@@ -47,7 +47,7 @@ Write your code in `src/dream-team.js`.
 
 ### **Count cats!**
 
-Your task is to count the cats hidden in the backyard (which is presented by two-dimensional Array). Cats hide well, but their ears ("^^") give them away . Your task is to implement the `countCats(backyard)` function, which will count cats. Good luck!
+Your task is to count the cats hidden in the backyard (which is presented by two-dimensional Array). Cats hide well, but their ears ("^^") give them away . Your task is to implement the `countCats(backyard)` function that will count cats. Good luck!
 
 Number of cats found should be `number`. If no cats found, function should return `0`;
 
@@ -63,11 +63,24 @@ The approximate age of the sample is calculated by measuring the ratio of the cu
 
 [Read about method](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Nuclear_Chemistry/Nuclear_Kinetics/Half-Lives_and_Radioactive_Decay_Kinetics#section_2)
 
-Your task is to implement function `dateSample(sampleActivity)` which calculates sample approximate age (in years). Please use given `modernActivity` and `halfLifePeriod`.
+Your task is to implement function `dateSample(sampleActivity)` that calculates sample approximate age (in years). Please use given `modernActivity` and `halfLifePeriod`.
 
 Function parameter `sampleActivity` is a `string`. Calculated sample age must be `number`. Age must be **integer**. Age must be **rounded up**. In case of wrong input parameter **type** or **inadequate** activity value or **absence** of argument function must return `false`.
 
 Write your code in `src/carbon-dating.js`.
+
+---
+
+### **What season?**
+
+Your task is to implement function `getSeason(date)` that accepts `Date` object and returns the time of the year that matches it.
+Time of the year must be `string`.
+
+if the `date` argument was not passed, the function must return the `string` `'Unable to determine the time of year!'`. If the `date` argument is invalid, the function must throw an `Error`.
+
+Shh! Among the arguments that come into this function, an enemy scout has lurked. He is guided by the famous proverb: “If it looks like a **duck**, swims like a **duck** and quacks like a **duck**, then it probably is a **duck** (who cares what it **really** is)”. He is expertly disguised as a real date, but a clever javascript developer can catch him and `throw` an `Error` just in time!
+
+Write your code in `src/what-season.js`.
 
 ---
 

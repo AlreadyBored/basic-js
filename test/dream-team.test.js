@@ -2,7 +2,7 @@ const createDreamTeam = require('../src/dream-team.js');
 
 // Presence requirement
 
-describe ('variable presence', () => {
+describe('variable presence', () => {
     it('function createDreamTeam exists', () => {
         expect(createDreamTeam).toBeDefined();
     });
@@ -17,8 +17,9 @@ describe('level 0', () => {
       'Grace',
       'Lily',
       'Ruby',
-  ])).toStrictEqual('AGLR');
+    ])).toStrictEqual('AGLR');
   });
+
   it('should return sorted sequence', () => {
     expect(createDreamTeam([
       'Amelia',
@@ -35,11 +36,11 @@ describe('level 0', () => {
     ])).toStrictEqual('ABDEFGJLMMR');
   });
   
-
   it('empty team shouldn\'t lead to error', () => {
     expect(() => createDreamTeam([])).not.toThrow();
   });
 });
+
 describe('functional requirements ', () => {   
     it('should handle whitespaces', () => {
       expect(createDreamTeam([
@@ -57,6 +58,7 @@ describe('functional requirements ', () => {
         '  Jay Rosenberg',
       ])).toStrictEqual('ADGJKMNPRSTW');
      });
+
      it('should handle lowercase', () => {
       expect(createDreamTeam([
         'amelia',
@@ -72,6 +74,7 @@ describe('functional requirements ', () => {
         'brooke',
       ])).toStrictEqual('ABDEFGJLMMR');
      });
+
      it('should return false on wrong type', () => {
       expect(createDreamTeam(3)).toStrictEqual(false);
       expect(createDreamTeam(3.312312)).toStrictEqual(false);
@@ -80,6 +83,7 @@ describe('functional requirements ', () => {
       expect(createDreamTeam(undefined)).toStrictEqual(false);
       expect(createDreamTeam({'foo': 'bar'})).toStrictEqual(false);
     });
+
      it('should ignore non-string values', () => {
       expect(createDreamTeam([
         'Amelia',
@@ -110,6 +114,7 @@ describe('functional requirements ', () => {
         'Brooke',
       ])).toStrictEqual('ABDEFGJLMMR');
     });
+
     it('should handle non-standard cases', () => {
       expect(createDreamTeam([
         ['David Abram'],
@@ -124,5 +129,5 @@ describe('functional requirements ', () => {
         'Erazim Kohak',
         '  val_plumwood',
       ])).toStrictEqual('BDETV');
-    })
+    });
 });

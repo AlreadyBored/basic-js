@@ -2,7 +2,7 @@ const countCats = require('../src/count-cats.js');
 
 // Presence requirement
 
-describe ('variable presence', () => {
+describe('variable presence', () => {
     it('function countCats exists', () => {
         expect(countCats).toBeDefined();
     });
@@ -16,31 +16,35 @@ describe('level 0', () => {
       ['##', 'dd', '00'],
       ['^^', '..', 'ss'],
       ['AA', 'dd', 'Oo'],
-    ])).toStrictEqual(1);
+    ])).toBe(1);
   });
+
   it('level 0.2', () => {
     expect(countCats([
       ['##', 'dd', '00'],
       ['^ ^', '..', 'ss'],
       ['AA', 'dd', 'Oo'],
-    ])).toStrictEqual(0);
+    ])).toBe(0);
   });
+
   it('level 0.3', () => {
     expect(countCats([
       ['##', 'dd', '00'],
       [' ^^ ', '..', 'ss'],
       ['AA', 'dd', 'Oo'],
-    ])).toStrictEqual(0);
+    ])).toBe(0);
   });
+
   it('level 0.4', () => {
     expect(countCats([
       ['##', 'dd', '00'],
       ['^', '^', 'ss'],
       ['AA', 'dd', 'Oo'],
-    ])).toStrictEqual(0);
+    ])).toBe(0);
   });
+  
   it('level 0.5', () => {
-    expect(countCats([])).toStrictEqual(0);
+    expect(countCats([])).toBe(0);
   });
 });
 
@@ -55,8 +59,9 @@ describe('functional requirements', () => {
         [false, NaN, 1, 0, ".", "^^", null, true, "dasdas", "^^", 2, ""],
         [null, 1, NaN, true, ".", "^^", "^^", 2, "", false, "dasdas", 0],
         [null, NaN, "", false, ".", 1, 0, "^^", "dasdas", true, 2, "^^"],
-      ])).toStrictEqual(16);
+      ])).toBe(16);
      });
+
     it('level 2', () => {
       expect(countCats([
         ["^^", ".", null, 0, false, "", NaN, 2, true, "dasdas", 1],
@@ -67,6 +72,6 @@ describe('functional requirements', () => {
         [false, NaN, 1, 0, ".", "^^"],
         [null, 1, NaN],
         [],
-      ])).toStrictEqual(8);
+      ])).toBe(8);
   });
 });
