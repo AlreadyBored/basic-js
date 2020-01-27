@@ -1,0 +1,29 @@
+{
+  "name": "rss-tasks",
+  "version": "1.0.0",
+  "description": "Tasks for RSS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlreadyBored/rss-tasks.git"
+  },
+  "keywords": [
+    "RSS",
+    "tasks"
+  ],
+  "author": "AlreadyBored",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlreadyBored/rss-tasks/issues"
+  },
+  "homepage": "https://github.com/AlreadyBored/rss-tasks#readme",
+  "dependencies": {
+    "jest": "^25.1.0"
+  }
+}
