@@ -1,57 +1,65 @@
+const assert = require('assert');
+const chai = require('chai');
+const { expect } = chai;
+
+Object.freeze(assert);
+
 const dateSample = require('../src/carbon-dating.js');
 
-// Presence requirement
 
-describe ('variable presence', () => {
-    it('function dateSample exists', () => {
-        expect(dateSample).toBeDefined();
+describe('Carbon dating', () => {
+  // Presence requirement
+    describe ('variable presence', () => {
+      it('function dateSample exists', () => {
+        expect(dateSample).to.not.be.undefined;
+      });
+  });
+
+  //Specific requirements
+
+  describe('base requirements', () => {
+    it('should return false on wrong type', () => {
+      assert.equal(dateSample(3), false);
+      assert.equal(dateSample(3.312312), false);
+      assert.equal(dateSample(false), false);
+      assert.equal(dateSample(null), false);
+      assert.equal(dateSample(undefined), false);
+      assert.equal(dateSample([3]), false);
+      assert.equal(dateSample(['3']), false);
+      assert.equal(dateSample({'3.14': '3dec'}), false);
     });
-});
 
-//Specific requirements
+    it('should return false if no argument', () => {
+      assert.equal(dateSample(), false);
+    });
 
-describe('base requirements', () => {
-  it('should return false on wrong type', () => {
-    expect(dateSample(3)).toStrictEqual(false);
-    expect(dateSample(3.312312)).toStrictEqual(false);
-    expect(dateSample(false)).toStrictEqual(false);
-    expect(dateSample(null)).toStrictEqual(false);
-    expect(dateSample(undefined)).toStrictEqual(false);
-    expect(dateSample([3])).toStrictEqual(false);
-    expect(dateSample(['3'])).toStrictEqual(false);
-    expect(dateSample({'3.14': '3dec'})).toStrictEqual(false);
+    it('should validate parameter', () => {
+      assert.equal(dateSample('ACTIVITY OVER 9000'), false);
+      assert.equal(dateSample('one'), false);
+    });
   });
 
-  it('should return false if no argument', () => {
-    expect(dateSample()).toStrictEqual(false);
-  });
+  describe('functional requirements ', () => {   
+    it('basic examples', () => {
+      assert.equal(dateSample('3'), 13308);
+      assert.equal(dateSample('1'), 22392);
+      assert.equal(dateSample('9'), 4224);
+      assert.equal(dateSample('11'), 2565);
+    });
 
-  it('should validate parameter', () => {
-    expect(dateSample('ACTIVITY OVER 9000')).toStrictEqual(false);
-    expect(dateSample('one')).toStrictEqual(false);
-  });
-});
+    it('should handle floating-point numbers', () => {
+      assert.equal(dateSample('3.142'), 12926);
+      assert.equal(dateSample('1.1'), 21604);
+      assert.equal(dateSample('9.8888'), 3446);
+      assert.equal(dateSample('11.3231.3213124'), 2326);
+    });
 
-describe('functional requirements ', () => {   
-  it('basic examples', () => {
-    expect(dateSample('3')).toStrictEqual(13308);
-    expect(dateSample('1')).toStrictEqual(22392);
-    expect(dateSample('9')).toStrictEqual(4224);
-    expect(dateSample('11')).toStrictEqual(2565);
-   });
-
-   it('should handle floating-point numbers', () => {
-    expect(dateSample('3.142')).toStrictEqual(12926);
-    expect(dateSample('1.1')).toStrictEqual(21604);
-    expect(dateSample('9.8888')).toStrictEqual(3446);
-    expect(dateSample('11.3231.3213124')).toStrictEqual(2326);
-   });
-
-   it('should handle inadequate values', () => {
-    expect(dateSample('9000')).toStrictEqual(false);
-    expect(dateSample('15.1')).toStrictEqual(false);
-    expect(dateSample('0')).toStrictEqual(false);
-    expect(dateSample('-5')).toStrictEqual(false);
-    expect(dateSample('-55.8')).toStrictEqual(false);
-  });
+    it('should handle inadequate values', () => {
+      assert.equal(dateSample('9000'), false);
+      assert.equal(dateSample('15.1'), false);
+      assert.equal(dateSample('0'), false);
+      assert.equal(dateSample('-5'), false);
+      assert.equal(dateSample('-55.8'), false);
+    });
+  });  
 });
