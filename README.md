@@ -63,7 +63,7 @@ The approximate age of the sample is calculated by measuring the ratio of the cu
 
 [Read about method](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Nuclear_Chemistry/Nuclear_Kinetics/Half-Lives_and_Radioactive_Decay_Kinetics#section_2)
 
-Your task is to implement function `dateSample(sampleActivity)` that calculates sample approximate age (in years). Please use given `modernActivity` and `halfLifePeriod`.
+Your task is to implement function `dateSample(sampleActivity)` that calculates sample approximate age (in years). Please use given `MODERN_ACTIVITY` and `HALF_LIFE_PERIOD`.
 
 Function parameter `sampleActivity` is a `string`. Calculated sample age must be `number`. Age must be **integer**. Age must be **rounded up**. In case of wrong input parameter **type** or **inadequate** activity value or **absence** of argument function must return `false`.
 
