@@ -1,4 +1,4 @@
-module.exports = function repeater(str, repeatTimes, separator, addition, additionRepeatTimes, additionSeparator) {
+module.exports = function repeater(str, options) {
     // write your code here
 };
   
