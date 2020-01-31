@@ -108,6 +108,8 @@ These parameters for both methods are **mandatory**. If at least one of them has
 
 You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except `Error` on absence of argument for these methods).
 
+Write your code in `src/vigenere-cipher.js`.
+
 ---
 
 
