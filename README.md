@@ -95,18 +95,21 @@ Write your code in `src/what-season.js`.
 
 Cryptography is awesome! Let's try to organize the production of encryption machines. Our machines will use one of the encryption methods that are easy to understand, but also not amenable to simple cryptanalysis - the [**Vigenere cipher**](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
 
-Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine encodes and decodes the string that was transmitted to it, and the **reverse** machine, when encoding and decoding, returns an **inverted** string.
+Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine simply encodes and decodes the string that was transmitted to it, and the **reverse** machine returns an **inverted** string after encoding and decoding.
 
 Your task is to implement `class` `VigenereCipheringMachine`. `constructor` of this `class` accepts `true` (**or nothing**) to create **direct** machine and `false` to create **reverse** machine.
 Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `decrypt`. 
 
-`encrypt` method accept 2 parameters: `message` (`string` to encode) and `key` (`string`-keyword).
+`encrypt` method accepts 2 parameters: `message` (`string` to encode) and `key` (`string`-keyword).
 
-`encrypt` method accept 2 parameters: `encryptedMessage` (`string` to decode) and `key` (`string`-keyword).
+`decrypt` method accepts 2 parameters: `encryptedMessage` (`string` to decode) and `key` (`string`-keyword).
 
-These parameters for both functions are **mandatory**. If at least one of them has not been transmitted, an `Error` must be thrown.
+These parameters for both methods are **mandatory**. If at least one of them has not been transmitted, an `Error` must be thrown.
+
+You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except `Error` on absence of argument for these methods).
 
 ---
+
 
 #### Prerequisites
 1. Install [Node.js](https://nodejs.org/en/download/)   
