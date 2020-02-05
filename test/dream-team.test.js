@@ -12,7 +12,7 @@ describe('Dream team', () => {
 
   describe('variable presence', () => {
     it('function createDreamTeam exists', () => {
-      expect(createDreamTeam).to.not.be.undefined;
+      expect(createDreamTeam).to.exist;
     });
   });
 

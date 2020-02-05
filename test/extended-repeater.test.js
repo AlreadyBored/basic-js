@@ -11,7 +11,7 @@ describe('Extended repeater', () => {
 
   describe('variable presence', () => {
     it('function repeater exists', () => {
-      expect(repeater).to.not.be.undefined;
+      expect(repeater).to.exist;
     });
   });
 

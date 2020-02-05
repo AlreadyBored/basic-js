@@ -9,7 +9,7 @@ const calculateHanoi = require('../src/hanoi-tower.js');
 describe('Hanoi tower', () => {
     //Presence requirement
     describe('variable presence', () => {
-        it('function calculateDate exists', () => {
+        it('function calculateHanoi exists', () => {
             expect(calculateHanoi).to.exist;
         });
     });

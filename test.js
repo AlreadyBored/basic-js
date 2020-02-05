@@ -5,3 +5,4 @@ require('./test/extended-repeater.test');
 require('./test/what-season.test');
 require('./test/vigenere-cipher.test');
 require('./test/hanoi-tower.test');
+require('./test/transform-array.test');

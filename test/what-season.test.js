@@ -11,7 +11,7 @@ describe('What season', () => {
 
     describe('variable presence', () => {
         it('function getSeason exists', () => {
-            expect(getSeason).to.not.be.undefined;
+            expect(getSeason).to.exist;
         });
     });
 
