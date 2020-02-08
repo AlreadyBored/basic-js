@@ -159,6 +159,51 @@ Write your code in `src/transform-array.js`.
 
 ---
 
+### **Chain maker**
+Let's practice in [chaining](https://en.wikipedia.org/wiki/Method_chaining)!
+
+Your task is to create an `object` `chainMaker` that will create chains. The finished chain is a string and looks like this: `'( value1 )~~( value2 )~~( value3 )'`.
+The `chainMaker` has several **methods** for creating chains and modifying them:
+* `getLength` returns the current chain length as a number;
+* `addLink(value)` adds a link containing a `string` representation of the `value` to the chain;
+* `removeLink(position)` removes a chain link in the specified position;
+* `reverseChain` reverses the chain;
+* `finishChain` ends the chain and `returns` it.
+
+
+`addLink`, `reverseChain` and `removeLink` methods are **chainable**, while the rest are not. If `addLink` is called with no arguments, it adds an empty link (`'(  )'`) to the chain. If `removeLink` accepts **invalid** `position` (e.g. not a number, or a fractional number, or corresponding to a nonexistent link) it must throw an `Error`. After calling the `finishChain` method, the existing chain must be delted, as if an `Error` was thrown.
+
+For example:
+
+`chainMaker.addLink(1).addLink(2).addLink(3).finishChain()` => `'( 1 )~~( 2 )~~( 3 )'`
+
+`chainMaker.addLink(1).addLink(2).removeLink(1).addLink(3).finishChain()` => `'( 2 )~~( 3 )'`
+
+`chainMaker.addLink(1).addLink(2).reverseChain().addLink(3).finishChain()` => `'( 2 )~~( 1 )~~( 3 )'`
+
+Write your code in `src/simple-chain.js`.
+
+---
+
+### **Recursive depth calculator**
+![Go deeper](https://i.gifer.com/S5u.gif)
+
+Your task is to implement function `calculateDepth` that takes an `array` and returns its depth.
+
+`calculateDepth` function must pass the given array **recursively**. Depth of a **flat** array is 1. Function must correctly work with `arrays` that contain no elements or conatin empty `arrays`.
+
+For example:
+
+`calculateDepth([1, 2, 3, 4, 5])` => `1`
+
+`calculateDepth([1, 2, 3, [4, 5]])` => `2`
+
+`calculateDepth([[[]]])` => `3`
+
+Write your code in `src/recursive-depth.js`.
+
+---
+
 #### Prerequisites
 1. Install [Node.js](https://nodejs.org/en/download/)   
 2. Fork this repository: https://github.com/rolling-scopes-school/basic-js/
