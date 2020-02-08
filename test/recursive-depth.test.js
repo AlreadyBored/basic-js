@@ -1,5 +1,6 @@
 const chai = require('chai');
 const { expect, assert } = chai;
+const sinon = require('sinon');
 
 Object.freeze(assert);
 
@@ -33,6 +34,11 @@ describe('Recursive depth', () => {
             assert.equal(calculateDepth([1, [8, [[]]], 2, 3, [8, [[[[[[[[[[[[[]]]]]]]]]]]]]], 4, 5, ['6575',['adas', ['dfg', [0]]]]]), 15);
             assert.equal(calculateDepth([1, [8, [[]]], 2, 3, [8, [[[[[[[[[[[[[]]]]]]]]]]]]]], [8, [[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]], 4, 5, ['6575',['adas', ['dfg', [0]]]]]), 25);
             assert.equal(calculateDepth([1, [8, [[]]], [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]], []]]], []]]]]]]]], []]]], []]]]]]]]]], 2, 3, [8, [[[[[[[[[[[[[[]]]]]]]]]]]]]]], [8, [[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]], 4, 5, ['6575',['adas', ['dfg', [0]]]]]), 31);
+        });
+        it('works recursively?', () => {
+            const spy1 = sinon.spy(calculateDepth);
+            assert.equal(spy1([1, 2, 3, 4, 5, [1, []]]), 3);
+            expect(spy1.callCount).to.be.greaterThan(1);
         });
     });
 });
