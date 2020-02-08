@@ -1,7 +1,5 @@
-const assert = require('assert');
 const chai = require('chai');
-const sinon = require('sinon');
-const { expect } = chai;
+const { expect, assert } = chai;
 
 Object.freeze(assert);
 
