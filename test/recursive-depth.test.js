@@ -4,8 +4,8 @@ const sinon = require('sinon');
 
 Object.freeze(assert);
 
-const MyClass = require('../src/recursive-depth.js');
-const instance = new MyClass();
+const DepthCalculator = require('../src/recursive-depth.js');
+const instance = new DepthCalculator();
 const calculateDepth = instance.calculateDepth.bind(instance);
 
 const createFlatArr = (length) => Array.from({length}, () => Math.floor(Math.random() * length));
@@ -36,11 +36,15 @@ describe('Recursive depth', () => {
             assert.equal(calculateDepth([1, [8, [[]]], 2, 3, [8, [[[[[[[[[[[[[]]]]]]]]]]]]]], [8, [[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]], 4, 5, ['6575',['adas', ['dfg', [0]]]]]), 25);
             assert.equal(calculateDepth([1, [8, [[]]], [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]], []]]], []]]]]]]]], []]]], []]]]]]]]]], 2, 3, [8, [[[[[[[[[[[[[[]]]]]]]]]]]]]]], [8, [[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]], 4, 5, ['6575',['adas', ['dfg', [0]]]]]), 31);
         });
-        it('works recursively?', () => {
+        it('works recursively', () => {
             const spy1 = sinon.spy(instance, 'calculateDepth');
             assert.equal(calculateDepth([1, 2, 3, 4, 5, [1, []]]), 3);
             expect(spy1.callCount).to.be.greaterThan(1);
             spy1.restore();
+            const spy2 = sinon.spy(instance, 'calculateDepth');
+            assert.equal(calculateDepth([[[[[]]]]]), 5);
+            expect(spy2.callCount).to.be.greaterThan(1);
+            spy2.restore();
         });
     });
 });

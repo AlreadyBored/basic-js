@@ -188,11 +188,14 @@ Write your code in `src/simple-chain.js`.
 ### **Recursive depth calculator**
 ![Go deeper](https://i.gifer.com/S5u.gif)
 
-Your task is to implement function `calculateDepth` that takes an `array` and returns its depth.
+Your task is to implement class `DepthCalculator` with method `calculateDepth` that takes an `array` and returns its depth.
 
-`calculateDepth` function must pass the given array **recursively**. Depth of a **flat** array is 1. Function must correctly work with `arrays` that contain no elements or conatin empty `arrays`.
+`calculateDepth` method must pass the given array **recursively**. Depth of a **flat** array is 1. Method must correctly work with `arrays` that contain no elements or conatin empty `arrays`.
 
 For example:
+
+`const depthCalc = new DepthCalculator();`
+`const { calculateDepth } = depthCalc;`
 
 `calculateDepth([1, 2, 3, 4, 5])` => `1`
 

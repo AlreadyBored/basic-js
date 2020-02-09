@@ -1,5 +1,5 @@
-module.exports = class MyClass {
+module.exports = class DepthCalculator {
     calculateDepth(arr) {
-        // magic
+        // write your code here
     }
-}
+};
