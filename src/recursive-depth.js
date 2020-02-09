@@ -1,3 +1,5 @@
-module.exports = function calculateDepth(arr) {
-    // write your code here
+module.exports = class DepthCalculator {
+    calculateDepth(arr) {
+        // write your code here
+    }
 };
