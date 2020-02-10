@@ -1,5 +1,6 @@
 module.exports = class DepthCalculator {
-    calculateDepth(arr) {
-        // write your code here
+    calculateDepth(/* arr */) {
+        throw 'Not implemented';
+        // remove line with error and write your code here
     }
 };

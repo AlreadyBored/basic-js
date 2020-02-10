@@ -1,5 +1,6 @@
 const chai = require('chai');
 const { expect, assert } = chai;
+it.optional = require('../extensions/it-optional');
 
 Object.freeze(assert);
 
@@ -9,7 +10,7 @@ const _0x1154=['floor','first','--discard-next','random','length','--discard-pre
 describe('Transform array', () => {
     //Presence requirement
     describe('variable presence', () => {
-        it('function transform exists', () => {
+        it.optional('function transform exists', () => {
             expect(transform).to.exist;
         });
     });
@@ -17,27 +18,27 @@ describe('Transform array', () => {
     //Functional requirements
     describe('functional requirements', () => {
 
-        it('correctly works with an empty array', () => {
+        it.optional('correctly works with an empty array', () => {
             assert.deepStrictEqual((transform([])), []);
         });
 
-        it('throws an Error if arr is not an Array', () => {
-            expect(() => transform(3)).to.throw(Error);
-            expect(() => transform(3.312312)).to.throw(Error);
-            expect(() => transform(false)).to.throw(Error);
-            expect(() => transform(null)).to.throw(Error);
-            expect(() => transform(undefined)).to.throw(Error);
-            expect(() => transform({'foo': 'bar'})).to.throw(Error);
+        it.optional('throws an Error if arr is not an Array', () => {
+            expect(() => transform(3)).to.throw();
+            expect(() => transform(3.312312)).to.throw();
+            expect(() => transform(false)).to.throw();
+            expect(() => transform(null)).to.throw();
+            expect(() => transform(undefined)).to.throw();
+            expect(() => transform({'foo': 'bar'})).to.throw();
         })
 
-        it('doesn\'t affect simple arrays', () => {
+        it.optional('doesn\'t affect simple arrays', () => {
             for (let i = 0; i < 1000; i += 1) {
                 const randArr = createSimpleArr(50);
                 assert.deepStrictEqual((transform(randArr)), randArr);
             }
         });
 
-        it('action flags work properly', () => {
+        it.optional('action flags work properly', () => {
             for(let i = 0; i < 50; i += 1) {
                 const { input, output } = createSample(i);
                 assert.deepStrictEqual(transform(input), output);

@@ -1,5 +1,6 @@
 const chai = require('chai');
 const { expect, assert } = chai;
+it.optional = require('../extensions/it-optional');
 
 Object.freeze(assert);
 
@@ -10,13 +11,13 @@ const _0x3a46=['random','length','ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$(),./|
 describe('Vigenere cipher', () => {
     // Presence requirement
     describe ('variables presence', () => {
-      it('function VigenereCipheringMachine exists', () => {
+      it.optional('function VigenereCipheringMachine exists', () => {
         expect(VigenereCipheringMachine).to.exist;
       });
-      it('correct inheritance', () => {
+      it.optional('correct inheritance', () => {
         expect(new VigenereCipheringMachine()).to.be.an.instanceof(VigenereCipheringMachine);
       });
-      it('has methods', () => {
+      it.optional('has methods', () => {
         expect(new VigenereCipheringMachine()).to.respondTo('encrypt');
         expect(new VigenereCipheringMachine()).to.respondTo('decrypt');
         expect(new VigenereCipheringMachine(false)).to.respondTo('encrypt');
@@ -28,29 +29,29 @@ describe('Vigenere cipher', () => {
         const directMachine = new VigenereCipheringMachine();
         const reverseMachine = new VigenereCipheringMachine();
 
-        it('must throw an Error if no args', () => {
-            expect(() => directMachine.encrypt('lala')).to.throw(Error);
-            expect(() => directMachine.encrypt(undefined, 'key')).to.throw(Error);
-            expect(() => directMachine.encrypt()).to.throw(Error);
-            expect(() => reverseMachine.encrypt('lala')).to.throw(Error);
-            expect(() => reverseMachine.encrypt(undefined, 'key')).to.throw(Error);
-            expect(() => reverseMachine.encrypt()).to.throw(Error);
-            expect(() => directMachine.decrypt('lala')).to.throw(Error);
-            expect(() => directMachine.decrypt(undefined, 'key')).to.throw(Error);
-            expect(() => directMachine.decrypt()).to.throw(Error);
-            expect(() => reverseMachine.decrypt('lala')).to.throw(Error);
-            expect(() => reverseMachine.decrypt(undefined, 'key')).to.throw(Error);
-            expect(() => reverseMachine.decrypt()).to.throw(Error);
+        it.optional('must throw an Error if no args', () => {
+            expect(() => directMachine.encrypt('lala')).to.throw();
+            expect(() => directMachine.encrypt(undefined, 'key')).to.throw();
+            expect(() => directMachine.encrypt()).to.throw();
+            expect(() => reverseMachine.encrypt('lala')).to.throw();
+            expect(() => reverseMachine.encrypt(undefined, 'key')).to.throw();
+            expect(() => reverseMachine.encrypt()).to.throw();
+            expect(() => directMachine.decrypt('lala')).to.throw();
+            expect(() => directMachine.decrypt(undefined, 'key')).to.throw();
+            expect(() => directMachine.decrypt()).to.throw();
+            expect(() => reverseMachine.decrypt('lala')).to.throw();
+            expect(() => reverseMachine.decrypt(undefined, 'key')).to.throw();
+            expect(() => reverseMachine.decrypt()).to.throw();
         });
         
-        it('base encryption', () => {
+        it.optional('base encryption', () => {
             assert.equal(directMachine.encrypt('attack at dawn!', 'alphonse'), 'AEIHQX SX DLLU!');
             assert.equal(directMachine.encrypt('Example of sequence: 1, 2, 3, 4.', 'lilkey'), 'PFLWTJP WQ CIOFMYMI: 1, 2, 3, 4.');
             assert.equal(directMachine.encrypt('cryptography', 'verylongkeyword'), 'XVPNECTXKTFU');
             assert.equal(directMachine.encrypt('Samelengthkey', 'Samelengthkey'), 'KAYIWIAMMOUIW');
             assert.equal(directMachine.encrypt('Same length key', 'Samelengthkey'), 'KAYI WIAMMO UIW');
         });
-        it('base decryption', () => {
+        it.optional('base decryption', () => {
             assert.equal(directMachine.decrypt('UWJJW XAGWLNFM VNNNDXHVWWL :)', 'js'), 'LEARN FRONTEND DEVELOPMENT :)');
             assert.equal(directMachine.decrypt('ICWWQAM KECEIK JVZZT EADGG!', 'rollingscopes'), 'ROLLING SCOPES SHOOL RULES!');
             assert.equal(directMachine.decrypt('TRVVFB VT JSUIFMYL!', 'learning'), 'INVEST IN YOURSELF!');
@@ -62,7 +63,7 @@ describe('Vigenere cipher', () => {
         const directMachine = new VigenereCipheringMachine();
         const reverseMachine = new VigenereCipheringMachine(false);
 
-        it('double-sided direct cryptography', () => {
+        it.optional('double-sided direct cryptography', () => {
             for (let i = 2; i < 200; i += 1) {
                 const testStr = createTestString(i);
                 const testKey = createTestKey(i + i % 2);
@@ -71,7 +72,7 @@ describe('Vigenere cipher', () => {
             }
         });
 
-        it('double-sided reverse cryptography 2', () => {
+        it.optional('double-sided reverse cryptography 2', () => {
             for (let i = 2; i < 200; i += 1) {
                 const testStr = createTestString(i);
                 const reversedTestStr = testStr.split('').reverse().join('');
