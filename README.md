@@ -3,15 +3,15 @@
 ⚠️ DO NOT SUBMIT PULL REQUESTS TO THIS REPO ⚠️
 
 ## General task description
-Your task is to write several functions that are the solution to the subtasks. Descriptions of subtasks, as well as instructions on how to run tests and submit solutions are below.
+Your task is to write several functions that are the solution to the subtasks. Subtasks descriptions, as well as instructions on how to run tests and submit solutions are below.
 
 ---
 
 ### **Count cats!**
 
-Your task is to count the cats hidden in the backyard (which is presented by two-dimensional `Array`). Cats hide well, but their **ears** (`"^^"`) give them away . Your task is to implement the `countCats(backyard)` function that will count cats. Good luck!
+Your task is to count the cats hidden in the backyard (presented by two-dimensional `Array`). Cats hide well, but their **ears** (`"^^"`) are clearly visible. Your task is to implement the `countCats(backyard)` function that will count cats. Good luck!
 
-Number of cats found should be `number`. If no cats found, function should return `0`;
+Number of cats found should be `number`. If no cats found, function should return `0`.
 
 Write your code in `src/count-cats.js`.
 
@@ -57,9 +57,9 @@ Write your code in `src/dream-team.js`.
 Your task is to implement the function `getSeason(date)` that accepts `Date` object and returns the time of the year that matches it.
 Time of the year must be `string`.
 
-if the `date` argument was not passed, the function must return the `string` `'Unable to determine the time of year!'`. If the `date` argument is **invalid**, the function must throw an `Error`.
+If the `date` argument was not passed, the function must return the `string` `'Unable to determine the time of year!'`. If the `date` argument is **invalid**, the function must throw an `Error`.
 
-Shh! Among the arguments that come into this function, an enemy scout has lurked. 
+Shh! An enemy scout has lurked among the arguments that come into this function.
 
 ![Disguised](https://www.famousbirthdays.com/faces/disguised-toast-image.jpg)
 
@@ -90,19 +90,20 @@ Both parameters are `numbers`.
 * `turns` (minimum `number` of turns to solve the puzzle)
 * `seconds` (minimum `number` of **seconds** to solve the puzzle at a given `turnsSpeed`).
 
-You don't need to valide parameters.
+You don't need to validate parameters.
 
 Write your code in `src/hanoi-tower.js`.
 
 ---
 
 ### **Transform array**
+
 Your task is to implement the function `transform(arr)` that takes an `array` and returns it **transformed**, based on the **control sequences** that it contains.
-**Control sequences** are defined `string` elements of the aforementioned `array`:
+**Control sequences** are defined `string` elements of the mentioned `array`:
 * `--discard-next` excludes the next element of the array from the transformed array.
 * `--discard-prev` excludes the previous element of the array from the transformed array.
-* `--double-next` doubles the next element of the array immediately after it in the transformed array.
-* `--double-prev` doubles the immediately following element of the array in the transformed array.
+* `--double-next` doubles the next element of the array in the transformed array.
+* `--double-prev` doubles the previous element of the array in the transformed array.
 
 For example:
 
@@ -119,7 +120,7 @@ Write your code in `src/transform-array.js`.
 ### **Chain maker**
 Let's practice in [chaining](https://en.wikipedia.org/wiki/Method_chaining)!
 
-Your task is to create the object `chainMaker` that will create chains. The finished chain is a string and looks like this: `'( value1 )~~( value2 )~~( value3 )'`.
+Your task is to create the object `chainMaker` that creates chains. The finished chain is a `string` and looks like this: `'( value1 )~~( value2 )~~( value3 )'`.
 The `chainMaker` has several **methods** for creating chains and modifying them:
 * `getLength` returns the current chain length as a number;
 * `addLink(value)` adds a link containing a `string` representation of the `value` to the chain;
@@ -127,8 +128,7 @@ The `chainMaker` has several **methods** for creating chains and modifying them:
 * `reverseChain` reverses the chain;
 * `finishChain` ends the chain and `returns` it.
 
-
-`addLink`, `reverseChain` and `removeLink` methods are **chainable**, while the rest are not. If `addLink` is called with no arguments, it adds an empty link (`'(  )'`) to the chain. If `removeLink` accepts **invalid** `position` (e.g. not a number, or a fractional number, or corresponding to a nonexistent link) it must throw an `Error`. After calling the `finishChain` method, the existing chain must be delted, as if an `Error` was thrown.
+`addLink`, `reverseChain` and `removeLink` methods are **chainable**, while the another ones are not. If `addLink` is called with no arguments, it adds an empty link (`'(  )'`) to the chain. If `removeLink` accepts **invalid** `position` (e.g. not a number, or a fractional number, or corresponding to a nonexistent link), it must throw an `Error`. After calling the `finishChain` method, the existing chain must be deleted, as if an `Error` was thrown.
 
 For example:
 
@@ -147,7 +147,7 @@ Write your code in `src/simple-chain.js`.
 
 Your task is to implement the class `DepthCalculator` with method `calculateDepth` that takes an `array` and returns its depth.
 
-`calculateDepth` method must pass the given array **recursively**. Depth of a **flat** array is 1. Method must correctly work with `arrays` that contain no elements or conatin empty `arrays`.
+`calculateDepth` method must pass the given array **recursively**. Depth of a **flat** array is 1. Method must correctly work with `arrays` that contain no elements or contain empty `arrays`.
 
 For example:
 
@@ -168,22 +168,22 @@ Write your code in `src/recursive-depth.js`.
 Your task is to implement the function `repeater(str, options)`.
 This function returns a repeating `string` based on the given parameters:
 * `str` is a `string` to repeat;
-* `options` is an `object` of options, that contains:
+* `options` is an `object` of options, that contains properties:
   * `repeatTimes` sets the `number` of repetitions of the `str`;
   * `separator` is a `string` separating repetitions of the `str`;
   * `addition` is an additional `string` that will be added to each repetition of the `str`;
   * `additionRepeatTimes` sets the `number` of repetitions of the `addition`;
-  * `additionSeparator` is a `string` separating repetitions of the `addition`;
+  * `additionSeparator` is a `string` separating repetitions of the `addition`.
 
-The `str` and `addition` parameters are `strings` by default. In the case of a different **type**, they must be converted to a `string`. 
+The `str` and `addition` parameters are `strings` by default. In case when **type** of these parameters is different, they must be converted to a `string`.
 
 `separator` and `additionSeparator` parameters are `strings`. 
 
-`repeatTimes` and `additionRepeatTimes` are integer `numbers` (in the absence of any of them, the corresponding string is not repeated). 
+`repeatTimes` and `additionRepeatTimes` are integer `numbers` (in the absence of any of them, the corresponding string is not repeated).
 
 The only indispensable parameter is `str`, any others may be not defined. `separator` default value is `'+'`. `additionSeparator` default value is `'|'`.
 
-For example: `repeater('STRING', 3, '**', 'PLUS', 3, '00')` => `'STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS'`
+For example: `repeater('STRING', { repeatTimes: 3, separator: '**', addition: 'PLUS', additionRepeatTimes: 3, additionSeparator: '00' })` => `'STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS'`
 
 Write your code in `src/extended-repeater.js`.
 
@@ -191,7 +191,7 @@ Write your code in `src/extended-repeater.js`.
 
 ### **Vigenere cipher**
 
-Cryptography is awesome! Let's try to organize the production of encryption machines. Our machines will use one of the encryption methods that are easy to understand, but also not amenable to simple cryptanalysis - the [**Vigenere cipher**](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
+Cryptography is awesome! Let's try to organize production of encryption machines. Our machines will use one of the encryption methods that are easy to understand, but also not amenable to simple cryptanalysis - the [**Vigenere cipher**](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
 
 Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine simply encodes and decodes the string that was transmitted to it, and the **reverse** machine returns an **inverted** string after encoding and decoding.
 
@@ -204,7 +204,7 @@ Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `
 
 These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` must be thrown.
 
-You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except `Error` on absence of argument for these methods).
+You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except throwing an `Error` on absence of argument for these methods).
 
 Write your code in `src/vigenere-cipher.js`.
 
@@ -230,8 +230,8 @@ Write your code in `src/vigenere-cipher.js`.
 ---
 
 #### Notes
-1. We recommend you to use nodejs of version 10 or lower. If you using any of features that does not supported by node v10, score won't be submitted.
-2. Please be sure that each of your test in limit of 30sec.
+1. We recommend you to use nodejs of version 10 or lower. If you use any of features, that does not supported by node v10, score won't be submitted.
+2. Please, be sure that each of your tests is limited to 30 sec.
 
 ---
 
