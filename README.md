@@ -1,4 +1,4 @@
-# Basic JS
+# BasicJS
 
 ⚠️ DO NOT SUBMIT PULL REQUESTS TO THIS REPO ⚠️
 
@@ -212,7 +212,7 @@ Write your code in `src/vigenere-cipher.js`.
 
 #### Prerequisites
 1. Install [Node.js](https://nodejs.org/en/download/)   
-2. Fork this repository: https://github.com/rolling-scopes-school/basic-js/
+2. Fork this repository: https://github.com/AlreadyBored/basic-js
 3. Clone your newly created repo: https://github.com/<%your_github_username%>/basic-js/  
 4. Go to folder `basic-js`  
 5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
@@ -223,8 +223,8 @@ Write your code in `src/vigenere-cipher.js`.
 
 #### Submit to [rs app](https://app.rs.school)
 1. Open [rs app](https://app.rs.school) and login
-2. Go to [submit task page](https://app.rs.school/course/submit-task?course=rs-2020-q1)
-3. Select your task (basic-js)
+2. Go to [submit task page](https://app.rs.school/course/student/auto-test?course=rs-2020-q1)
+3. Select your task (BasicJS)
 4. Press the submit button and enjoy
 
 ---
