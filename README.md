@@ -143,7 +143,7 @@ Write your code in `src/simple-chain.js`.
 ---
 
 ### **Recursive depth calculator**
-![Go deeper](https://i.gifer.com/S5u.gif)
+![Go deeper](https://i.imgur.com/k7lADiM.jpg)
 
 Your task is to implement the class `DepthCalculator` with method `calculateDepth` that takes an `array` and returns its depth.
 
@@ -237,4 +237,4 @@ Write your code in `src/vigenere-cipher.js`.
 
 © [AlreadyBored](https://github.com/alreadybored)
 
-& Thanks [Mikhama](https://github.com/mikhama) for assistance!
+& Thanks [mikhama](https://github.com/mikhama) for assistance!
