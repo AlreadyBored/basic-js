@@ -1,7 +1,7 @@
 const chainMaker = {
+  chain:[],
   getLength() {
-    throw 'Not implemented';
-    // remove line with error and write your code here
+    return this.length;
   },
   addLink(value) {
     throw 'Not implemented';

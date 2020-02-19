@@ -1,8 +1,12 @@
 module.exports = function createDreamTeam(members) {
-  members.sort();
+  if (!Array.isArray(members)){
+    return false;
+}
   let newArr = [];
-  for (let i = 0; i < members.length; i++) {    
-    newArr.push(members[i].slice(0, 2));
+  for (let i = 0; i < members.length; i++) {   
+    if (typeof(members[i]) === 'string') {
+      newArr.push(members[i].trim()[0].toUpperCase());
+    }    
   }
-  return newArr.join('').toUpperCase();
+  return newArr.sort().join('');
 };
