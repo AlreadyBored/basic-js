@@ -177,7 +177,7 @@ This function returns a repeating `string` based on the given parameters:
 
 The `str` and `addition` parameters are `strings` by default. In case when **type** of these parameters is different, they must be converted to a `string`.
 
-`separator` and `additionSeparator` parameters are `strings`. 
+`separator` and `additionSeparator` parameters are `strings`.
 
 `repeatTimes` and `additionRepeatTimes` are integer `numbers` (in the absence of any of them, the corresponding string is not repeated).
 
@@ -196,7 +196,7 @@ Cryptography is awesome! Let's try to organize production of encryption machines
 Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine simply encodes and decodes the string that was transmitted to it, and the **reverse** machine returns an **inverted** string after encoding and decoding.
 
 Your task is to implement the class `VigenereCipheringMachine`. `constructor` of this `class` accepts `true` (**or nothing**) to create **direct** machine and `false` to create **reverse** machine.
-Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `decrypt`. 
+Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `decrypt`.
 
 `encrypt` method accepts 2 parameters: `message` (`string` to encode) and `key` (`string`-keyword).
 

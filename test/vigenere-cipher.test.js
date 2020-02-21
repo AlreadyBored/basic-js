@@ -43,7 +43,7 @@ describe('Vigenere cipher', () => {
             expect(() => reverseMachine.decrypt(undefined, 'key')).to.throw();
             expect(() => reverseMachine.decrypt()).to.throw();
         });
-        
+
         it.optional('base encryption', () => {
             assert.equal(directMachine.encrypt('attack at dawn!', 'alphonse'), 'AEIHQX SX DLLU!');
             assert.equal(directMachine.encrypt('Example of sequence: 1, 2, 3, 4.', 'lilkey'), 'PFLWTJP WQ CIOFMYMI: 1, 2, 3, 4.');

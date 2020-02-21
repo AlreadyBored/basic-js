@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlreadyBored/basic-js.git"
+    "url": "git+https://github.com/aleshkinpaul/basic-js.git"
   },
   "keywords": [
     "RSS",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/AlreadyBored/basic-js/issues"
   },
-  "homepage": "https://github.com/AlreadyBored/basic-js#readme",
+  "homepage": "https://github.com/aleshkinpaul/basic-js#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.0.1",
