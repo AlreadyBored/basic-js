@@ -4,16 +4,24 @@ const chainMaker = {
     return this.arr.length;
   },
   addLink(value) {
-    return this.arr.push(`( ${value} )`);
+    this.arr.push(`( ${value} )`);
+    return this;
   },
   removeLink(position) {
-    return this.arr.splice(position - 1, 1);
+    if (position < 1 || position > this.getLength() || typeof position !== 'number') {
+      this.arr = [];
+      throw Error;
+  }
+    this.arr.splice(position - 1, 1);
+    return this;
   },
   reverseChain() {
-    return this.arr.reverse();
+    this.arr.reverse();
+    return this
   },
   finishChain() {
-    const result = this.arr.join('~~');
+    let result = this.arr.join('~~');
+    this.arr = [];
     return result;
   }
 };
