@@ -1,11 +1,11 @@
-//module.exports = 
+module.exports = 
 function getSeason(date) {
   res = [];
   //console.log(typeof(date));
   switch (typeof(date)){
     case 'string':
       {
-        console.log(date);
+        //console.log(date);
         if (date === 'winter' || 'autumn' || 'summer' || 'spring')
           break;
         else 
@@ -68,7 +68,7 @@ let date = 'winter';
 let date = new Date(20192701);
 console.log(getSeason(date));
 
-*/
+
 
 const deeperFakeDate = {
   toString() {
@@ -100,4 +100,4 @@ const deeperFakeDate = {
   }
 };
 let date4 = new Date (deeperFakeDate);
-console.log(date4.toString());
+console.log(date4.toString());*/
