@@ -12,6 +12,7 @@ describe('Carbon dating', () => {
     describe ('variable presence', () => {
       it.optional('function dateSample exists', () => {
         expect(dateSample).exist;
+        expect(dateSample).to.be.instanceOf(Function);
       });
   });
 

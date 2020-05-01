@@ -11,8 +11,9 @@ const _0x3a46=['random','length','ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$(),./|
 describe('Vigenere cipher', () => {
     // Presence requirement
     describe ('variables presence', () => {
-      it.optional('function VigenereCipheringMachine exists', () => {
+      it.optional('class VigenereCipheringMachine exists', () => {
         expect(VigenereCipheringMachine).to.exist;
+        expect(VigenereCipheringMachine).to.be.instanceOf(Function);
       });
       it.optional('correct inheritance', () => {
         expect(new VigenereCipheringMachine()).to.be.an.instanceof(VigenereCipheringMachine);
@@ -29,19 +30,29 @@ describe('Vigenere cipher', () => {
         const directMachine = new VigenereCipheringMachine();
         const reverseMachine = new VigenereCipheringMachine();
 
-        it.optional('must throw an Error if no args', () => {
-            expect(() => directMachine.encrypt('lala')).to.throw();
-            expect(() => directMachine.encrypt(undefined, 'key')).to.throw();
-            expect(() => directMachine.encrypt()).to.throw();
-            expect(() => reverseMachine.encrypt('lala')).to.throw();
-            expect(() => reverseMachine.encrypt(undefined, 'key')).to.throw();
-            expect(() => reverseMachine.encrypt()).to.throw();
-            expect(() => directMachine.decrypt('lala')).to.throw();
-            expect(() => directMachine.decrypt(undefined, 'key')).to.throw();
-            expect(() => directMachine.decrypt()).to.throw();
-            expect(() => reverseMachine.decrypt('lala')).to.throw();
-            expect(() => reverseMachine.decrypt(undefined, 'key')).to.throw();
-            expect(() => reverseMachine.decrypt()).to.throw();
+        it.optional('must throw an Error if no args', function() {
+          let res = null;
+            try {
+              directMachine.encrypt('lala');
+              directMachine.encrypt(undefined, 'key');
+              directMachine.encrypt();
+              reverseMachine.encrypt('lala');
+              reverseMachine.encrypt(undefined, 'key');
+              reverseMachine.encrypt();
+              directMachine.decrypt('lala');
+              directMachine.decrypt(undefined, 'key');
+              directMachine.decrypt();
+              reverseMachine.decrypt('lala');
+              reverseMachine.decrypt(undefined, 'key');
+              reverseMachine.decrypt();
+            } catch(err) {
+                if (err._validationProp === 'NA') {
+                    this.skip();
+                  } else {
+                    res = 'THROWN';
+                  }
+            }
+            assert.equal(res, 'THROWN');
         });
         
         it.optional('base encryption', () => {

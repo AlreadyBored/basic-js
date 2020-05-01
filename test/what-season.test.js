@@ -12,6 +12,7 @@ describe('What season', () => {
     describe('variable presence', () => {
         it.optional('function getSeason exists', () => {
             expect(getSeason).to.exist;
+            expect(getSeason).to.be.instanceOf(Function);
         });
     });
 
@@ -72,8 +73,18 @@ describe('What season', () => {
             expect(getSeason(autumn)).to.match(/autumn|fall/);
         });
 
-        it.optional('corretly handles argument absence', () => {
-            expect(() => getSeason()).to.not.throw(Error);
+        it.optional('corretly handles argument absence', function() {
+            let res = null;
+            try {
+                getSeason();
+            } catch(err) {
+              if (err._validationProp === 'NA') {
+                this.skip();
+              } else {
+                res = 'FAIL';
+              }
+            }
+            assert.equal(res, null);
             assert.equal(getSeason(), 'Unable to determine the time of year!');
         });
 
@@ -181,25 +192,48 @@ describe('What season', () => {
     });
 
     describe('extended requirements ', () => {   
-        it.optional('throws an error on invalid argument', () => {
-            expect(() => getSeason('foo')).to.throw();
-            expect(() => getSeason({ John: 'Smith' })).to.throw();
-            expect(() => getSeason(20192701)).to.throw();
-            expect(() => getSeason([2019, '27', 0 + '1'])).to.throw();
-            expect(() => getSeason(() => new Date())).to.throw();
+        it.optional('throws an error on invalid argument', function() {
+            let res = null;
+            try {
+                getSeason('foo');
+                getSeason({ John: 'Smith' });
+                getSeason(20192701);
+                getSeason([2019, '27', 0 + '1']);
+                getSeason(() => new Date());
+            } catch(err) {
+                if (err._validationProp === 'NA') {
+                  this.skip();
+                } else {
+                  res = 'THROWN';
+                }
+              }
+              assert.equal(res, 'THROWN');
         });
 
-        it.optional('throws an error on tricky moment', () => {
+        it.optional('throws an error on tricky moment', function() {
+            let res = null;
+
             const fakeDate = {
                 toString() {
                     return Date.prototype.toString.call(new Date());
                 }
             };
             Object.setPrototypeOf(fakeDate, Object.getPrototypeOf(new Date()));
-            expect(() => getSeason(fakeDate)).to.throw();
+            try {
+                getSeason(fakeDate)
+            } catch(err) {
+                if (err._validationProp === 'NA') {
+                    this.skip();
+                  } else {
+                    res = 'THROWN';
+                  }
+            }
+            assert.equal(res, 'THROWN');
         });
 
-        it.optional('throws an error on a very tricky moment', () => {
+        it.optional('throws an error on a very tricky moment', function() {
+            let res = null;
+
             const deeperFakeDate = {
                 toString() {
                     return Date.prototype.toString.call(new Date());
@@ -232,7 +266,16 @@ describe('What season', () => {
 
             Object.setPrototypeOf(deeperFakeDate, Object.getPrototypeOf(new Date()));
 
-           expect(() => getSeason(deeperFakeDate)).to.throw();
+            try {
+                getSeason(deeperFakeDate)
+            } catch(err) {
+                if (err._validationProp === 'NA') {
+                    this.skip();
+                  } else {
+                    res = 'THROWN';
+                  }
+            }
+            assert.equal(res, 'THROWN');
         });
     });
 });

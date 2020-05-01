@@ -88,7 +88,7 @@ Both parameters are `numbers`.
 
 `calculateHanoi` function returns an object with 2 properties:
 * `turns` (minimum `number` of turns to solve the puzzle)
-* `seconds` (minimum `number` of **seconds** to solve the puzzle at a given `turnsSpeed`).
+* `seconds` (minimum `number` of **seconds** to solve the puzzle at a given `turnsSpeed`, seconds must be an integer, **rounded down**)
 
 You don't need to validate parameters.
 

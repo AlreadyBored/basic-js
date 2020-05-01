@@ -12,6 +12,7 @@ describe('Transform array', () => {
     describe('variable presence', () => {
         it.optional('function transform exists', () => {
             expect(transform).to.exist;
+            expect(transform).to.be.instanceOf(Function);
         });
     });
 
@@ -22,14 +23,24 @@ describe('Transform array', () => {
             assert.deepStrictEqual((transform([])), []);
         });
 
-        it.optional('throws an Error if arr is not an Array', () => {
-            expect(() => transform(3)).to.throw();
-            expect(() => transform(3.312312)).to.throw();
-            expect(() => transform(false)).to.throw();
-            expect(() => transform(null)).to.throw();
-            expect(() => transform(undefined)).to.throw();
-            expect(() => transform({'foo': 'bar'})).to.throw();
-        })
+        it.optional('throws an Error if arr is not an Array', function() {
+            let res = null;
+            try {
+                transform(3);
+                transform(3.312312);
+                transform(false);
+                transform(null);
+                transform(undefined);
+                transform({'foo': 'bar'});
+            } catch(err) {
+                if (err._validationProp === 'NA') {
+                    this.skip();
+                  } else {
+                    res = 'THROWN';
+                  }
+            }
+            assert.equal(res, 'THROWN');
+        });
 
         it.optional('doesn\'t affect simple arrays', () => {
             for (let i = 0; i < 1000; i += 1) {
