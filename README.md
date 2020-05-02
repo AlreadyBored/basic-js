@@ -202,7 +202,7 @@ Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `
 
 `decrypt` method accepts 2 parameters: `encryptedMessage` (`string` to decode) and `key` (`string`-keyword).
 
-These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` must be thrown.
+These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` must be thrown. The text returned by these methods must be **uppercase**. Machines encrypt and decrypt **only latin alphabet**.
 
 You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except throwing an `Error` on absence of argument for these methods).
 
@@ -230,7 +230,7 @@ Write your code in `src/vigenere-cipher.js`.
 ---
 
 #### Notes
-1. We recommend you to use nodejs of version 10 or lower. If you use any of features, that does not supported by node v10, score won't be submitted.
+1. We recommend you to use nodejs of version 12 or lower. If you use any of features, that does not supported by node v12, score won't be submitted.
 2. Please, be sure that each of your tests is limited to 30 sec.
 
 ---
