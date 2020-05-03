@@ -6,13 +6,13 @@ Object.freeze(assert);
 
 const createDreamTeam = require('../src/dream-team.js');
 
-
 describe('Dream team', () => {
   // Presence requirement
 
   describe('variable presence', () => {
     it.optional('function createDreamTeam exists', () => {
       expect(createDreamTeam).to.exist;
+      expect(createDreamTeam).to.be.instanceOf(Function);  
     });
   });
 
@@ -130,8 +130,18 @@ describe('Dream team', () => {
       assert.equal(createDreamTeam(['Kevin', 'Timothy', 'Jeffrey', 'Albert', 'Laura', 'Karen', 'Steven', 'Diana', 'Sandra', 'Emma']), 'ADEJKKLSST' );
     });
 
-    it.optional('empty team shouldn\'t lead to error', () => {
-      expect(() => createDreamTeam([])).to.not.throw(Error);
+    it.optional('empty team shouldn\'t lead to error', function () {
+      let res = null;
+        try {
+          createDreamTeam([]);
+        } catch(err) {
+          if (err._validationProp === 'NA') {
+            this.skip();
+          } else {
+            res = 'FAIL';
+          }
+        } 
+        assert.equal(res, null);
     });
   });
 

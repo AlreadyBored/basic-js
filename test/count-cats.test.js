@@ -29,6 +29,7 @@ describe('Count cats!', () => {
   describe('variable presence', () => {
     it.optional('function countCats exists', () => {
       expect(countCats).to.exist;
+      expect(countCats).to.be.instanceOf(Function);
     });
   });
 
