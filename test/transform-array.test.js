@@ -43,10 +43,50 @@ describe('Transform array', () => {
         });
 
         it.optional('doesn\'t affect simple arrays', () => {
-            for (let i = 0; i < 1000; i += 1) {
+            for (let i = 0; i < 50; i += 1) {
                 const randArr = createSimpleArr(50);
-                assert.deepStrictEqual((transform(randArr)), randArr);
+                assert.deepStrictEqual(transform(randArr), randArr);
             }
+        });
+
+        it.optional('basic sequence interactions work well', () => {
+            const cases = [
+                ['--discard-prev', 1, 2, 3],
+                ['--double-prev', 1, 2, 3],
+                [1, 2, 3, '--double-next'],
+                [1, 2, 3, '--discard-next']
+            ];
+            
+            cases.forEach(currCase => {
+                assert.deepStrictEqual(transform(currCase), [1, 2, 3]);
+            });
+
+        });
+
+        it.optional('advanced sequence interactions work well', () => {
+            const cases = {
+                doubleDiscarded: {
+                    input: [1, 2, 3, '--discard-next', 1337, '--double-prev', 4, 5],
+                    output: [1, 2, 3, 4, 5]
+                },
+                doubleDoubled: {
+                    input: [1, 2, 3, '--double-next', 1337, '--double-prev', 4, 5],
+                    output: [1, 2, 3, 1337, 1337, 1337, 4, 5]
+                },
+                discardDiscarded: {
+                    input: [1, 2, 3, '--discard-next', 1337, '--discard-prev', 4, 5],
+                    output: [1, 2, 3, 4, 5]
+                },
+                discardDoubled: {
+                    input: [1, 2, 3, '--double-next', 1337, '--discard-prev', 4, 5],
+                    output: [1, 2, 3, 1337, 4, 5]
+                }
+            };
+
+            Object.values(cases).forEach(currCase => {
+                const { input, output } = currCase;
+                assert.deepStrictEqual(transform(input), output);
+            });
         });
 
         it.optional('control sequences work properly', () => {
