@@ -25,9 +25,19 @@ The approximate age of the sample is calculated by measuring the **ratio** of th
 
 [Read about method](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Nuclear_Chemistry/Nuclear_Kinetics/Half-Lives_and_Radioactive_Decay_Kinetics#section_2)
 
+---
+<details>
+  <summary>About calculations</summary>
+  You can use the formula from the article at the link above.
+</details>
+
+---
+
 Your task is to implement the function `dateSample(sampleActivity)` that calculates sample approximate age (in years). Please use given `MODERN_ACTIVITY` and `HALF_LIFE_PERIOD`.
 
-Function parameter `sampleActivity` is a `string`. Calculated sample age must be `number`. Age must be **integer**. Age must be **rounded up**. In case of wrong input parameter **type** or **inadequate** activity value or **absence** of argument function must return `false`.
+Function parameter `sampleActivity` is a `string`. Calculated sample age must be `number`.
+
+Age must be **integer**. Age must be **rounded up** (ceiling). In case of wrong input parameter **type** or **inadequate** activity value or **absence** of argument function must return `false`.
 
 Write your code in `src/carbon-dating.js`.
 
