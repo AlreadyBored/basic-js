@@ -35,8 +35,10 @@ The approximate age of the sample is calculated by measuring the **ratio** of th
 
 ---
 <details>
+
   <summary>About calculations</summary>
   You can use the formula from the article at the link above. 0.693 is an approximation of the natural logarithm of two.
+
 </details>
 
 ---
@@ -81,12 +83,15 @@ Write your code in `src/dream-team.js`.
 Your task is to implement the function `getSeason(date)` that accepts `Date` object and returns the time of the year that matches it.
 Time of the year must be `string`.
 
+---
 <details>
 
 <summary>Seasons in English</summary>
 The names of the seasons in English are: spring, summer, autumn (fall), winter.
 
 </details>
+
+---
 
 If the `date` argument was not passed, the function must return the `string` `'Unable to determine the time of year!'`. If the `date` argument is **invalid**, the function must throw an `Error`.
 
@@ -96,9 +101,9 @@ Shh! An enemy scout has lurked among the arguments that come into this function.
 
 He is guided by the famous proverb: “If it looks like a **duck**, swims like a **duck** and quacks like a **duck**, then it probably is a **duck** (who cares what it **really** is)”. He is **expertly disguised** as a real date, but a clever javascript developer can catch him and `throw` an `Error` just in time!
 
-Form example:
+For example:
 
-`const springDate = new Date(new Date(2020, 02, 31));`
+`const springDate = new Date(2020, 02, 31)`
 
 `getSeason(springDate) => 'spring'`
 
@@ -125,7 +130,7 @@ Both parameters are `numbers`.
 
 `calculateHanoi` function returns an object with 2 properties:
 * `turns` (minimum `number` of turns to solve the puzzle)
-* `seconds` (minimum `number` of **seconds** to solve the puzzle at a given `turnsSpeed`, seconds must be an integer, **rounded down** (floor))
+* `seconds` (minimum `number` of **seconds** to solve the puzzle at a given `turnsSpeed`, seconds must be an integer, obtained  from **rounded down** (floor) calculation result)
 
 You don't need to validate parameters.
 
@@ -243,7 +248,7 @@ Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `
 
 `decrypt` method accepts 2 parameters: `encryptedMessage` (`string` to decode) and `key` (`string`-keyword).
 
-These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` must be thrown. The text returned by these methods must be **uppercase**. Machines encrypt and decrypt **only latin alphabet**.
+These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` must be thrown. The text returned by these methods must be **uppercase**. Machines encrypt and decrypt **only latin alphabet** (all other symbols remain unchanged).
 
 You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except throwing an `Error` on absence of argument for these methods).
 
