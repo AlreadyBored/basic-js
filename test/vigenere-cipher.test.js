@@ -28,7 +28,7 @@ describe('Vigenere cipher', () => {
   //Specific requirements
     describe('base requirements', () => {
         const directMachine = new VigenereCipheringMachine();
-        const reverseMachine = new VigenereCipheringMachine();
+        const reverseMachine = new VigenereCipheringMachine(false);
 
         it.optional('must throw an Error if no args', function() {
           let res = null;
