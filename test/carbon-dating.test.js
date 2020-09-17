@@ -38,6 +38,8 @@ describe('Carbon dating', () => {
       assert.equal(dateSample('ACTIVITY OVER 9000'), false);
       assert.equal(dateSample('one'), false);
       assert.equal(dateSample(''), false);
+      assert.equal(dateSample(' '), false);
+      assert.equal(dateSample(' \n\t\r'), false);
     });
   });
 
