@@ -1,6 +1,3 @@
-const CustomError = require("../extensions/custom-error");
-
-
 module.exports = function dateSample(sampleActivity) {
   if (isNaN(sampleActivity) || sampleActivity <= 0 ||  sampleActivity > 15 || typeof sampleActivity !== 'string') {
     return false;
