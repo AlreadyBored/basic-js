@@ -198,13 +198,12 @@ Your task is to implement the class `DepthCalculator` with method `calculateDept
 For example:
 
 `const depthCalc = new DepthCalculator();`
-`const { calculateDepth } = depthCalc;`
 
-`calculateDepth([1, 2, 3, 4, 5])` => `1`
+`depthCalc.calculateDepth([1, 2, 3, 4, 5])` => `1`
 
-`calculateDepth([1, 2, 3, [4, 5]])` => `2`
+`depthCalc.calculateDepth([1, 2, 3, [4, 5]])` => `2`
 
-`calculateDepth([[[]]])` => `3`
+`depthCalc.calculateDepth([[[]]])` => `3`
 
 Write your code in `src/recursive-depth.js`.
 
