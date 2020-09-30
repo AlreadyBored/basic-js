@@ -3,8 +3,6 @@ let matrix = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 for (let i = 0; i < 25; i++) {
   matrix.push(matrix[i].slice(1) + matrix[i][0])
 }
-
-
 class VigenereCipheringMachine {
   constructor(direct = true) {
     this.direct = direct;
@@ -46,9 +44,4 @@ class VigenereCipheringMachine {
     return this.direct ? res : [...res].reverse().join('');
   }
 }
-
-const directMachine = new VigenereCipheringMachine(); 
-
-console.log(directMachine.encrypt('attack at dawn!', 'alphonse')); //'AEIHQX SX DLLU!'
-console.log(directMachine.decrypt('AEIHQX SX DLLU!', 'alphonse'));
 module.exports = VigenereCipheringMachine;
