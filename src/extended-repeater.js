@@ -22,8 +22,8 @@ module.exports = function repeater(str, options) {
     additionSeparator: "|",
   };
 
-  console.log(options);
-  console.log(repitOptions);
+  /*  console.log(options); */
+  /*   console.log(repitOptions); */
 
   if (typeof options.repeatTimes !== "undefined")
     repitOptions.repeatTimes = options.repeatTimes;
@@ -44,7 +44,7 @@ module.exports = function repeater(str, options) {
   if (options.additionSeparator === null)
     repitOptions.additionSeparator = "null";
 
-  console.log(repitOptions);
+  /* console.log(repitOptions); */
 
   /*
  Параметры str и addition по умолчанию являются строками. В случае, если они другого типа, он должны быть преобразованы к строке.

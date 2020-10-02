@@ -14,11 +14,7 @@ seconds (минимальное число (тип number) секунд, нео�
 
   let numSteps = Math.pow(2, disksNumber) - 1;
 
-  console.log(numSteps);
-
   let minTime = Math.floor((numSteps / turnsSpeed) * 60 * 60);
-
-  console.log(minTime);
 
   return { turns: numSteps, seconds: minTime };
 };
