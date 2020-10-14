@@ -1,7 +1,7 @@
 const CustomError = require("../extensions/custom-error");
 
-module.exports =
-    function transform(arr) {
+module.exports = function transform(arr) {
+        Array.isArray(arr);
         var newArr;
         newArr = arr.map((element, index) => {
             if (arr[index + 1] === '--double-prev') {
@@ -26,16 +26,9 @@ module.exports =
 
 
         });
-        return newArr;
-        /*  console.log(arr); */
+        return arr;
+
     }
-
-/* const arr =
-    for (let i = 0; i < 50; i += 1) {
-        const randArr = createSimpleArr(50);
-        assert.deepStrictEqual(transform(randArr), randArr);
-    }; */
-
-/* transform([1, 2, '--double-prev', 3, 4, '--discard-next', 5,
-    6, '--discard-prev', 7, 8, '--double-next', 9, 10
-]); */
+    /* transform([1, 2, '--double-prev', 3, 4, '--discard-next', 5,
+        6, '--discard-prev', 7, 8, '--double-next', 9, 10
+    ]); */
