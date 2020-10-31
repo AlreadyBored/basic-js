@@ -11,6 +11,4 @@ module.exports = function createDreamTeam(members) {
   string=newArray.sort().join('')
   return string
 
-
-
 };
