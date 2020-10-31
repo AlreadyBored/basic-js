@@ -36,24 +36,3 @@ module.exports = function getSeason(date) {
   }
 };
 
-
-// function getSeason(date) {
-//   console.log(typeof date);
-//   if ((typeof date) == 'Date') {
-//     if ((0 <= date.getMonth() <= 1) || (date.getMonth() == 11)) {
-//       return 'winter';
-//     } else if (2 <= date.getMonth() <= 4) {
-//       return 'spring';
-//     } else if (5 <= date.getMonth() <= 7) {
-//       return 'summer';
-//     } else if (8 <= date.getMonth() <= 10) {
-//       return 'autumn';
-//     } else {
-//       return 'Error';
-//     }
-//   } else {
-//     return 'Unable to determine the time of year!';
-//   }
-// };
-
-// getSeason(new Date(2019, 11, 22, 23, 45, 11, 500));
