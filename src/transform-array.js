@@ -19,8 +19,8 @@ module.exports = function transform(arr) {
         break;
       default:
         NewArr.push(arr[i]);
-    }
-  }
+ //   }
+ // }
   return NewArr;
 
 };

@@ -42,8 +42,8 @@ class VigenereCipheringMachine {
             else arr.push(encryptedMessage[i]);         
         }
         if(this.is_direct == false) arr.reverse();
-        return arr.join("");       
-    }
+  //      return arr.join("");       
+  //  }
 }
 
 module.exports = VigenereCipheringMachine;
