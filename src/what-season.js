@@ -1,5 +1,6 @@
 module.exports = function getSeason(date) {
 
+<<<<<<< HEAD
   let month = date.getMonth();
   //console.log(test);
   //console.log(n);
@@ -27,4 +28,16 @@ module.exports = function getSeason(date) {
   if ( arr[1] == 'Sep' || arr[1] == 'Oct' || arr[1] == 'Nov') return 'autumn'
   
 */
+=======
+  if (date === undefined) return 'Unable to determine the time of year!'
+  
+  if( !date.getMilliseconds()) {throw Error}
+  let x = date.getMonth();
+
+  if ( x == 11 || x == 1 || x == 0) return 'winter'
+  if ( x == 2 || x == 3 || x == 4) return 'spring'
+  if ( x == 5 || x == 6 || x == 7) return 'summer'
+  if ( x == 8 || x == 9 || x == 10) return 'autumn'
+  
+>>>>>>> 8b487667a0b3207317e2e884cdc4bb9c6265f3de
 };
