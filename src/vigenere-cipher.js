@@ -7,7 +7,7 @@ class VigenereCipheringMachine {
         if(arguments.length <=1) throw new Error();
         message = message.toUpperCase();
         key = key.toUpperCase();
-        let Narr = [];                  //N
+        let arr = [];                
         let len = message.length;
         let index = 0; //current key index
         for(let i = 0; i < len; i++) {
