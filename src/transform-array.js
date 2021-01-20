@@ -1,7 +1,7 @@
 module.exports = function transform(arr) {
     if (arr.length < 1) return [];
     if (!Array.isArray(arr)) throw new Error('not an array');
-    const NNewArr = [];
+    const NNewArr = [];         //N
 
   for (let i = 0; i < arr.length; i++) {
     switch (arr[i]) {
