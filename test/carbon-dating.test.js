@@ -45,7 +45,7 @@ describe('Carbon dating', () => {
 
   describe('functional requirements ', () => {
 
-    it.optional('passes simpliest check and determines correct tests', () => {
+    describe('passes simpliest check and determines correct tests', () => {
       const isLogCalculated = dateSample('1') === 22387 ? true : false;
 
       if (isLogCalculated) {
