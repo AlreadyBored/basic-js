@@ -5,7 +5,7 @@ module.exports = function createDreamTeam(members) {
     return false;
   }
 
-  let dreamNames = []
+  let dreamNames = [];
 
   for (let i = 0; i < members.length; i++) {
     if (typeof members[i] === 'string') {
@@ -20,4 +20,4 @@ module.exports = function createDreamTeam(members) {
   }
 
   return firstLetters.sort().join('');
-  }
+}
