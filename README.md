@@ -157,7 +157,7 @@ For example:
 
 `transform([1, 2, 3, '--discard-prev', 4, 5])` => `[1, 2, 4, 5]`
 
-The function must not affect inital array. Control sequences are applied **from left to right**. Control sequences **do not fall** into the transformed array. Control sequences in initial array don't occur in a row. If there is **no element** next to the control sequence **to which it can be applied**, **it does nothing**. The function should throw an `Error` if the `arr` is not an `Array`.
+The function must not affect inital array. Control sequences are applied **from left to right** to initial array elements. Control sequences **do not fall** into the transformed array. Control sequences in initial array don't occur in a row. If there is **no element** next to the control sequence **to which it can be applied** in the initial array, or this element was previously deleted, **it does nothing**. The function should throw an `Error` if the `arr` is not an `Array`.
 
 Write your code in `src/transform-array.js`.
 
