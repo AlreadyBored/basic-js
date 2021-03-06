@@ -1,9 +1,25 @@
-const CustomError = require("../extensions/custom-error");
-
 const MODERN_ACTIVITY= 15; 
 const HALF_LIFE_PERIOD= 5730;
+const APPROXIMATION_LN = 0.693;
 
-module.exports = function dateSample(/* sampleActivity */) {
-  throw new CustomError('Not implemented');
-  // remove line with error and write your code here
+function check_activity(value) {
+  if (typeof value !== 'string') return false
+
+  let activity = parseFloat(value)
+  if (isNaN(activity) || 
+      activity > MODERN_ACTIVITY || 
+      activity <= 0) 
+      return false    
+
+  return activity
+}
+
+module.exports = function dateSample(sampleActivity) {
+  if (!check_activity(sampleActivity)) return false
+
+  var activities = Math.log(MODERN_ACTIVITY / +sampleActivity)
+  var reaction_rate = APPROXIMATION_LN / HALF_LIFE_PERIOD
+  return Math.ceil(activities / reaction_rate)
 };
+
+
