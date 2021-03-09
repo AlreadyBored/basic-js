@@ -8,12 +8,12 @@ if (!Array.isArray(arr)){
 
 // let arrTrans=[],
 transArray=[...arr],
- arr
+
 //  .filter(e=>e!==(arr[0]==='--discard-prev'))
- .forEach((e,i)=>e==='--discard-next'? arr.splice(i+1, 1): 
- e==='--discard-prev'? arr.splice(i-1, 1):
-  e==='--double-prev'? arr.splice(i, 1, arr[i-1]):
-e==='--double-next'? arr.splice(i, 1, arr[i+1]) :e )
+transArray.forEach((e,i)=>e==='--discard-next'? transArray.splice(i+1, 1): 
+ e==='--discard-prev'? transArray.splice(i-1, 1):
+  e==='--double-prev'? transArray.splice(i, 1, transArray[i-1]):
+e==='--double-next'? transArray.splice(i, 1, transArray[i+1]) :e )
 
 
 
