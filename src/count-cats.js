@@ -1,11 +1,8 @@
 const CustomError = require("../extensions/custom-error");
-// let number=0;
+
 module.exports = function countCats(backyard) {
   //  throw new CustomError('Not implemented');
-  // let number=0;
- let gh=backyard.flat()
- let array=gh.filter(i=>i==="^^")
- number=array.length
+  let number=0
+    number=backyard.flat().filter(i=>i==="^^").length
    return number
 };
-// return number
