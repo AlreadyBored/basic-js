@@ -3,23 +3,29 @@
 const chainMaker = {
   array: [],
   getLength() {
-    // return this.array.lenght
+    return this.array.lenght
   },
   addLink(value) {
-    throw new CustomError('Not implemented');
-    // remove line with error and write your code here
+         
+     this.array.push(`( ${value} )`)
+     return this
   },
   removeLink(position) {
-    throw new CustomError('Not implemented');
-    // remove line with error and write your code here
+      if( typeof position !=="number"  || position>this.array.lenght){
+        this.array=[]
+           throw new Error('THROWN')
+      }
+      this.array.splice(position-1, 1)
+      return this
   },
   reverseChain() {
-    throw new CustomError('Not implemented');
-    // remove line with error and write your code here
+            this.array=this.array.reverse()
+             return this
   },
   finishChain() {
-    throw new CustomError('Not implemented');
-    // remove line with error and write your code here
+    let string=this.array.join('~~')
+     this.array=[]
+    return string
   }
 };
 
