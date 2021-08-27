@@ -1,10 +1,11 @@
-const chai = require('chai');
-const { expect, assert } = chai;
-it.optional = require('../extensions/it-optional');
+import { expect, assert } from 'chai';
+import { testOptional } from '../extensions/index.js';
+import countCats from '../src/count-cats.js';
 
+it.optional = testOptional;
+
+Object.freeze(expect);
 Object.freeze(assert);
-
-const countCats = require('../src/count-cats.js');
 
 const fakeRandom = ({ rows, cols, stringSet }) => {
   const stringSetLength = stringSet.length;
@@ -73,7 +74,7 @@ describe('Count cats!', () => {
     });
   });
 
-  describe('functional requirements', () => {   
+  describe('functional requirements', () => {
     it.optional('level 1', () => {
       assert.equal(countCats([
         ["^^", ".", null, 0, false, "", NaN, "^^", 2, true, "dasdas", 1],
@@ -85,7 +86,7 @@ describe('Count cats!', () => {
         [null, 1, NaN, true, ".", "^^", "^^", 2, "", false, "dasdas", 0],
         [null, NaN, "", false, ".", 1, 0, "^^", "dasdas", true, 2, "^^"],
       ]), 16);
-     });
+    });
 
     it.optional('level 2', () => {
       assert.equal(countCats([

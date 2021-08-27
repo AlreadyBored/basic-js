@@ -1,12 +1,13 @@
-const chai = require('chai');
-const { expect, assert } = chai;
-it.optional = require('../extensions/it-optional');
-const { checkForThrowingErrors, checkForNotThrowingErrors } = require('../extensions/check-error');
-const { CORRECT_RESULT_MSG, INCORRECT_RESULT_MSG } = require('../extensions/constants');
+import { expect, assert } from 'chai';
+import { testOptional, checkForThrowingErrors, checkForNotThrowingErrors, CONSTANTS } from '../extensions/index.js';
+import getSeason from '../src/what-season.js';
 
+const { CORRECT_RESULT_MSG, INCORRECT_RESULT_MSG } = CONSTANTS;
+
+it.optional = testOptional;
+
+Object.freeze(expect);
 Object.freeze(assert);
-
-const getSeason = require('../src/what-season.js');
 
 describe('What season', () => {
     // Presence requirement

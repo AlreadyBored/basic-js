@@ -1,14 +1,12 @@
-const CustomError = require("../extensions/custom-error");
+import { NotImplementedError } from '../extensions/index.js';
 
-class VigenereCipheringMachine {
+export default class VigenereCipheringMachine {
   encrypt() {
-    throw new CustomError('Not implemented');
+    throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
-  }    
+  }
   decrypt() {
-    throw new CustomError('Not implemented');
+    throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
 }
-
-module.exports = VigenereCipheringMachine;

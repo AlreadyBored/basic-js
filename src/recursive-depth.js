@@ -1,8 +1,8 @@
-const CustomError = require("../extensions/custom-error");
+import { NotImplementedError } from '../extensions/index.js';
 
-module.exports = class DepthCalculator {
+export default class DepthCalculator {
   calculateDepth(/* arr */) {
-    throw new CustomError('Not implemented');
+    throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
-};
+}

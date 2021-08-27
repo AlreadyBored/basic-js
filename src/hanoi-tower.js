@@ -1,6 +1,6 @@
-const CustomError = require("../extensions/custom-error");
+import { NotImplementedError } from '../extensions/index.js';
 
-module.exports = function calculateHanoi(/* disksNumber, turnsSpeed */) {
-  throw new CustomError('Not implemented');
+export default function calculateHanoi(/* disksNumber, turnsSpeed */) {
+  throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
-};
+}
