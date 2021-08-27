@@ -276,20 +276,20 @@ Write your code in `src/vigenere-cipher.js`.
 4. Go to folder `basic-js`  
 5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
 6. Run `npm run test` in command line.
-7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to 100p in score  
+7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to max score for the task
 
 ---
 
 #### Submit to [rs app](https://app.rs.school)
 1. Open [rs app](https://app.rs.school) and login
-2. Go to [submit task page](https://app.rs.school/course/student/auto-test?course=rs-2020-q3)
+2. Go to submit task page
 3. Select your task (BasicJS)
 4. Press the submit button and enjoy
 
 ---
 
 #### Notes
-1. We recommend you to use nodejs of version 12 or lower. If you use any of features, that does not supported by node v12, there may be problems with task submit.
+1. We recommend you to use Node.js of version 14.x.x LTS. If you use any of features, that does not supported by Node.js v14, there may be problems with task submit.
 2. Please, be sure that each of your tests is limited to 30 sec.
 
 ---
