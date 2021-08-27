@@ -1,11 +1,13 @@
-const chai = require('chai');
-const { expect, assert } = chai;
-const sinon = require('sinon');
-it.optional = require('../extensions/it-optional');
+import { expect, assert } from 'chai';
+import sinon from 'sinon';
+import { testOptional } from '../extensions/index.js';
+import DepthCalculator from '../src/recursive-depth.js';
 
+it.optional = testOptional;
+
+Object.freeze(expect);
 Object.freeze(assert);
 
-const DepthCalculator = require('../src/recursive-depth.js');
 const instance = new DepthCalculator();
 const calculateDepth = instance.calculateDepth.bind(instance);
 

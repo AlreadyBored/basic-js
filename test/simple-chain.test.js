@@ -1,12 +1,13 @@
-const chai = require('chai');
-const { expect, assert } = chai;
-it.optional = require('../extensions/it-optional');
-const { checkForThrowingErrors } = require('../extensions/check-error');
-const { CORRECT_RESULT_MSG } = require('../extensions/constants');
+import { expect, assert } from 'chai';
+import { testOptional, checkForThrowingErrors, CONSTANTS } from '../extensions/index.js';
+import chainMaker from '../src/simple-chain.js';
 
+const { CORRECT_RESULT_MSG } = CONSTANTS;
+
+it.optional = testOptional;
+
+Object.freeze(expect);
 Object.freeze(assert);
-
-const chainMaker = require('../src/simple-chain.js');
 
 describe('Make chain!', () => {
     //Presence requirement

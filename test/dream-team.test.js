@@ -1,12 +1,13 @@
-const chai = require('chai');
-const { expect, assert } = chai;
-it.optional = require('../extensions/it-optional');
-const { checkForNotThrowingErrors } = require('../extensions/check-error');
-const { INCORRECT_RESULT_MSG } = require('../extensions/constants');
+import { expect, assert } from 'chai';
+import { testOptional, checkForNotThrowingErrors, CONSTANTS } from '../extensions/index.js';
+import createDreamTeam from '../src/dream-team.js';
 
+const { INCORRECT_RESULT_MSG } = CONSTANTS;
+
+it.optional = testOptional;
+
+Object.freeze(expect);
 Object.freeze(assert);
-
-const createDreamTeam = require('../src/dream-team.js');
 
 describe('Dream team', () => {
   // Presence requirement
