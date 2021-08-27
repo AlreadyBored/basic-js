@@ -1,8 +1,10 @@
-const CustomError = class CustomError extends Error {
+const { SPECIAL_PROP_VALUE } = require('./constants');
+
+const NotImplementedError = class NotImplementedError extends Error {
     constructor(message) {
         super(message);
-        this._validationProp = 'NA';
+        this._specialProp = SPECIAL_PROP_VALUE;
     }
 };
 
-module.exports = CustomError;
+module.exports = NotImplementedError;

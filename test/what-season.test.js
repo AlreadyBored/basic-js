@@ -1,6 +1,8 @@
 const chai = require('chai');
 const { expect, assert } = chai;
 it.optional = require('../extensions/it-optional');
+const { checkForThrowingErrors, checkForNotThrowingErrors } = require('../extensions/check-error');
+const { CORRECT_RESULT_MSG, INCORRECT_RESULT_MSG } = require('../extensions/constants');
 
 Object.freeze(assert);
 
@@ -19,18 +21,18 @@ describe('What season', () => {
     //Specific requirements
 
     describe('base requirements', () => {
-        it.optional('returns proper value', () => {   
-            const [ 
-                winter, 
-                spring, 
-                summer, 
+        it.optional('returns proper value', () => {
+            const [
+                winter,
+                spring,
+                summer,
                 autumn,
             ] = [
-                new Date(2019, 11, 22, 23, 45, 11, 500),
-                new Date(2018, 4, 17, 11, 27, 4, 321),
-                new Date(2017, 6, 11, 23, 45, 11, 500),
-                new Date(1994, 8, 26, 3, 0, 11, 500),
-            ];
+                    new Date(2019, 11, 22, 23, 45, 11, 500),
+                    new Date(2018, 4, 17, 11, 27, 4, 321),
+                    new Date(2017, 6, 11, 23, 45, 11, 500),
+                    new Date(1994, 8, 26, 3, 0, 11, 500),
+                ];
             assert.equal(getSeason(winter), 'winter');
             assert.equal(getSeason(spring), 'spring');
             assert.equal(getSeason(summer), 'summer');
@@ -38,17 +40,17 @@ describe('What season', () => {
         });
 
         it.optional('returns proper value if date is before 1970', () => {
-            const [ 
-                winter, 
-                spring, 
-                summer, 
+            const [
+                winter,
+                spring,
+                summer,
                 autumn,
             ] = [
-                new Date(1900, 0, 22, 23, 45, 11, 500),
-                new Date(1354, 4, 17, 11, 27, 4, 321),
-                new Date(1, 6, 13, 23, 45, 11, 500),
-                new Date(22, 8, 22, 3, 0, 11, 500),
-            ];
+                    new Date(1900, 0, 22, 23, 45, 11, 500),
+                    new Date(1354, 4, 17, 11, 27, 4, 321),
+                    new Date(1, 6, 13, 23, 45, 11, 500),
+                    new Date(22, 8, 22, 3, 0, 11, 500),
+                ];
             assert.equal(getSeason(winter), 'winter');
             assert.equal(getSeason(spring), 'spring');
             assert.equal(getSeason(summer), 'summer');
@@ -56,35 +58,28 @@ describe('What season', () => {
         });
 
         it.optional('returns proper value (month index)', () => {
-            const [ 
-                winter, 
-                spring, 
-                summer, 
+            const [
+                winter,
+                spring,
+                summer,
                 autumn,
             ] = [
-                new Date(2025, 1, 22, 23, 45, 11, 500),
-                new Date(2134, 2, 17, 11, 27, 4, 321),
-                new Date(2012, 5, 13, 23, 45, 11, 500),
-                new Date(2019, 8, 22, 3, 0, 11, 500),
-            ];
+                    new Date(2025, 1, 22, 23, 45, 11, 500),
+                    new Date(2134, 2, 17, 11, 27, 4, 321),
+                    new Date(2012, 5, 13, 23, 45, 11, 500),
+                    new Date(2019, 8, 22, 3, 0, 11, 500),
+                ];
             assert.equal(getSeason(winter), 'winter');
             assert.equal(getSeason(spring), 'spring');
             assert.equal(getSeason(summer), 'summer');
             expect(getSeason(autumn)).to.match(/autumn|fall/);
         });
 
-        it.optional('corretly handles argument absence', function() {
-            let res = null;
-            try {
-                getSeason();
-            } catch(err) {
-              if (err._validationProp === 'NA') {
-                this.skip();
-              } else {
-                res = 'FAIL';
-              }
-            }
-            assert.equal(res, null);
+        it.optional('corretly handles argument absence', function () {
+            const res = checkForNotThrowingErrors.call(this, [
+                () => getSeason()
+            ]);
+            assert.equal(res.includes(INCORRECT_RESULT_MSG), false);
             assert.equal(getSeason(), 'Unable to determine the time of year!');
         });
 
@@ -191,49 +186,36 @@ describe('What season', () => {
         });
     });
 
-    describe('extended requirements ', () => {   
-        it.optional('throws an error on invalid argument', function() {
-            let res = null;
-            try {
-                getSeason('foo');
-                getSeason({ John: 'Smith' });
-                getSeason(20192701);
-                getSeason([2019, '27', 0 + '1']);
-                getSeason(() => new Date());
-            } catch(err) {
-                if (err._validationProp === 'NA') {
-                  this.skip();
-                } else {
-                  res = 'THROWN';
-                }
-              }
-              assert.equal(res, 'THROWN');
+    describe('extended requirements ', () => {
+        it.optional('throws an error with message "Invalid date!" on invalid argument', function () {
+            const res = checkForThrowingErrors.call(this, [
+                () => getSeason('foo'),
+                () => getSeason({ John: 'Smith' }),
+                () => getSeason(20192701),
+                () => getSeason([2019, '27', 0 + '1']),
+                () => getSeason(() => new Date())
+            ], 'Invalid date!');
+
+            assert.strictEqual(res.every($ => $ === CORRECT_RESULT_MSG), true);
         });
 
-        it.optional('throws an error on tricky moment', function() {
-            let res = null;
-
+        it.optional('throws an error with message "Invalid date!" on tricky moment', function () {
             const fakeDate = {
                 toString() {
                     return Date.prototype.toString.call(new Date());
                 }
             };
+
             Object.setPrototypeOf(fakeDate, Object.getPrototypeOf(new Date()));
-            try {
-                getSeason(fakeDate)
-            } catch(err) {
-                if (err._validationProp === 'NA') {
-                    this.skip();
-                  } else {
-                    res = 'THROWN';
-                  }
-            }
-            assert.equal(res, 'THROWN');
+
+            const res = checkForThrowingErrors.call(this, [
+                () => getSeason(fakeDate)
+            ], 'Invalid date!');
+
+            assert.strictEqual(res.every($ => $ === CORRECT_RESULT_MSG), true);
         });
 
-        it.optional('throws an error on a very tricky moment', function() {
-            let res = null;
-
+        it.optional('throws an error with message "Invalid date!" on a very tricky moment', function () {
             const deeperFakeDate = {
                 toString() {
                     return Date.prototype.toString.call(new Date());
@@ -266,16 +248,11 @@ describe('What season', () => {
 
             Object.setPrototypeOf(deeperFakeDate, Object.getPrototypeOf(new Date()));
 
-            try {
-                getSeason(deeperFakeDate)
-            } catch(err) {
-                if (err._validationProp === 'NA') {
-                    this.skip();
-                  } else {
-                    res = 'THROWN';
-                  }
-            }
-            assert.equal(res, 'THROWN');
+            const res = checkForThrowingErrors.call(this, [
+                () => getSeason(deeperFakeDate)
+            ], 'Invalid date!');
+
+            assert.strictEqual(res.every($ => $ === CORRECT_RESULT_MSG), true);
         });
     });
 });

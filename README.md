@@ -93,13 +93,13 @@ The names of the seasons in English are: spring, summer, autumn (fall), winter.
 
 ---
 
-If the `date` argument was not passed, the function must return the `string` `'Unable to determine the time of year!'`. If the `date` argument is **invalid**, the function must throw an `Error`.
+If the `date` argument was not passed, the function must return the `string` `'Unable to determine the time of year!'`. If the `date` argument is **invalid**, the function must throw an `Error` with message `Invalid date!`.
 
 Shh! An enemy scout has lurked among the arguments that come into this function.
 
 ![Disguised](https://www.famousbirthdays.com/faces/disguised-toast-image.jpg)
 
-He is guided by the famous proverb: “If it looks like a **duck**, swims like a **duck** and quacks like a **duck**, then it probably is a **duck** (who cares what it **really** is)”. He is **expertly disguised** as a real date, but a clever javascript developer can catch him and `throw` an `Error` just in time!
+He is guided by the famous proverb: “If it looks like a **duck**, swims like a **duck** and quacks like a **duck**, then it probably is a **duck** (who cares what it **really** is)”. He is **expertly disguised** as a real date, but a clever javascript developer can catch him and `throw` an `Error` with message `Invalid date!` just in time!
 
 For example:
 
@@ -157,7 +157,7 @@ For example:
 
 `transform([1, 2, 3, '--discard-prev', 4, 5])` => `[1, 2, 4, 5]`
 
-The function must not affect inital array. Control sequences are applied **from left to right** to initial array elements. Control sequences **do not fall** into the transformed array. Control sequences in initial array don't occur in a row. If there is **no element** next to the control sequence **to which it can be applied** in the initial array, or this element was previously deleted, **it does nothing**. The function should throw an `Error` if the `arr` is not an `Array`.
+The function must not affect inital array. Control sequences are applied **from left to right** to initial array elements. Control sequences **do not fall** into the transformed array. Control sequences in initial array don't occur in a row. If there is **no element** next to the control sequence **to which it can be applied** in the initial array, or this element was previously deleted, **it does nothing**. The function should throw an `Error` with message `'arr' parameter must be an instance of the Array!` if the `arr` is not an `Array`.
 
 Write your code in `src/transform-array.js`.
 
@@ -174,7 +174,7 @@ The `chainMaker` has several **methods** for creating chains and modifying them:
 * `reverseChain` reverses the chain;
 * `finishChain` ends the chain and `returns` it.
 
-`addLink`, `reverseChain` and `removeLink` methods are **chainable**, while the another ones are not. If `addLink` is called with no arguments, it adds an empty link (`'(  )'`) to the chain. If `removeLink` accepts **invalid** `position` (e.g. not a number, or a fractional number, or corresponding to a nonexistent link), it must throw an `Error`. After calling the `finishChain` method, the existing chain must be deleted, as if an `Error` was thrown.
+`addLink`, `reverseChain` and `removeLink` methods are **chainable**, while the another ones are not. If `addLink` is called with no arguments, it adds an empty link (`'(  )'`) to the chain. If `removeLink` accepts **invalid** `position` (e.g. not a number, or a fractional number, or corresponding to a nonexistent link), it must throw an `Error` with message `You can't remove incorrect link!`. After calling the `finishChain` method, the existing chain must be deleted, as if an `Error` was thrown.
 
 For example:
 
@@ -247,7 +247,7 @@ Each instance of `VigenereCipheringMachine` must have 2 methods: `encrypt` and `
 
 `decrypt` method accepts 2 parameters: `encryptedMessage` (`string` to decode) and `key` (`string`-keyword).
 
-These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` must be thrown. The text returned by these methods must be **uppercase**. Machines encrypt and decrypt **only latin alphabet** (all other symbols remain unchanged).
+These parameters for both methods are **mandatory**. If at least one of them has not been given, an `Error` with message `Incorrect arguments!` must be thrown. The text returned by these methods must be **uppercase**. Machines encrypt and decrypt **only latin alphabet** (all other symbols remain unchanged).
 
 You don't need to validate value sent to `constructor` and to `encrypt` and `decrypt` methods (except throwing an `Error` on absence of argument for these methods).
 
