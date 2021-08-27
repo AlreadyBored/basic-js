@@ -11,7 +11,7 @@ import { NotImplementedError } from '../extensions/index.js';
  * For n = 152, the output should be 52
  *
  */
-export default function (/* n */) {
+export default function deleteDigit(/* n */) {
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 }
