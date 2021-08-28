@@ -23,7 +23,7 @@ import { NotImplementedError } from '../extensions/index.js';
  *  [1, 1, 1]
  * ]
  */
-export default function (/* matrix */) {
+export default function minesweeper (/* matrix */) {
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 }
