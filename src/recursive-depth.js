@@ -1,13 +1,9 @@
 import { NotImplementedError } from '../extensions/index.js';
 
 /**
- * Implement class DepthCalculator with method calculateDeoth
+ * Implement class DepthCalculator with method calculateDepth
  * that calculates deoth of nested array
  * 
- * @param {Array} arr nested array
- * @return {Number} depth of a nested array (flat array depth is 1)
- * 
- *
  * @example
  * 
  * const depthCalc = new DepthCalculator();
