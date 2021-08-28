@@ -325,18 +325,6 @@ Write your code in `src/st-file-names.js`.
 
 ---
 
-### **Find index**
-Your task is to implement function that accepts sorted **array** (`array`) and value (`value`) and returns the index of the element with the given value.  
-Time complexity should be **O(logN)**
-
-For example:
-
-`findIndex([1, 2, 3], 1) => 0`
-
-Write your code in `src/st-find-index.js`.
-
----
-
 ### **Get email domain**
 Your task is to implement function that accepts email address (`email`) and returns it's **domain**.  
 
@@ -401,23 +389,6 @@ minesweeper(matrix) => [
 ```
 
 Write your code in `src/st-mine-sweeper.js`.
-
----
-
-### **Queue**
-Implement the **Queue** with a given interface via **linked list** (use `ListNode` extension)
-
-For example:
-
-```js
-const queue = new Queue();
-
-queue.enqueue(1); // adds the element to the queue
-queue.enqueue(3); // adds the element to the queue
-queue.dequeue(); // returns the top element from queue and deletes it, returns 1
-```
-
-Write your code in `src/st-queue.js`.
 
 ---
 
