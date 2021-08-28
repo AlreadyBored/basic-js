@@ -269,6 +269,221 @@ Write your code in `src/vigenere-cipher.js`.
 
 ---
 
+### **Common character count**
+Your task is to implement function that accepts two **strings** (`s1` and `s2`) and returns **number** of common characters between them.
+
+For example:
+
+`getCommonCharacterCount('aabcc', 'adcaa') => 3`
+
+Write your code in `src/st-common-character-count.js`.
+
+---
+
+### **Delete digit**
+Your task is to implement function that accepts **integer number** (`n`) and returns maximal **number** you can obtain by deleting exactly one digit of the given number.
+
+For example:
+
+`deleteDigit(152) => 52`
+
+Write your code in `src/st-delete-digit.js`.
+
+---
+
+### **DNS stat**
+Your task is to implement function that accepts an **array** of domains (`domains`) and returns the **object** with the appearances of the DNS.
+
+For example:
+
+`getDNSStats(['code.yandex.ru', 'music.yandex.ru', 'yandex.ru']) => {'.ru': 3, '.ru.yandex': 3, '.ru.yandex.code': 1,'.ru.yandex.music': 1}`
+
+Write your code in `src/st-dns-stats.js`.
+
+---
+
+### **Encode line**
+Your task is to implement function that accepts **string** (`str`) and returns its encoded version.
+
+For example:
+
+`encodeLine('aabbbc') => '2a3bc'`
+
+Write your code in `src/st-encode-line.js`.
+
+---
+
+### **File names**
+There's a list of file, since two files cannot have equal names, the one which comes later will have a suffix **(k)**, where k is the smallest **integer** such that the found name is not used yet.
+Your task is to implement function that accepts **array** of names (`names`) and returns an **array** of names that will be given to the files.
+
+For example:
+
+`renameFiles(["file", "file", "image", "file(1)", "file"]) => ["file", "file(1)", "image", "file(1)(1)", "file(2)"]`
+
+Write your code in `src/st-file-names.js`.
+
+---
+
+### **Find index**
+Your task is to implement function that accepts sorted **array** (`array`) and value (`value`) and returns the index of the element with the given value.  
+Time complexity should be **O(logN)**
+
+For example:
+
+`findIndex([1, 2, 3], 1) => 0`
+
+Write your code in `src/st-find-index.js`.
+
+---
+
+### **Get email domain**
+Your task is to implement function that accepts email address (`email`) and returns it's **domain**.  
+
+For example:
+
+`getEmailDomain('prettyandsimple@example.com') => 'example.com'`
+
+Write your code in `src/st-get-email-domain.js`.
+
+---
+
+### **Is MAC-48 Adress?**
+The MAC-48 address is six groups of two hexadecimal digits (0 to 9 or A to F) separated by hyphens.
+Your task is to implement function that accepts string (`inputString`) and returns true if string is valid MAC-48 adress.  
+
+For example:
+
+`isMAC48Address('00-1B-63-84-45-E6') => true`
+
+Write your code in `src/st-mac-adress.js`.
+
+---
+
+### **Matrix elements sum**
+Given **matrix**, a rectangular matrix of **integers**, just add up all the values that **don't appear below a "0"**.
+
+For example:
+
+```
+const matrix = [
+ [0, 1, 1, 2],
+ [0, 5, 0, 0],
+ [2, 0, 3, 3]
+];
+
+getMatrixElementsSum(matrix) => 9
+```
+
+Write your code in `src/st-matrix-elements-sum.js`.
+
+---
+
+### **Minesweeper**
+In the popular Minesweeper game you have a board with some mines and those cells that don't contain a mine have a **number** in it that indicates the total **number of mines** in the neighboring cells. Starting off with some arrangement of mines we want to create a Minesweeper game setup.
+
+For example:
+
+For example:
+
+```
+const matrix = [
+ [true, false, false],
+ [false, true, false],
+ [false, false, false]
+];
+
+minesweeper(matrix) => [
+ [1, 2, 1],
+ [2, 1, 1],
+ [1, 1, 1]
+];
+```
+
+Write your code in `src/st-mine-sweeper.js`.
+
+---
+
+### **Queue**
+Implement the **Queue** with a given interface via **linked list** (use `ListNode` extension)
+
+For example:
+
+```js
+const queue = new Queue();
+
+queue.enqueue(1); // adds the element to the queue
+queue.enqueue(3); // adds the element to the queue
+queue.dequeue(); // returns the top element from queue and deletes it, returns 1
+```
+
+Write your code in `src/st-queue.js`.
+
+---
+
+### **Remove from list**
+Given a singly linked list of integers `l` and an integer `k`, remove all elements from list `l` that have a value equal to `k`.
+
+For example, for `l` = `[3, 1, 2, 3, 4, 5]` and `k` = `3`,
+the output should be `[1, 2, 4, 5]`
+
+Singly - **linked lists** are already defined with this interface
+
+```js
+function ListNode(x) {
+  this.value = x;
+  this.next = null;
+}
+```
+
+Write your code in `src/st-remove-from-list.js`.
+
+---
+
+### **Sort by height**
+Given an array with heights, sort them except if the value is `-1`.
+Your task is to implement function that accepts **array** (`arr`) and returns it **sorted**
+
+For example:
+
+`sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]) => [-1, 150, 160, 170, -1, -1, 180, 190]`
+
+Write your code in `src/st-sort-by-height.js`.
+
+---
+
+### **Stack**
+Implement the **Stack** with a given interface via **array**.
+
+For example:
+
+```js
+const stack = new Stack();
+
+stack.push(1); // adds the element to the stack
+stack.peek(); // returns the peek, but doesn't delete it, returns 1
+stack.pop(); // returns the top element from stack and deletes it, returns 1
+stack.pop(); // undefined
+```
+
+Write your code in `src/st-stack.js`.
+
+---
+
+### **Sum digits**
+Your task is to implement function that accepts a **number** (`n`) and returns the **sum of its digits** until we get to a **one digit number**.  
+
+For example:
+
+For 100, the result should be 1 (1 + 0 + 0 = 1)  
+`getSumOfDigits(100) => 1`
+For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)  
+`getSumOfDigits(91) => 1`
+
+Write your code in `src/st-sum-digits.js`.
+
+---
+
 #### Prerequisites
 1. Install [Node.js](https://nodejs.org/en/download/)   
 2. Fork this repository: https://github.com/AlreadyBored/basic-js
