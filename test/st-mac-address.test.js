@@ -6,7 +6,7 @@ it.optional = testOptional;
 
 Object.freeze(assert);
 
-describe('06-mac-address', () => {
+describe('st-mac-address', () => {
   it.optional('should check if a given string corresponds to MAC-48 address or not', () => {
     assert.strictEqual(isMAC48Address('00-1B-63-84-45-E6'), true);
     assert.strictEqual(isMAC48Address('Z1-1B-63-84-45-E6'), false);
