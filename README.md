@@ -349,8 +349,8 @@ Write your code in `src/st-get-email-domain.js`.
 ---
 
 ### **Is MAC-48 Adress?**
-The MAC-48 address is six groups of two hexadecimal digits (0 to 9 or A to F) separated by hyphens.
-Your task is to implement function that accepts string (`inputString`) and returns true if string is valid MAC-48 adress.  
+The **MAC-48 address** is six groups of two hexadecimal digits (0 to 9 or A to F) separated by hyphens.
+Your task is to implement function that accepts **string** (`inputString`) and returns `true` if **string** is valid **MAC-48 adress**.  
 
 For example:
 
@@ -380,7 +380,7 @@ Write your code in `src/st-matrix-elements-sum.js`.
 ---
 
 ### **Minesweeper**
-In the popular Minesweeper game you have a board with some mines and those cells that don't contain a mine have a **number** in it that indicates the total **number of mines** in the neighboring cells. Starting off with some arrangement of mines we want to create a Minesweeper game setup.
+In the popular Minesweeper game you have a board with some mines and cells that have a **number** in it that indicates the total **number of mines** in the neighboring cells. Starting off with some arrangement of mines we want to create a Minesweeper game setup.
 
 For example:
 
@@ -422,12 +422,12 @@ Write your code in `src/st-queue.js`.
 ---
 
 ### **Remove from list**
-Given a singly linked list of integers `l` and an integer `k`, remove all elements from list `l` that have a value equal to `k`.
+Given a **singly linked list** of integers `l` and an integer `k`, remove all elements from list `l` that have a value equal to `k`.
 
 For example, for `l` = `[3, 1, 2, 3, 4, 5]` and `k` = `3`,
 the output should be `[1, 2, 4, 5]`
 
-Singly - **linked lists** are already defined with this interface
+**Singly linked lists** are already defined with this interface
 
 ```js
 function ListNode(x) {
@@ -510,5 +510,6 @@ Write your code in `src/st-sum-digits.js`.
 ---
 
 © [AlreadyBored](https://github.com/alreadybored)
+& tasks with prefix `st-` are integrated from [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
 
 & Thanks [mikhama](https://github.com/mikhama) for assistance!
