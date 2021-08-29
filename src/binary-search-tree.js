@@ -1,35 +1,34 @@
 import { NotImplementedError } from '../extensions/index.js';
 
-/**
- * Implement node for binary search tree
- */
-class Node {}
+// import { Node } from '../extensions/list-tree.js';
 
 /**
- * Implement simple binary search tree
- */
+* Implement simple binary search tree according to task description
+* using Node from extensions
+*/
 export default class BinarySearchTree {
+
   root() {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
 
-  add() {
+  add(/* data */) {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
 
-  find() {
+  has(/* data */) {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
 
-  has() {
+  find(/* data */) {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
 
-  remove() {
+  remove(/* data */) {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
@@ -43,5 +42,5 @@ export default class BinarySearchTree {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   }
-  
+
 }
