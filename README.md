@@ -281,9 +281,9 @@ Each instance of `BinarySearchTree` must have following methods:
   * `add(data)` — add **node** with `data` to the tree
   * `has(data)` — returns `true` if **node** with the `data` exists in the tree and `false` otherwise
   * `find(data)` — returns **node** with the `data` if **node** with the `data` exists in the tree and `null` otherwise
-  * `remove(data)` — removes node with the data from the tree if node with the data exists
-  * `min` — returns minimal value stored in the tree (or null if tree has no nodes)
-  * `max` — returns maximal value stored in the tree (or null if tree has no nodes)
+  * `remove(data)` — removes **node** with the `data` from the tree if **node** with the `data` exists
+  * `min` — returns **minimal** **value** stored in the tree (or `null` if tree has no **nodes**)
+  * `max` — returns **maximal** **value** stored in the tree (or `null` if tree has no **nodes**)
 
 For example:
 
