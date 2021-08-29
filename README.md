@@ -9,6 +9,7 @@ Your task is to write several functions that are the solution to the subtasks. S
 
 ### **Count cats!**
 
+![Count cats!](https://vg5b2ejdwb-flywheel.netdna-ssl.com/wp-content/uploads/2019/11/cats-in-boxes-03.jpg)  
 Your task is to count the cats hidden in the backyard (presented by two-dimensional `Array`). Cats hide well, but their **ears** (`"^^"`) are clearly visible. Your task is to implement the `countCats(backyard)` function that will count cats. Good luck!
 
 Number of cats found should be `number`. If no cats found, function should return `0`.
@@ -19,7 +20,7 @@ For example:
     [0, 1, '^^'],
     [0, '^^', 2],
     ['^^', 1, 2]
-  ]) => 3`
+  ])` => `3`
 
 Write your code in `src/count-cats.js`.
 
@@ -27,6 +28,7 @@ Write your code in `src/count-cats.js`.
 
 ### **Carbon dating**
 
+![Carbon dating](https://earthhow.com/wp-content/uploads/2018/12/Carbon-Dating-678x378.png)  
 To determine the age of archaeological finds, **radioisotope dating** is widely used. One of its types is **radiocarbon dating**.
 
 The approximate age of the sample is calculated by measuring the **ratio** of the **modern** activity of the C14 isotope to the activity of the same isotope in the **sample**.
@@ -51,9 +53,9 @@ Age must be **integer**. Age must be **rounded up** (ceiling). In case of wrong 
 
 For example:
 
-`dateSample('1') => 22387` (or `22392` depending on formula used)
+`dateSample('1')` => `22387` (or `22392` depending on formula used)
 
-`dateSample('WOOT!') => false`
+`dateSample('WOOT!')` => `false`
 
 Write your code in `src/carbon-dating.js`.
 
@@ -61,6 +63,7 @@ Write your code in `src/carbon-dating.js`.
 
 ### **Dream team**
 
+![Dream team](https://i0.wp.com/www.comicsbeat.com/wp-content/uploads/2021/05/power-rangers.jpg?fit=1420,945&ssl=1)  
 Imagine you and your friends decide to create a **dream team**. This team should have a cool secret name that contains encrypted information about it. For example, these may be the **first letters** of the names of its members in **upper case** **sorted alphabetically**.
 Your task is to implement the `createDreamTeam(members)` function that returns name of a newly made team (`string`) based on the names of its members (`Array`). Good luck!
 
@@ -80,6 +83,7 @@ Write your code in `src/dream-team.js`.
 
 ### **What season?**
 
+![What season](https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/83/d2/T-T-224-four-seasons-posters-a4_ver_2.avif)  
 Your task is to implement the function `getSeason(date)` that accepts `Date` object and returns the time of the year that matches it.
 Time of the year must be `string`.
 
@@ -97,15 +101,14 @@ If the `date` argument was not passed, the function must return the `string` `'U
 
 Shh! An enemy scout has lurked among the arguments that come into this function.
 
-![Disguised](https://www.famousbirthdays.com/faces/disguised-toast-image.jpg)
-
+![Disguised](https://www.famousbirthdays.com/faces/disguised-toast-image.jpg)  
 He is guided by the famous proverb: “If it looks like a **duck**, swims like a **duck** and quacks like a **duck**, then it probably is a **duck** (who cares what it **really** is)”. He is **expertly disguised** as a real date, but a clever javascript developer can catch him and `throw` an `Error` with message `Invalid date!` just in time!
 
 For example:
 
 `const springDate = new Date(2020, 02, 31)`
 
-`getSeason(springDate) => 'spring'`
+`getSeason(springDate)` => `'spring'`
 
 Write your code in `src/what-season.js`.
 
@@ -113,8 +116,7 @@ Write your code in `src/what-season.js`.
 
 ### **Tower of Hanoi**
 
-![Tower of hanoi visualisation](https://ioecapsule.com/wp-content/uploads/2019/08/tower_of_hanoi_3_disks.gif)
-
+![Tower of hanoi visualisation](https://ioecapsule.com/wp-content/uploads/2019/08/tower_of_hanoi_3_disks.gif)  
 [Tower of Hanoi](https://www.britannica.com/topic/Tower-of-Hanoi) is famous mathematical puzzle of the 18th century.
 It consists of three rods and a number of disks of different sizes, which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.
 
@@ -136,7 +138,7 @@ You don't need to validate parameters.
 
 For example:
 
-`calculateHanoi(9, 4308) => { turns: 511, seconds: 427 }`
+`calculateHanoi(9, 4308)` => `{ turns: 511, seconds: 427 }`
 
 Write your code in `src/hanoi-tower.js`.
 
@@ -144,6 +146,7 @@ Write your code in `src/hanoi-tower.js`.
 
 ### **Transform array**
 
+![Transform array](https://www.capturehighered.com/wp-content/uploads/2019/02/The-Call-720x332.jpg)  
 Your task is to implement the function `transform(arr)` that takes an `array` and returns **transformed** array, based on the **control sequences** that `arr` contains.
 **Control sequences** are defined `string` elements of the mentioned `array`:
 * `--discard-next` excludes the next element of the array from the transformed array.
@@ -164,6 +167,8 @@ Write your code in `src/transform-array.js`.
 ---
 
 ### **Chain maker**
+
+![Chaining](https://www.sdxcentral.com/cdn-cgi/image/w=748,h=374,fit=scale-down,f=auto,q=30/https://www.sdxcentral.com/wp-content/uploads/2018/08/Why-Problems-With-Service-Chaining-Are-Stalling-NFV.jpg)  
 Let's practice in [chaining](https://en.wikipedia.org/wiki/Method_chaining)!
 
 Your task is to create the object `chainMaker` that creates chains. The finished chain is a `string` and looks like this: `'( value1 )~~( value2 )~~( value3 )'`.
@@ -189,8 +194,8 @@ Write your code in `src/simple-chain.js`.
 ---
 
 ### **Recursive depth calculator**
-![Go deeper](https://i.imgur.com/k7lADiM.jpg)
 
+![Go deeper](https://i.imgur.com/k7lADiM.jpg)  
 Your task is to implement the class `DepthCalculator` with method `calculateDepth` that takes an `array` and returns its depth.
 
 `calculateDepth` method must pass the given array **recursively**. Depth of a **flat** array is 1. Method must correctly work with `arrays` that contain no elements or contain empty `arrays`.
@@ -210,6 +215,7 @@ Write your code in `src/recursive-depth.js`.
 ---
 ### **Extended repeater**
 
+![Extended repater](https://farm5.staticflickr.com/4683/39024400961_732f449b65.jpg)  
 Your task is to implement the function `repeater(str, options)`.
 This function returns a repeating `string` based on the given parameters:
 * `str` is a `string` to repeat;
@@ -236,6 +242,7 @@ Write your code in `src/extended-repeater.js`.
 
 ### **Vigenere cipher**
 
+![Ciphering machine](https://live.staticflickr.com/1931/44960892745_471bee66bb_b.jpg)  
 Cryptography is awesome! Let's try to organize production of encryption machines. Our machines will use one of the encryption methods that are easy to understand, but also not amenable to simple cryptanalysis - the [**Vigenere cipher**](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher).
 
 Our machine will have 2 modifications: **direct** and **reverse** (the type of machine is determined at the moment of creation). The **direct** machine simply encodes and decodes the string that was transmitted to it, and the **reverse** machine returns an **inverted** string after encoding and decoding.
@@ -257,13 +264,13 @@ For example:
 
 `const reverseMachine = new VigenereCipheringMachine(false);`
 
-`directMachine.encrypt('attack at dawn!', 'alphonse') => 'AEIHQX SX DLLU!'`
+`directMachine.encrypt('attack at dawn!', 'alphonse')` => `'AEIHQX SX DLLU!'`
 
-`directMachine.decrypt('AEIHQX SX DLLU!', 'alphonse') => 'ATTACK AT DAWN!'`
+`directMachine.decrypt('AEIHQX SX DLLU!', 'alphonse')` => `'ATTACK AT DAWN!'`
 
-`reverseMachine.encrypt('attack at dawn!', 'alphonse') => '!ULLD XS XQHIEA'`
+`reverseMachine.encrypt('attack at dawn!', 'alphonse')` => `'!ULLD XS XQHIEA'`
 
-`reverseMachine.decrypt('AEIHQX SX DLLU!', 'alphonse') => '!NWAD TA KCATTA'`
+`reverseMachine.decrypt('AEIHQX SX DLLU!', 'alphonse')` => `'!NWAD TA KCATTA'`
 
 Write your code in `src/vigenere-cipher.js`.
 
@@ -271,6 +278,7 @@ Write your code in `src/vigenere-cipher.js`.
 
 ### **Binary search tree**
 
+![Binary search tree](https://www.tutorialspoint.com/data_structures_algorithms/images/binary_search_tree.jpg)  
 A **binary tree** is a hierarchical **data structure** in which each **node** has a **value** (in this case, it is also a key) and **links** to the **left** and **right** **children**. The **node** that is at the topmost level (which is not someone else's child) is called the **root**. **Nodes** that have no children are called **leaves**.
 
 A **binary search tree** is a **binary tree** with additional properties: the value of the **left** child is **less** than the value of the parent, and the value of the **right** child is **greater** than the value of the parent for each tree **node**. That is, the data in the binary search tree is stored sorted. Each time you **add** a new or **remove** an existing node, the sorted order of the tree is preserved. When **searching** for an element, the search value is compared with the root. If the desired is **greater** than the root, then the search continues in the **right** child of the root, if **less**, then in the **left**, if **equal**, then the value is **found** and the search stops.
@@ -288,34 +296,45 @@ Each instance of `BinarySearchTree` must have following methods:
 For example:
 
 `const tree = new BinarySearchTree();`
+
 `tree.add(1);`
+
 `tree.add(2);`
+
 `tree.add(3);`
+
 `tree.add(4);`
+
 `tree.add(5);`
-`tree.root().data => 1;`
-`tree.min() => 1`
-`tree.max() => 5;`
+
+`tree.root().data` => `1;`
+
+`tree.min()` => `1`
+
+`tree.max()` => `5`
+
 `tree.remove(5);`
-`tree.has(5) => false;`
-`tree.max() => 4;`
+
+`tree.has(5)` => `false`
+
+`tree.max()` => `4`
 
 Write your code in `src/binary-search-tree.js`.
 
 ---
 
-### **Common character count**
+### **(ST) Common character count**
 Your task is to implement function that accepts two **strings** (`s1` and `s2`) and returns **number** of common characters between them.
 
 For example:
 
-`getCommonCharacterCount('aabcc', 'adcaa') => 3`
+`getCommonCharacterCount('aabcc', 'adcaa')` => `3`
 
 Write your code in `src/st-common-character-count.js`.
 
 ---
 
-### **Delete digit**
+### **(ST) Delete digit**
 Your task is to implement function that accepts **integer number** (`n`) and returns maximal **number** you can obtain by deleting exactly one digit of the given number.
 
 For example:
@@ -326,64 +345,64 @@ Write your code in `src/st-delete-digit.js`.
 
 ---
 
-### **DNS stat**
+### **(ST) DNS stat**
 Your task is to implement function that accepts an **array** of domains (`domains`) and returns the **object** with the appearances of the DNS.
 
 For example:
 
-`getDNSStats(['code.yandex.ru', 'music.yandex.ru', 'yandex.ru']) => {'.ru': 3, '.ru.yandex': 3, '.ru.yandex.code': 1,'.ru.yandex.music': 1}`
+`getDNSStats(['code.yandex.ru', 'music.yandex.ru', 'yandex.ru'])` => `{'.ru': 3, '.ru.yandex': 3, '.ru.yandex.code': 1,'.ru.yandex.music': 1}`
 
 Write your code in `src/st-dns-stats.js`.
 
 ---
 
-### **Encode line**
+### **(ST) Encode line**
 Your task is to implement function that accepts **string** (`str`) and returns its encoded version.
 
 For example:
 
-`encodeLine('aabbbc') => '2a3bc'`
+`encodeLine('aabbbc')` => `'2a3bc'`
 
 Write your code in `src/st-encode-line.js`.
 
 ---
 
-### **File names**
+### **(ST) File names**
 There's a list of file, since two files cannot have equal names, the one which comes later will have a suffix **(k)**, where k is the smallest **integer** such that the found name is not used yet.
 Your task is to implement function that accepts **array** of names (`names`) and returns an **array** of names that will be given to the files.
 
 For example:
 
-`renameFiles(["file", "file", "image", "file(1)", "file"]) => ["file", "file(1)", "image", "file(1)(1)", "file(2)"]`
+`renameFiles(["file", "file", "image", "file(1)", "file"])` => `["file", "file(1)", "image", "file(1)(1)", "file(2)"]`
 
 Write your code in `src/st-file-names.js`.
 
 ---
 
-### **Get email domain**
+### **(ST) Get email domain**
 Your task is to implement function that accepts email address (`email`) and returns it's **domain**.  
 
 For example:
 
-`getEmailDomain('prettyandsimple@example.com') => 'example.com'`
+`getEmailDomain('prettyandsimple@example.com')` => `'example.com'`
 
 Write your code in `src/st-get-email-domain.js`.
 
 ---
 
-### **Is MAC-48 Adress?**
+### **(ST) Is MAC-48 Adress?**
 The **MAC-48 address** is six groups of two hexadecimal digits (0 to 9 or A to F) separated by hyphens.
 Your task is to implement function that accepts **string** (`inputString`) and returns `true` if **string** is valid **MAC-48 adress**.  
 
 For example:
 
-`isMAC48Address('00-1B-63-84-45-E6') => true`
+`isMAC48Address('00-1B-63-84-45-E6')` => `true`
 
 Write your code in `src/st-mac-adress.js`.
 
 ---
 
-### **Matrix elements sum**
+### **(ST) Matrix elements sum**
 Given **matrix**, a rectangular matrix of **integers**, just add up all the values that **don't appear below a "0"**.
 
 For example:
@@ -402,7 +421,7 @@ Write your code in `src/st-matrix-elements-sum.js`.
 
 ---
 
-### **Minesweeper**
+### **(ST) Minesweeper**
 In the popular Minesweeper game you have a board with some mines and cells that have a **number** in it that indicates the total **number of mines** in the neighboring cells. Starting off with some arrangement of mines we want to create a Minesweeper game setup.
 
 For example:
@@ -427,7 +446,7 @@ Write your code in `src/st-mine-sweeper.js`.
 
 ---
 
-### **Remove from list**
+### **(ST) Remove from list**
 Given a **singly linked list** of integers `l` and an integer `k`, remove all elements from list `l` that have a value equal to `k`.
 
 For example, for `l` = `[3, 1, 2, 3, 4, 5]` and `k` = `3`,
@@ -446,19 +465,19 @@ Write your code in `src/st-remove-from-list.js`.
 
 ---
 
-### **Sort by height**
+### **(ST) Sort by height**
 Given an array with heights, sort them except if the value is `-1`.
 Your task is to implement function that accepts **array** (`arr`) and returns it **sorted**
 
 For example:
 
-`sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]) => [-1, 150, 160, 170, -1, -1, 180, 190]`
+`sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])` => `[-1, 150, 160, 170, -1, -1, 180, 190]`
 
 Write your code in `src/st-sort-by-height.js`.
 
 ---
 
-### **Stack**
+### **(ST) Stack**
 Implement the **Stack** with a given interface via **array**.
 
 For example:
@@ -476,15 +495,15 @@ Write your code in `src/st-stack.js`.
 
 ---
 
-### **Sum digits**
+### **(ST) Sum digits**
 Your task is to implement function that accepts a **number** (`n`) and returns the **sum of its digits** until we get to a **one digit number**.  
 
 For example:
 
 For 100, the result should be 1 (1 + 0 + 0 = 1)  
-`getSumOfDigits(100) => 1`
+`getSumOfDigits(100)` => `1`
 For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)  
-`getSumOfDigits(91) => 1`
+`getSumOfDigits(91)` => `1`
 
 Write your code in `src/st-sum-digits.js`.
 
@@ -515,7 +534,7 @@ Write your code in `src/st-sum-digits.js`.
 
 ---
 
-© [AlreadyBored](https://github.com/alreadybored)
+© [AlreadyBored](https://github.com/alreadybored)  
 & tasks with prefix `st-` are integrated from [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
 
 & Thanks [mikhama](https://github.com/mikhama) for assistance!
