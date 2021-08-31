@@ -509,6 +509,29 @@ Write your code in `src/st-sum-digits.js`.
 
 ---
 
+### **(ST) Queue**
+Implement the **Queue** with a given interface via **linked list** (use `ListNode` extension).
+Each instance of queue must have 3 methods:
+    * `enqueue(value)` — puts the `value` at the end of the **queue** 
+    * `deque` — retrieves a value from the head of the **queue** and deletes it
+    * `getUnderlyingList` - returns underlying **linked list**
+
+For example:
+
+```js
+const queue = new Queue();
+
+queue.enqueue(1); // adds the element to the queue
+queue.enqueue(3); // adds the element to the queue
+queue.dequeue(); // returns the top element from queue and deletes it, returns 1
+queue.getUnderlyingList() // returns { value: 3, next: null }
+
+```
+
+Write your code in `src/st-queue.js`.
+
+---
+
 #### Prerequisites
 1. Install [Node.js](https://nodejs.org/en/download/)   
 2. Fork this repository: https://github.com/AlreadyBored/basic-js
