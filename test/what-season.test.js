@@ -204,7 +204,8 @@ describe('What season', () => {
             const fakeDate = {
                 toString() {
                     return Date.prototype.toString.call(new Date());
-                }
+                },
+                [Symbol.toStringTag]: 'Date'
             };
 
             Object.setPrototypeOf(fakeDate, Object.getPrototypeOf(new Date()));
@@ -244,7 +245,8 @@ describe('What season', () => {
                 },
                 getDay() {
                     return Date.prototype.getDay.call(new Date(1812, 8, 9, 10, 11, 12));
-                }
+                },
+                [Symbol.toStringTag]: 'Date'
             };
 
             Object.setPrototypeOf(deeperFakeDate, Object.getPrototypeOf(new Date()));
