@@ -23,7 +23,7 @@ export default {
       position < 1 ||
       position > this.getLength()) {
       this.chain = []
-      throw new Error("You can't remove incorrect link!" )
+      throw new Error("You can't remove incorrect link!")
     }
     this.chain.splice(position - 1, 1)
     return this

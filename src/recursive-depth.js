@@ -1,4 +1,6 @@
-import { NotImplementedError } from '../extensions/index.js';
+import {
+	NotImplementedError
+} from '../extensions/index.js';
 
 /**
  * Implement class DepthCalculator with method calculateDepth
@@ -13,11 +15,11 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default class DepthCalculator {
-  calculateDepth(arr) {
+	calculateDepth(arr) {
 		let count = 1
 		arr.forEach(el => {
-			if (Array.isArray(el)){ 
-				let tmp = this.calculateDepth(el)+1
+			if (Array.isArray(el)) {
+				let tmp = this.calculateDepth(el) + 1
 				if (tmp > count) count = tmp
 			}
 		});

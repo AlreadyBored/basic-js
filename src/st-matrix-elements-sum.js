@@ -1,4 +1,6 @@
-import { NotImplementedError } from '../extensions/index.js';
+import {
+  NotImplementedError
+} from '../extensions/index.js';
 
 /**
  * Given matrix, a rectangular matrix of integers,
@@ -19,16 +21,17 @@ import { NotImplementedError } from '../extensions/index.js';
 export default function getMatrixElementsSum(matrix) {
   const h = matrix.length;
   const l = matrix[0].length;
-  for(let i = 0; i<h; i++){
-      for(let j=0; j<l; j++){
-          if(matrix[i][j]==0 && typeof matrix[i+1] !== 'undefined') matrix[i+1][j]=0;
-      }
+  for (let i = 0; i < h; i++) {
+    for (let j = 0; j < l; j++) {
+      if (matrix[i][j] == 0 && typeof matrix[i + 1] !== 'undefined') matrix[i + 1][j] = 0;
+    }
   }
   return arrSum(matrix);
 }
 
 const arrSum = array =>
   array.reduce(
-      (sum, num) => sum + (Array.isArray(num) ? arrSum(num) : num * 1),
-      0
+    (sum, num) => sum + (Array.isArray(num) ? arrSum(num) : num * 1),
+    0
   );
+  
