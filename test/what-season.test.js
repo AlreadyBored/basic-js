@@ -209,7 +209,7 @@ describe('What season', () => {
             };
 
             Object.setPrototypeOf(fakeDate, Object.getPrototypeOf(new Date()));
-            console.log(fakeDate);
+            
             const res = checkForThrowingErrors.call(this, [
                 () => getSeason(fakeDate)
             ], 'Invalid date!');
