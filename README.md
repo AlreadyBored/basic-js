@@ -445,7 +445,7 @@ Write your code in `src/st-sum-digits.js`.
 ---
 
 #### Notes
-1. We recommend you to use Node.js of version 14.x.x LTS. If you use any of features, that does not supported by Node.js v14, there may be problems with task submit.
+1. We recommend you to use Node.js of version 12.x.x LTS. If you use any of features, that does not supported by Node.js v12, there may be problems with task submit.
 2. Please, be sure that each of your tests is limited to 30 sec.
 
 ---

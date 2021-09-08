@@ -10,9 +10,6 @@
   "scripts": {
     "test": "mocha"
   },
-  "engines": {
-    "node": ">=14.17.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlreadyBored/basic-js.git"
