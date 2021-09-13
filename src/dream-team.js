@@ -15,11 +15,14 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default function createDreamTeam(arr) {
     if (Array.isArray(arr)) {
-        let finalArray = arr.map(function (el) {
-            if (typeof el === string) {
-                return el[0]
+        let finalArray = []
+        arr.forEach(el => {
+            if (typeof el === "string") {
+                finalArray.push(el[0])
             }
         })
+
+                
         return finalArray.sort()
     }else{
         return false
