@@ -18,12 +18,13 @@ export default function createDreamTeam(arr) {
         let finalArray = []
         arr.forEach(el => {
             if (typeof el === "string") {
+                el[0].toUpperCase()
                 finalArray.push(el[0])
             }
         })
 
                 
-        return finalArray.sort()
+        return finalArray.sort().join("")
     }else{
         return false
     }
