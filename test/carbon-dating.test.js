@@ -1,11 +1,11 @@
-const chai = require('chai');
-const { expect, assert } = chai;
-it.optional = require('../extensions/it-optional');
+import { expect, assert } from 'chai';
+import { testOptional } from '../extensions/index.js';
+import dateSample from '../src/carbon-dating.js';
 
+it.optional = testOptional;
+
+Object.freeze(expect);
 Object.freeze(assert);
-
-const dateSample = require('../src/carbon-dating.js');
-
 
 describe('Carbon dating', () => {
   // Presence requirement

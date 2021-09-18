@@ -22,4 +22,3 @@ module.exports = function dateSample(sampleActivity) {
   return Math.ceil(activities / reaction_rate)
 };
 
-
