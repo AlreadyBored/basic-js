@@ -26,12 +26,8 @@ export default function dateSample(sampleActivity) {
   if (  isNaN(sampleActivity) || sampleActivity <=0 || sampleActivity >15) {return false}
  
   {Number = Math.ceil(Math.log((15/sampleActivity))*5730/(693/1000))}
-// console.log(Number)
-// console.log(typeof(Number))
-// if ( Number <=0 || Number == Infinity) {return false;}
-// {
+
 return Number;
-// }
 }
-// console.log(dateSample("3"));
+// console.log(dateSample(3));
 

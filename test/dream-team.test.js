@@ -214,7 +214,10 @@ describe('Dream team', () => {
     it.optional('should handle non-standard cases', () => {
       assert.equal(createDreamTeam([
         ['David Abram'],
-        ['Robin Attfield'],
+        ['Robin Attfield'],      
+        ['Robin Attfield'],      
+        ['Robin Attfield'],      
+        ['Robin Attfield'],      
         'Thomas Berry',
         ['Paul R.Ehrlich'],
         'donna Haraway',
