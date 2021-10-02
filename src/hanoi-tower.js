@@ -21,8 +21,8 @@ export default function calculateHanoi(disksNumber, turnsSpeed) {
   let seconds = 0;
   turns = Math.pow(2, disksNumber) - 1;
   seconds = Math.floor((turns * 3600) / turnsSpeed);
-  console.log(turns);
-  console.log(seconds);
+  //console.log(turns);
+  //console.log(seconds);
   let result = { turns: turns, seconds: seconds };
   return result;
 }
