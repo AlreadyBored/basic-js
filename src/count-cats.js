@@ -15,7 +15,6 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function countCats(box) {
-  throw new NotImplementedError('Not implemented');
   let result = 0;
   let arr = box.flat();
   let a = '^^';
@@ -26,5 +25,4 @@ export default function countCats(box) {
       }
   }
   return result;
-  // remove line with error and write your code here
 }
