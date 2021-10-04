@@ -1,10 +1,11 @@
-const chai = require('chai');
-const { expect, assert } = chai;
-it.optional = require('../extensions/it-optional');
+import { expect, assert } from 'chai';
+import { testOptional } from '../extensions/index.js';
+import repeater from '../src/extended-repeater.js';
 
+it.optional = testOptional;
+
+Object.freeze(expect);
 Object.freeze(assert);
-
-const repeater = require('../src/extended-repeater.js');
 
 describe('Extended repeater', () => {
   // Presence requirement
@@ -36,7 +37,7 @@ describe('Extended repeater', () => {
     });
 
     it.optional('supports missing repeat counters', () => {
-      assert.equal(repeater('TESTstr', { repeatTimes: undefined, separator: 'ds', addition: 'ADD!', additionRepeatTimes: undefined, additionSeparator: ')))000' }), 'TESTstrADD!');
+      assert.equal(repeater('TESTstr', { separator: 'ds', addition: 'ADD!', additionSeparator: ')))000' }), 'TESTstrADD!');
     });
 
     it.optional('some pack of tests', () => {
@@ -142,8 +143,8 @@ describe('Extended repeater', () => {
     });
   });
 
-  describe('extended requirements ', () => {   
-    it.optional('supports multi words ', () => {      
+  describe('extended requirements ', () => {
+    it.optional('supports multi words ', () => {
       assert.equal(repeater('my test string', { repeatTimes: 5, separator: '?!', addition: 'PLUS', additionRepeatTimes: 4, additionSeparator: '))' }), 'my test stringPLUS))PLUS))PLUS))PLUS?!my test stringPLUS))PLUS))PLUS))PLUS?!my test stringPLUS))PLUS))PLUS))PLUS?!my test stringPLUS))PLUS))PLUS))PLUS?!my test stringPLUS))PLUS))PLUS))PLUS');
     });
 
@@ -152,11 +153,26 @@ describe('Extended repeater', () => {
     });
 
     it.optional('supports different str & addition', () => {
-      assert.equal(repeater(9.234, { repeatTimes: 4, separator: '||', addition: {a: 5}, additionRepeatTimes: 3, additionSeparator: '&&' }), '9.234[object Object]&&[object Object]&&[object Object]||9.234[object Object]&&[object Object]&&[object Object]||9.234[object Object]&&[object Object]&&[object Object]||9.234[object Object]&&[object Object]&&[object Object]');
+      assert.equal(repeater(9.234, { repeatTimes: 4, separator: '||', addition: { a: 5 }, additionRepeatTimes: 3, additionSeparator: '&&' }), '9.234[object Object]&&[object Object]&&[object Object]||9.234[object Object]&&[object Object]&&[object Object]||9.234[object Object]&&[object Object]&&[object Object]||9.234[object Object]&&[object Object]&&[object Object]');
       assert.equal(repeater(-222, { repeatTimes: 4, separator: '||', addition: new Map(), additionRepeatTimes: 3, additionSeparator: '&&' }), '-222[object Map]&&[object Map]&&[object Map]||-222[object Map]&&[object Map]&&[object Map]||-222[object Map]&&[object Map]&&[object Map]||-222[object Map]&&[object Map]&&[object Map]');
       assert.equal(repeater(new Set(), { repeatTimes: 3, separator: '??? ', addition: [1, 2, 3, '4'], additionRepeatTimes: 2, additionSeparator: '!!!' }), '[object Set]1,2,3,4!!!1,2,3,4??? [object Set]1,2,3,4!!!1,2,3,4??? [object Set]1,2,3,4!!!1,2,3,4');
       assert.equal(repeater(true, { repeatTimes: 3, separator: '??? ', addition: false, additionRepeatTimes: 2, additionSeparator: '!!!' }), 'truefalse!!!false??? truefalse!!!false??? truefalse!!!false');
-      assert.equal(repeater(null, { repeatTimes: 3, separator: '??? ', addition: null, additionRepeatTimes: 3, additionSeparator: '!!!' }), 'nullnull!!!null!!!null??? nullnull!!!null!!!null??? nullnull!!!null!!!null');  
+      assert.equal(repeater(null, { repeatTimes: 3, separator: '??? ', addition: null, additionRepeatTimes: 3, additionSeparator: '!!!' }), 'nullnull!!!null!!!null??? nullnull!!!null!!!null??? nullnull!!!null!!!null');
     });
+
+    it.optional('correctly converts str and addition options to string', () => {
+      const objWithSpecificCoercion = {
+        [Symbol.toPrimitive]: hint => hint !== 'number' ? 'STRING_OR_DEFAULT' : 'NUMBER'
+      };
+
+      assert.equal(repeater(objWithSpecificCoercion, { repeatTimes: 2, addition: objWithSpecificCoercion }), 'STRING_OR_DEFAULTSTRING_OR_DEFAULT+STRING_OR_DEFAULTSTRING_OR_DEFAULT');
+    });
+
+    it.optional('correctly works with no separator & no additionSeparator', () => {
+      assert.equal(repeater('REPEATABLE_STRING', { repeatTimes: 2, addition: 'ADDITION', additionRepeatTimes: 3 }), 'REPEATABLE_STRINGADDITION|ADDITION|ADDITION+REPEATABLE_STRINGADDITION|ADDITION|ADDITION');
+      assert.equal(repeater('REPEATABLE_STRING', { repeatTimes: 2, addition: 'ADDITION', additionSeparator: '222', additionRepeatTimes: 3 }), 'REPEATABLE_STRINGADDITION222ADDITION222ADDITION+REPEATABLE_STRINGADDITION222ADDITION222ADDITION');
+      assert.equal(repeater('REPEATABLE_STRING', { repeatTimes: 2, separator: '222', addition: 'ADDITION', additionRepeatTimes: 3 }), 'REPEATABLE_STRINGADDITION|ADDITION|ADDITION222REPEATABLE_STRINGADDITION|ADDITION|ADDITION');
+    });
+
   });
 });
