@@ -1,4 +1,3 @@
-import { NotImplementedError } from '../extensions/index.js';
 
 /**
  * Create transformed array based on the control sequences that original
