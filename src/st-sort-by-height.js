@@ -12,12 +12,13 @@ import { NotImplementedError } from '../extensions/index.js';
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
 export default function sortByHeight(arr) {
+  // -1 to string
   let kkk = arr;
   for (let i = 0; i < kkk.length; i++){
     if (kkk[i] === -1) {kkk[i] = 'm'}
   }
-  console.log(kkk)
 
+  // sort
   for (let i = 0; i < kkk.length - 1; i++) {
     let min = i;
     for (let j = i + 1; j < kkk.length; j++) {
@@ -32,13 +33,13 @@ export default function sortByHeight(arr) {
     }
   }
 
-  console.log(kkk)
+  // string to -1
 
   for (let i = 0; i < kkk.length; i++){
     if (kkk[i] === 'm') {kkk[i] = -1}
   }
   
-  console.log(kkk)
+
   return(kkk)
 }
 

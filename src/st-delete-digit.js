@@ -24,7 +24,7 @@ export default function deleteDigit(n) {
     } 
     nArr[i] = save;
   }
-  console.log(max)
+
   return max
 }
 

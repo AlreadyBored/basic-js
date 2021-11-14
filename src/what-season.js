@@ -28,7 +28,7 @@ export default function getSeason(date) {
 
 
  
-  console.log(season)
+
   return season
  }
 

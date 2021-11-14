@@ -37,21 +37,21 @@ export default chainMaker = {
     }
     result = result.split(',').filter(x => x !== '');
     if (result === ''){result = []}
-    console.log(result, '1')
+
     this.chain = result;
     return this
   },
   finishChain() {
     let finaleResultate;
     if (this.chain.join('').slice(-2) === '~~'){
-      console.log(this.chain.join('').slice(0, -2));
+
       finaleResultate = this.chain.join('').slice(0, -2);
       this.chain = [];
       return finaleResultate;
     }
     finaleResultate = this.chain.join('');
     this.chain = [];
-    console.log(this.chain.join(''));
+
     return finaleResultate
   }
 };

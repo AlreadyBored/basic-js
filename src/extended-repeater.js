@@ -23,20 +23,14 @@ export default function repeater(str, obj) {
   let SR2 = obj.additionSeparator;
   let PlusStr = obj.addition;
   let result = '';
-  console.log(obj)
 
-  console.log(obj)
   if(RT1 === undefined){RT1 = 0}
   if(RT2 === undefined){RT2 = 0}
   if(SR2 === undefined && SR1 === undefined && PlusStr === undefined){SR2 = '+'}
   if(SR2 === undefined){SR2 = ''}
   if(SR1 === undefined){SR1 = ''}
   if(PlusStr === undefined){PlusStr = ''}
-  console.log(RT1)
-  console.log(RT2)
-  console.log(SR1)
-  console.log(SR2)
-  console.log(PlusStr)
+
 
   let innerArr = [];
   let outerArr = [];
@@ -55,7 +49,7 @@ export default function repeater(str, obj) {
     result = outerArr.join('').slice(0, outerArr.join('').length - SR1.length)
   }
   
-  console.log(result);
+
   return result
 }
 

@@ -14,7 +14,6 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function createDreamTeam(member) {
-  
   let memberNames = [];
   let result = '';
 
