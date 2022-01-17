@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import getMatrixElementsSum from '../src/st-matrix-elements-sum.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { getMatrixElementsSum } = require('../src/st-matrix-elements-sum.js');
 
 it.optional = testOptional;
 

@@ -1,7 +1,7 @@
-import { expect, assert } from 'chai';
-import sinon from 'sinon';
-import { testOptional } from '../extensions/index.js';
-import DepthCalculator from '../src/recursive-depth.js';
+const { expect, assert } = require('chai');
+const sinon = require('sinon');
+const { testOptional } = require('../extensions/index.js');
+const { DepthCalculator } = require('../src/recursive-depth.js');
 
 it.optional = testOptional;
 

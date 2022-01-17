@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import deleteDigit from '../src/st-delete-digit.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { deleteDigit } = require('../src/st-delete-digit.js');
 
 it.optional = testOptional;
 

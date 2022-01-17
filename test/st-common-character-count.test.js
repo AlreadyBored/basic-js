@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import getCommonCharacterCount from '../src/st-common-character-count.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { getCommonCharacterCount } = require('../src/st-common-character-count.js');
 
 it.optional = testOptional;
 

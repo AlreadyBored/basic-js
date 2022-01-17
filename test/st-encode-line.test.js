@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import encodeLine from '../src/st-encode-line.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { encodeLine } = require('../src/st-encode-line.js');
 
 it.optional = testOptional;
 

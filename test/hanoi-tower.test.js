@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import calculateHanoi from '../src/hanoi-tower.js';
+const { expect, assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { calculateHanoi } = require('../src/hanoi-tower.js');
 
 it.optional = testOptional;
 

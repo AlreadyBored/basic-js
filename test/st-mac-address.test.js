@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import isMAC48Address from '../src/st-mac-address.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { isMAC48Address } = require('../src/st-mac-address.js');
 
 it.optional = testOptional;
 

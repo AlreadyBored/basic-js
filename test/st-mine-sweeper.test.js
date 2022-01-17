@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import minesweeper from '../src/st-mine-sweeper.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { minesweeper } = require('../src/st-mine-sweeper.js');
 
 it.optional = testOptional;
 

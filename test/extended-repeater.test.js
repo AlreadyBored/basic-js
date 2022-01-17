@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import repeater from '../src/extended-repeater.js';
+const { expect, assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { repeater } = require('../src/extended-repeater.js');
 
 it.optional = testOptional;
 
