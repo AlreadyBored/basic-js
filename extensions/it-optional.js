@@ -1,8 +1,8 @@
-import { CONSTANTS } from './constants.js';
+const { CONSTANTS } = require('./constants.js');
 
 const { SPECIAL_PROP_VALUE } = CONSTANTS;
 
-export function testOptional(title, fn, isAsyncTest) {
+function testOptional(title, fn, isAsyncTest) {
   if (isAsyncTest) {
     it(title, function test(done) {
       try {
@@ -29,3 +29,7 @@ export function testOptional(title, fn, isAsyncTest) {
     });
   }
 }
+
+module.exports = {
+  testOptional
+};

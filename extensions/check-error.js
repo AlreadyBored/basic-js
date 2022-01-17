@@ -1,6 +1,6 @@
 import { CONSTANTS } from './constants.js';
 
-const { SPECIAL_PROP_VALUE, CORRECT_RESULT_MSG } = CONSTANTS;
+const { SPECIAL_PROP_VALUE, CORRECT_RESULT_MSG, INCORRECT_RESULT_MSG } = CONSTANTS;
 
 export const checkForThrowingErrors = function (testsFuncs, expectedErrMsg) {
     return testsFuncs.map(f => {
@@ -24,7 +24,7 @@ export const checkForNotThrowingErrors = function (testFuncs) {
             if (err._specialProp === SPECIAL_PROP_VALUE) {
                 this.skip();
             } else {
-                return
+                return INCORRECT_RESULT_MSG;
             }
         }
     });
