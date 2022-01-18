@@ -1,12 +1,12 @@
 const { assert } = require('chai');
 const { testOptional } = require('../extensions/index.js');
-const { deleteDigit } = require('../src/st-delete-digit.js');
+const { deleteDigit } = require('../src/delete-digit.js');
 
 it.optional = testOptional;
 
 Object.freeze(assert);
 
-describe('st-delete-digit', () => {
+describe('Delete digit', () => {
   it.optional('should return the maximal number you can obtain by deleting exactly one digit of the given number', () => {
     assert.strictEqual(deleteDigit(152), 52);
     assert.strictEqual(deleteDigit(1001), 101);
