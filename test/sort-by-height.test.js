@@ -1,12 +1,12 @@
 const { assert } = require('chai');
 const { testOptional } = require('../extensions/index.js');
-const { sortByHeight } = require('../src/st-sort-by-height.js');
+const { sortByHeight } = require('../src/sort-by-height.js');
 
 it.optional = testOptional;
 
 Object.freeze(assert);
 
-describe('st-sort-by-height', () => {
+describe('Sort by height', () => {
   it.optional('should return sorted array without moving -1', () => {
     assert.deepEqual(
       sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]),

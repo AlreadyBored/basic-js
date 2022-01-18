@@ -1,12 +1,12 @@
 const { assert } = require('chai');
 const { testOptional } = require('../extensions/index.js');
-const { getCommonCharacterCount } = require('../src/st-common-character-count.js');
+const { getCommonCharacterCount } = require('../src/common-character-count.js');
 
 it.optional = testOptional;
 
 Object.freeze(assert);
 
-describe('st-common-character-count', () => {
+describe('Common character count', () => {
   it.optional('should return the number of common characters between the given strings', () => {
     assert.strictEqual(getCommonCharacterCount('aabcc', 'adcaa'), 3);
     assert.strictEqual(getCommonCharacterCount('zzzz', 'zzzzzzz'), 4);
