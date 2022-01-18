@@ -283,7 +283,7 @@ For example:
 
 `getCommonCharacterCount('aabcc', 'adcaa')` => `3`
 
-Write your code in `src/st-common-character-count.js`.
+Write your code in `src/common-character-count.js`.
 
 ---
 
@@ -294,7 +294,7 @@ For example:
 
 `deleteDigit(152) => 52`
 
-Write your code in `src/st-delete-digit.js`.
+Write your code in `src/delete-digit.js`.
 
 ---
 
@@ -305,7 +305,7 @@ For example:
 
 `getDNSStats(['code.yandex.ru', 'music.yandex.ru', 'yandex.ru'])` => `{'.ru': 3, '.ru.yandex': 3, '.ru.yandex.code': 1,'.ru.yandex.music': 1}`
 
-Write your code in `src/st-dns-stats.js`.
+Write your code in `src/dns-stats.js`.
 
 ---
 
@@ -316,7 +316,7 @@ For example:
 
 `encodeLine('aabbbc')` => `'2a3bc'`
 
-Write your code in `src/st-encode-line.js`.
+Write your code in `src/encode-line.js`.
 
 ---
 
@@ -328,7 +328,7 @@ For example:
 
 `renameFiles(["file", "file", "image", "file(1)", "file"])` => `["file", "file(1)", "image", "file(1)(1)", "file(2)"]`
 
-Write your code in `src/st-file-names.js`.
+Write your code in `src/file-names.js`.
 
 ---
 
@@ -339,7 +339,7 @@ For example:
 
 `getEmailDomain('prettyandsimple@example.com')` => `'example.com'`
 
-Write your code in `src/st-get-email-domain.js`.
+Write your code in `src/get-email-domain.js`.
 
 ---
 
@@ -351,7 +351,7 @@ For example:
 
 `isMAC48Address('00-1B-63-84-45-E6')` => `true`
 
-Write your code in `src/st-mac-adress.js`.
+Write your code in `src/mac-adress.js`.
 
 ---
 
@@ -370,7 +370,7 @@ const matrix = [
 getMatrixElementsSum(matrix) => 9
 ```
 
-Write your code in `src/st-matrix-elements-sum.js`.
+Write your code in `src/matrix-elements-sum.js`.
 
 ---
 
@@ -395,7 +395,7 @@ minesweeper(matrix) => [
 ];
 ```
 
-Write your code in `src/st-mine-sweeper.js`.
+Write your code in `src/mine-sweeper.js`.
 
 ---
 
@@ -407,7 +407,7 @@ For example:
 
 `sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])` => `[-1, 150, 160, 170, -1, -1, 180, 190]`
 
-Write your code in `src/st-sort-by-height.js`.
+Write your code in `src/sort-by-height.js`.
 
 ---
 
@@ -421,7 +421,7 @@ For 100, the result should be 1 (1 + 0 + 0 = 1)
 For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)  
 `getSumOfDigits(91)` => `1`
 
-Write your code in `src/st-sum-digits.js`.
+Write your code in `src/sum-digits.js`.
 
 ---
 
