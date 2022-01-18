@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional, checkForThrowingErrors, CONSTANTS } from '../extensions/index.js';
-import chainMaker from '../src/simple-chain.js';
+const { expect, assert } = require('chai');
+const { testOptional, checkForThrowingErrors, CONSTANTS } = require('../extensions/index.js');
+const { chainMaker } = require('../src/simple-chain.js');
 
 const { CORRECT_RESULT_MSG } = CONSTANTS;
 

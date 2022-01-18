@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import getDNSStats from '../src/st-dns-stats.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { getDNSStats } = require('../src/st-dns-stats.js');
 
 it.optional = testOptional;
 

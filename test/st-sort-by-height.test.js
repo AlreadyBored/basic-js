@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import sortByHeight from '../src/st-sort-by-height.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { sortByHeight } = require('../src/st-sort-by-height.js');
 
 it.optional = testOptional;
 

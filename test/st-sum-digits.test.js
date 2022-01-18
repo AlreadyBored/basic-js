@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import getSumOfDigits from '../src/st-sum-digits.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { getSumOfDigits } = require('../src/st-sum-digits.js');
 
 it.optional = testOptional;
 

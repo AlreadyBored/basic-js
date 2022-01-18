@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import getEmailDomain from '../src/st-get-email-domain.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { getEmailDomain } = require('../src/st-get-email-domain.js');
 
 it.optional = testOptional;
 

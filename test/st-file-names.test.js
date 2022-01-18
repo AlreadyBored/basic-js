@@ -1,6 +1,6 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import renameFiles from '../src/st-file-names.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { renameFiles } = require('../src/st-file-names.js');
 
 it.optional = testOptional;
 

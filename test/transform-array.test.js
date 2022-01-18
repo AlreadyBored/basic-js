@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional, checkForThrowingErrors, CONSTANTS } from '../extensions/index.js';
-import transform from '../src/transform-array.js';
+const { expect, assert } = require('chai');
+const { testOptional, checkForThrowingErrors, CONSTANTS } = require('../extensions/index.js');
+const { transform } = require('../src/transform-array.js');
 
 const { CORRECT_RESULT_MSG } = CONSTANTS;
 

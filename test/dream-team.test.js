@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional, checkForNotThrowingErrors, CONSTANTS } from '../extensions/index.js';
-import createDreamTeam from '../src/dream-team.js';
+const { expect, assert } = require('chai');
+const { testOptional, checkForNotThrowingErrors, CONSTANTS } = require('../extensions/index.js');
+const { createDreamTeam } = require('../src/dream-team.js');
 
 const { INCORRECT_RESULT_MSG } = CONSTANTS;
 
