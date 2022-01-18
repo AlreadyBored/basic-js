@@ -451,6 +451,20 @@ Write your code in `src/st-sum-digits.js`.
 ---
 
 © [AlreadyBored](https://github.com/alreadybored)  
-& tasks with prefix `st-` are integrated from [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
+
+& tasks:
+* Common character count
+* Delete digit
+* DNS stat
+* Encode line
+* File names
+* Get email domain
+* Is MAC-48 Adress?
+* Matrix elements sum
+* Minesweeper
+* Sort by height
+* Sum digits
+
+are integrated from [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
 
 & Thanks [mikhama](https://github.com/mikhama) for assistance!
