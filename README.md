@@ -2,6 +2,33 @@
 
 ⚠️ DO NOT SUBMIT PULL REQUESTS TO THIS REPO ⚠️
 
+---
+
+#### Prerequisites
+1. Install [Node.js](https://nodejs.org/en/download/)   
+2. Fork this repository: https://github.com/AlreadyBored/basic-js
+3. Clone your newly created repo: https://github.com/<%your_github_username%>/basic-js/  
+4. Go to folder `basic-js`  
+5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
+6. Run `npm run test` in command line.
+7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to max score for the task
+
+---
+
+#### Submit to [rs app](https://app.rs.school)
+1. Open [rs app](https://app.rs.school) and login
+2. Go to submit task page
+3. Select your task (BasicJS)
+4. Press the submit button and enjoy
+
+---
+
+#### Notes
+1. We recommend you to use Node.js of version 14.x.x LTS. If you use any of features, that does not supported by Node.js v14, there may be problems with task submit.
+2. Please, be sure that each of your tests is limited to 30 sec.
+
+---
+
 ## General task description
 Your task is to write several functions that are the solution to the subtasks. Subtasks descriptions, as well as instructions on how to run tests and submit solutions are below.
 
@@ -421,31 +448,6 @@ For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)
 `getSumOfDigits(91)` => `1`
 
 Write your code in `src/sum-digits.js`.
-
----
-
-#### Prerequisites
-1. Install [Node.js](https://nodejs.org/en/download/)   
-2. Fork this repository: https://github.com/AlreadyBored/basic-js
-3. Clone your newly created repo: https://github.com/<%your_github_username%>/basic-js/  
-4. Go to folder `basic-js`  
-5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
-6. Run `npm run test` in command line.
-7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to max score for the task
-
----
-
-#### Submit to [rs app](https://app.rs.school)
-1. Open [rs app](https://app.rs.school) and login
-2. Go to submit task page
-3. Select your task (BasicJS)
-4. Press the submit button and enjoy
-
----
-
-#### Notes
-1. We recommend you to use Node.js of version 12.x.x LTS. If you use any of features, that does not supported by Node.js v12, there may be problems with task submit.
-2. Please, be sure that each of your tests is limited to 30 sec.
 
 ---
 
