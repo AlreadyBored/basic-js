@@ -379,8 +379,6 @@ In the popular Minesweeper game you have a board with some mines and cells that 
 
 For example:
 
-For example:
-
 ```
 const matrix = [
  [true, false, false],
@@ -418,6 +416,7 @@ For example:
 
 For 100, the result should be 1 (1 + 0 + 0 = 1)  
 `getSumOfDigits(100)` => `1`
+
 For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)  
 `getSumOfDigits(91)` => `1`
 
