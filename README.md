@@ -379,8 +379,6 @@ In the popular Minesweeper game you have a board with some mines and cells that 
 
 For example:
 
-For example:
-
 ```
 const matrix = [
  [true, false, false],
