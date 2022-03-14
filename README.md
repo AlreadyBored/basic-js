@@ -178,8 +178,8 @@ Your task is to implement the function `transform(arr)` that takes an `array` an
 **Control sequences** are defined `string` elements of the mentioned `array`:
 * `--discard-next` excludes the next element of the array from the transformed array.
 * `--discard-prev` excludes the previous element of the array from the transformed array.
-* `--double-next` doubles the next element of the array in the transformed array.
-* `--double-prev` doubles the previous element of the array in the transformed array.
+* `--double-next` duplicates the next element of the array in the transformed array.
+* `--double-prev` duplicates the previous element of the array in the transformed array.
 
 For example:
 
