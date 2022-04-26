@@ -20,13 +20,63 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 class VigenereCipheringMachine {
-  encrypt() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  mode=true;
+  constructor(mode)
+  {
+    if (mode===false)
+    {
+      this.mode=mode;  
+    }
   }
-  decrypt() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  encrypt(message,key) {
+    this.testParam(message,key);
+    message=message.toUpperCase();
+    key=key.toUpperCase();
+    let res="";
+    for(let i=0,j=0;i<message.length;i++)
+    {
+      let currentCharCode=message.charCodeAt(i);
+      if(currentCharCode>=65 && currentCharCode<=90)
+      {
+        let currKeyCode=key.charCodeAt(j % key.length);
+        let newCode= ((currentCharCode - 65 + currKeyCode - 65) % 26) + 65;
+        j++;
+        res+=String.fromCharCode(newCode);
+      }
+      else{
+        res+=message[i];
+      }
+    }
+    return this.mode?res:res.split("").reverse().join("");
+  }
+  decrypt(message,key) {
+    this.testParam(message,key);
+    message=message.toUpperCase();
+    key=key.toUpperCase();
+    let res="";
+    for(let i=0,j=0;i<message.length;i++)
+    {
+      let currentCharCode=message.charCodeAt(i);
+      if(currentCharCode>=65 && currentCharCode<=90)
+      {
+        let currKeyCode=key.charCodeAt(j % key.length);
+        let mm=currentCharCode >= currKeyCode?currentCharCode-currKeyCode:currentCharCode+26-currKeyCode;
+        let newCode= (mm % 26) + 65;
+        j++;
+        res+=String.fromCharCode(newCode);
+      }
+      else{
+        res+=message[i];
+      }
+    }
+    return this.mode?res:res.split("").reverse().join("");
+  }
+  testParam(message,key)
+  {
+    if(message===undefined || key===undefined)
+    {
+      throw new Error( "Incorrect arguments!");
+    }
   }
 }
 
