@@ -15,15 +15,15 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function countCats( matrix ) {
-    let kittens = 0;
-    matrix.forEach((amount) => {
+    let kittens = 0;               
+    matrix.forEach((amount) => {    
       amount.forEach(amount => {
-        if (amount === '^^') {
-          kittens += 1;
+        if (amount === '^^') {  
+          kittens ++ 
         }
       })
     });
-    return kittens;
+  return kittens;
 }
 
 module.exports = {
