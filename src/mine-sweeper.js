@@ -10,22 +10,21 @@ const { NotImplementedError } = require('../extensions/index.js');
  * @return {Array<Array>}
  *
  * @example
- * matrix = [
- *  [true, false, false],
- *  [false, true, false],
- *  [false, false, false]
- * ]
- *
- * The result should be following:
- * [
- *  [1, 2, 1],
- *  [2, 1, 1],
- *  [1, 1, 1]
- * ]
- */
-function minesweeper(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+  * matrix = [
+  *  [true, false, false],
+  *  [false, true, false],
+  *  [false, false, false]
+  * ]
+  *
+  * The result should be following:
+  * [
+  *  [1, 2, 1],
+  *  [2, 1, 1],
+  *  [1, 1, 1]
+  * ]
+  */
+function minesweeper( matrix ) {
+
 }
 
 module.exports = {
