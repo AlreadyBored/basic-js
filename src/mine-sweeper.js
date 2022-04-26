@@ -23,9 +23,85 @@ const { NotImplementedError } = require('../extensions/index.js');
  *  [1, 1, 1]
  * ]
  */
-function minesweeper(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+function minesweeper(matrix) {
+  let resMatrix = [];
+  for (let j = 0; j < matrix.length; j++) {
+    let preArr = [];
+    for (let i = 0; i < matrix[j].length; i++) {
+      let res = 0;
+
+      if (j > 0 && i > 0 && i !== matrix[j].length - 1 && j !== matrix.length - 1) {
+        if (matrix[j - 1][i - 1] === true) ++res;
+        if (matrix[j - 1][i] === true) ++res;
+        if (matrix[j - 1][i + 1] === true) ++res;
+        if (matrix[j + 1][i - 1] === true) ++res;
+        if (matrix[j + 1][i] === true) ++res;
+        if (matrix[j + 1][i + 1] === true) ++res;
+        if (matrix[j][i - 1] === true) ++res;
+        if (matrix[j][i + 1] === true) ++res;
+      }
+      if (j === 0 && i === 0) {
+        if (matrix[j + 1][i + 1] === true) ++res;
+        if (matrix[j + 1][i] === true) ++res;
+        if (matrix[j][i + 1] === true) ++res;
+      }
+
+      if (j === matrix.length - 1 && i === matrix[j].length - 1) {
+        if (matrix[j - 1][i - 1] === true) ++res;
+        if (matrix[j - 1][i] === true) ++res;
+        if (matrix[j][i - 1] === true) ++res;
+      }
+
+      if (j === 0 && i === matrix[j].length - 1) {
+        if (matrix[j + 1][i - 1] === true) ++res;
+        if (matrix[j][i - 1] === true) ++res;
+        if (matrix[j + 1][i] === true) ++res;
+      }
+
+      if (j === matrix.length - 1 && i === 0) {
+        if (matrix[j - 1][i] === true) ++res;
+        if (matrix[j - 1][i + 1] === true) ++res;
+        if (matrix[j][i + 1] === true) ++res;
+      }
+
+      if (j > 0 && j !== matrix.length - 1 && i === 0) {
+        if (matrix[j][i + 1] === true) ++res;
+        if (matrix[j - 1][i + 1] === true) ++res;
+        if (matrix[j + 1][i + 1] === true) ++res;
+        if (matrix[j - 1][i] === true) ++res;
+        if (matrix[j + 1][i] === true) ++res;
+      }
+
+      if (j > 0 && j !== matrix.length - 1 && i === matrix[j].length - 1) {
+        if (matrix[j + 1][i] === true) ++res;
+        if (matrix[j - 1][i] === true) ++res;
+        if (matrix[j + 1][i - 1] === true) ++res;
+        if (matrix[j - 1][i - 1] === true) ++res;
+        if (matrix[j][i - 1] === true) ++res;
+      }
+
+      if (j === 0 && i > 0 && i !== matrix[j].length - 1) {
+        if (matrix[j + 1][i] === true) ++res;
+        if (matrix[j + 1][i + 1] === true) ++res;
+        if (matrix[j + 1][i - 1] === true) ++res;
+        if (matrix[j][i + 1] === true) ++res;
+        if (matrix[j][i - 1] === true) ++res;
+      }
+
+      if (j === matrix.length - 1 && i > 0 && i !== matrix[j].length - 1) {
+        if (matrix[j - 1][i] === true) ++res;
+        if (matrix[j - 1][i + 1] === true) ++res;
+        if (matrix[j - 1][i - 1] === true) ++res;
+        if (matrix[j][i + 1] === true) ++res;
+        if (matrix[j][i - 1] === true) ++res;
+      }
+      preArr.push(res);
+      res = 0;
+    }
+    resMatrix.push(preArr);
+    preArr = [];
+  }
+  return resMatrix;
 }
 
 module.exports = {
