@@ -24,8 +24,9 @@ const { NotImplementedError } = require('../extensions/index.js');
   * ]
   */
 function minesweeper( matrix ) {
-
+  re
 }
+
 
 module.exports = {
   minesweeper
