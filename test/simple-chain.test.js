@@ -24,6 +24,10 @@ describe('Make chain!', () => {
             assert.deepEqual(chainMaker.addLink(function () { }).addLink('2nd').addLink('3rd').removeLink(2).reverseChain().finishChain(), '( 3rd )~~( function () { } )');
         });
 
+        it.optional('getLength works!', () => {
+            assert.deepEqual(chainMaker.addLink('1').addLink('2').removeLink(1).getLength(), 1);
+        });
+
         it.optional('throws an Error with message "You can\'t remove incorrect link!" on trying to remove wrong link', function () {
             const res = checkForThrowingErrors.call(this, [
                 () => chainMaker.addLink(1).addLink(2).addLink(3).removeLink(0),
@@ -139,6 +143,10 @@ describe('Make chain!', () => {
             assert.deepEqual(chainMaker.addLink(false).addLink(null).addLink(true).reverseChain().reverseChain().addLink(1.233).reverseChain().reverseChain().addLink(333).reverseChain().finishChain(), '( 333 )~~( 1.233 )~~( true )~~( null )~~( false )');
             assert.deepEqual(chainMaker.addLink({ 0: 'first', 1: 'second', 'length': 2 }).reverseChain().reverseChain().addLink(true).addLink(Infinity).reverseChain().reverseChain().reverseChain().addLink('8.963').reverseChain().finishChain(), '( 8.963 )~~( [object Object] )~~( true )~~( Infinity )');
             assert.deepEqual(chainMaker.reverseChain().reverseChain().addLink('DEF').addLink(NaN).reverseChain().addLink(333).reverseChain().addLink('GHI').addLink('ABC').addLink({ 0: 'first', 1: 'second', 'length': 2 }).finishChain(), '( 333 )~~( DEF )~~( NaN )~~( GHI )~~( ABC )~~( [object Object] )');
+        });
+        it.optional('getLengths works correctly', () => {
+            assert.deepEqual(chainMaker.addLink('2').addLink('3').reverseChain().removeLink(1).addLink('1').getLength(), 2);
+            assert.deepEqual(chainMaker.addLink('1').addLink('2').reverseChain().removeLink(2).removeLink(1).getLength(), 0);
         });
         it.optional('removeLinks works correctly', () => {
             assert.deepEqual(chainMaker.reverseChain().reverseChain().reverseChain().addLink(NaN).reverseChain().addLink(null).addLink(1.233).addLink(true).addLink(false).removeLink(3).addLink(1.233).finishChain(), '( NaN )~~( null )~~( true )~~( false )~~( 1.233 )');

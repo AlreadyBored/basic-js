@@ -200,7 +200,7 @@ Let's practice in [chaining](https://en.wikipedia.org/wiki/Method_chaining)!
 
 Your task is to create the object `chainMaker` that creates chains. The finished chain is a `string` and looks like this: `'( value1 )~~( value2 )~~( value3 )'`.
 The `chainMaker` has several **methods** for creating chains and modifying them:
-* `getLength` returns the current chain length as a number;
+* `getLength` ends the chain and returns the current chain length as a number;
 * `addLink(value)` adds a link containing a `string` representation of the `value` to the chain;
 * `removeLink(position)` removes a chain link in the specified position;
 * `reverseChain` reverses the chain;
