@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional, checkForThrowingErrors, checkForNotThrowingErrors, CONSTANTS } from '../extensions/index.js';
-import getSeason from '../src/what-season.js';
+const { expect, assert } = require('chai');
+const { testOptional, checkForThrowingErrors, checkForNotThrowingErrors, CONSTANTS } = require('../extensions/index.js');
+const { getSeason } = require('../src/what-season.js');
 
 const { CORRECT_RESULT_MSG, INCORRECT_RESULT_MSG } = CONSTANTS;
 

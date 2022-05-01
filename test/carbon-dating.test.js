@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import dateSample from '../src/carbon-dating.js';
+const { expect, assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { dateSample } = require('../src/carbon-dating.js');
 
 it.optional = testOptional;
 

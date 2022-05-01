@@ -1,12 +1,12 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import getEmailDomain from '../src/st-get-email-domain.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { getEmailDomain } = require('../src/get-email-domain.js');
 
 it.optional = testOptional;
 
 Object.freeze(assert);
 
-describe('st-get-email-domain', () => {
+describe('Get email domain', () => {
   it.optional('should return domain name of the given email address', () => {
     assert.strictEqual(getEmailDomain('prettyandsimple@example.com'), 'example.com');
     assert.strictEqual(getEmailDomain('someaddress@yandex.ru'), 'yandex.ru');

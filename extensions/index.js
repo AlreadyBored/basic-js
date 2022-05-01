@@ -1,9 +1,9 @@
-import { checkForThrowingErrors, checkForNotThrowingErrors } from './check-error.js';
-import { CONSTANTS } from './constants.js';
-import { testOptional } from './it-optional.js';
-import { NotImplementedError } from './not-implemented-error.js';
+const { checkForThrowingErrors, checkForNotThrowingErrors } = require('./check-error.js');
+const { CONSTANTS } = require('./constants.js');
+const { testOptional } = require('./it-optional.js');
+const { NotImplementedError } = require('./not-implemented-error.js');
 
-export {
+module.exports = {
     checkForThrowingErrors,
     checkForNotThrowingErrors,
     CONSTANTS,

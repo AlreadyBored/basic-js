@@ -1,6 +1,6 @@
-import { expect, assert } from 'chai';
-import { testOptional, checkForThrowingErrors, CONSTANTS } from '../extensions/index.js';
-import VigenereCipheringMachine from '../src/vigenere-cipher.js';
+const { expect, assert } = require('chai');
+const { testOptional, checkForThrowingErrors, CONSTANTS } = require('../extensions/index.js');
+const { VigenereCipheringMachine } = require('../src/vigenere-cipher.js');
 
 const { CORRECT_RESULT_MSG } = CONSTANTS;
 

@@ -1,12 +1,12 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import getMatrixElementsSum from '../src/st-matrix-elements-sum.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { getMatrixElementsSum } = require('../src/matrix-elements-sum.js');
 
 it.optional = testOptional;
 
 Object.freeze(assert);
 
-describe('st-matrix-elements-sum', () => {
+describe('Matrix elements sum', () => {
   it.optional('should return the sum of the matrix elements that are not below 0', () => {
     assert.strictEqual(getMatrixElementsSum([
       [0, 1, 1, 2],

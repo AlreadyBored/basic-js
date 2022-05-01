@@ -2,6 +2,33 @@
 
 ⚠️ DO NOT SUBMIT PULL REQUESTS TO THIS REPO ⚠️
 
+---
+
+#### Prerequisites
+1. Install [Node.js](https://nodejs.org/en/download/)   
+2. Fork this repository: https://github.com/AlreadyBored/basic-js
+3. Clone your newly created repo: https://github.com/<%your_github_username%>/basic-js/  
+4. Go to folder `basic-js`  
+5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
+6. Run `npm run test` in command line.
+7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to max score for the task
+
+---
+
+#### Submit to [rs app](https://app.rs.school)
+1. Open [rs app](https://app.rs.school) and login
+2. Go to submit task page
+3. Select your task (BasicJS)
+4. Press the submit button and enjoy
+
+---
+
+#### Notes
+1. We recommend you to use Node.js of version 14.x.x LTS. If you use any of features, that does not supported by Node.js v14, there may be problems with task submit.
+2. Please, be sure that each of your tests is limited to 30 sec.
+
+---
+
 ## General task description
 Your task is to write several functions that are the solution to the subtasks. Subtasks descriptions, as well as instructions on how to run tests and submit solutions are below.
 
@@ -151,8 +178,8 @@ Your task is to implement the function `transform(arr)` that takes an `array` an
 **Control sequences** are defined `string` elements of the mentioned `array`:
 * `--discard-next` excludes the next element of the array from the transformed array.
 * `--discard-prev` excludes the previous element of the array from the transformed array.
-* `--double-next` doubles the next element of the array in the transformed array.
-* `--double-prev` doubles the previous element of the array in the transformed array.
+* `--double-next` duplicates the next element of the array in the transformed array.
+* `--double-prev` duplicates the previous element of the array in the transformed array.
 
 For example:
 
@@ -283,7 +310,7 @@ For example:
 
 `getCommonCharacterCount('aabcc', 'adcaa')` => `3`
 
-Write your code in `src/st-common-character-count.js`.
+Write your code in `src/common-character-count.js`.
 
 ---
 
@@ -294,7 +321,7 @@ For example:
 
 `deleteDigit(152) => 52`
 
-Write your code in `src/st-delete-digit.js`.
+Write your code in `src/delete-digit.js`.
 
 ---
 
@@ -305,7 +332,7 @@ For example:
 
 `getDNSStats(['code.yandex.ru', 'music.yandex.ru', 'yandex.ru'])` => `{'.ru': 3, '.ru.yandex': 3, '.ru.yandex.code': 1,'.ru.yandex.music': 1}`
 
-Write your code in `src/st-dns-stats.js`.
+Write your code in `src/dns-stats.js`.
 
 ---
 
@@ -316,7 +343,7 @@ For example:
 
 `encodeLine('aabbbc')` => `'2a3bc'`
 
-Write your code in `src/st-encode-line.js`.
+Write your code in `src/encode-line.js`.
 
 ---
 
@@ -328,7 +355,7 @@ For example:
 
 `renameFiles(["file", "file", "image", "file(1)", "file"])` => `["file", "file(1)", "image", "file(1)(1)", "file(2)"]`
 
-Write your code in `src/st-file-names.js`.
+Write your code in `src/file-names.js`.
 
 ---
 
@@ -339,7 +366,7 @@ For example:
 
 `getEmailDomain('prettyandsimple@example.com')` => `'example.com'`
 
-Write your code in `src/st-get-email-domain.js`.
+Write your code in `src/get-email-domain.js`.
 
 ---
 
@@ -351,7 +378,7 @@ For example:
 
 `isMAC48Address('00-1B-63-84-45-E6')` => `true`
 
-Write your code in `src/st-mac-adress.js`.
+Write your code in `src/mac-adress.js`.
 
 ---
 
@@ -370,14 +397,12 @@ const matrix = [
 getMatrixElementsSum(matrix) => 9
 ```
 
-Write your code in `src/st-matrix-elements-sum.js`.
+Write your code in `src/matrix-elements-sum.js`.
 
 ---
 
 ### **(ST) Minesweeper**
 In the popular Minesweeper game you have a board with some mines and cells that have a **number** in it that indicates the total **number of mines** in the neighboring cells. Starting off with some arrangement of mines we want to create a Minesweeper game setup.
-
-For example:
 
 For example:
 
@@ -395,7 +420,7 @@ minesweeper(matrix) => [
 ];
 ```
 
-Write your code in `src/st-mine-sweeper.js`.
+Write your code in `src/mine-sweeper.js`.
 
 ---
 
@@ -407,7 +432,7 @@ For example:
 
 `sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])` => `[-1, 150, 160, 170, -1, -1, 180, 190]`
 
-Write your code in `src/st-sort-by-height.js`.
+Write your code in `src/sort-by-height.js`.
 
 ---
 
@@ -418,39 +443,29 @@ For example:
 
 For 100, the result should be 1 (1 + 0 + 0 = 1)  
 `getSumOfDigits(100)` => `1`
+
 For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)  
 `getSumOfDigits(91)` => `1`
 
-Write your code in `src/st-sum-digits.js`.
-
----
-
-#### Prerequisites
-1. Install [Node.js](https://nodejs.org/en/download/)   
-2. Fork this repository: https://github.com/AlreadyBored/basic-js
-3. Clone your newly created repo: https://github.com/<%your_github_username%>/basic-js/  
-4. Go to folder `basic-js`  
-5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
-6. Run `npm run test` in command line.
-7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to max score for the task
-
----
-
-#### Submit to [rs app](https://app.rs.school)
-1. Open [rs app](https://app.rs.school) and login
-2. Go to submit task page
-3. Select your task (BasicJS)
-4. Press the submit button and enjoy
-
----
-
-#### Notes
-1. We recommend you to use Node.js of version 12.x.x LTS. If you use any of features, that does not supported by Node.js v12, there may be problems with task submit.
-2. Please, be sure that each of your tests is limited to 30 sec.
+Write your code in `src/sum-digits.js`.
 
 ---
 
 © [AlreadyBored](https://github.com/alreadybored)  
-& tasks with prefix `st-` are integrated from [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
+
+& tasks:
+* Common character count
+* Delete digit
+* DNS stat
+* Encode line
+* File names
+* Get email domain
+* Is MAC-48 Adress?
+* Matrix elements sum
+* Minesweeper
+* Sort by height
+* Sum digits
+
+are integrated from [Short track 2021 repo](https://github.com/rkhaslarov/rs-school-short-track-2021)
 
 & Thanks [mikhama](https://github.com/mikhama) for assistance!

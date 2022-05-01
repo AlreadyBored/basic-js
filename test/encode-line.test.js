@@ -1,12 +1,12 @@
-import { assert } from 'chai';
-import { testOptional } from '../extensions/index.js';
-import encodeLine from '../src/st-encode-line.js';
+const { assert } = require('chai');
+const { testOptional } = require('../extensions/index.js');
+const { encodeLine } = require('../src/encode-line.js');
 
 it.optional = testOptional;
 
 Object.freeze(assert);
 
-describe('st-encode-line', () => {
+describe('Encode line', () => {
   it.optional('should return encoding version of string', () => {
     assert.strictEqual(encodeLine('aaaatttt'), '4a4t');
     assert.strictEqual(encodeLine('aabbccc'), '2a2b3c');
