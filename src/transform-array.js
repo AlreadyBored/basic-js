@@ -15,9 +15,7 @@
  */
 
 function transform(arr) {
-    if (arr.length === 0) {
-      return arr;
-  }
+
   if (!Array.isArray(arr)){
     throw new Error("'arr' parameter must be an instance of the Array!");
   }
@@ -38,7 +36,6 @@ function transform(arr) {
       } else newArr.push(arr[i]);
   }
   return newArr;
-// remove line with error and write your code here
 }
 
 module.exports = {
