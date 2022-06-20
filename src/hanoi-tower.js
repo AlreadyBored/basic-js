@@ -15,6 +15,6 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function calculateHanoi(/* disksNumber, turnsSpeed */) {
-  throw new NotImplementedError('Not implemented');
+  throw new NotImplementedError('Not implemented yet');
   // remove line with error and write your code here
 }
