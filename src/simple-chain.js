@@ -5,25 +5,46 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 const chainMaker = {
+  chains: [],
   getLength() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    return this.chains.length
   },
-  addLink(/* value */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  addLink(value) {
+    if (value == null){
+      this.chains.push(' null ')
+    } else if (value == undefined){
+      this.chains.push(' ')
+    } else {
+      this.chains.push(` ${''+value} `)
+    }
+    return this
   },
-  removeLink(/* position */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  removeLink(position) {
+    if (!Number.isInteger(position)) {
+      this.chains.splice(0,this.chains.length)
+      throw new Error("You can\'t remove incorrect link!")
+    } else if ((position < 1) || (position > this.chains.length)) {
+      this.chains.splice(0,this.chains.length)
+      throw new Error("You can\'t remove incorrect link!")
+    } else {
+      this.chains.splice((position - 1), 1)
+    }
+    return this
   },
   reverseChain() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    this.chains = this.chains.reduce((acc, value) => {
+      return [value, ...acc]
+    }, [])
+    return this
   },
   finishChain() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    if (this.chains.length === 0){
+      return ''
+    } else {
+      res = `(${this.chains.join(')~~(')})`
+      this.chains.splice(0,this.chains.length)
+      return res
+    }
   }
 };
 
