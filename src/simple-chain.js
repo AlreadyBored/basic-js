@@ -1,9 +1,8 @@
-const { NotImplementedError } = require('../extensions/index.js');
-
 /**
  * Implement chainMaker object according to task description
  * 
- */
+**/
+
 const chainMaker = {
   result: '',
 
@@ -33,8 +32,8 @@ const chainMaker = {
       	this.tempArr.push(v);
       }
     });
-
     this.result = this.tempArr.join('~~');
+
     return this;
   },
 

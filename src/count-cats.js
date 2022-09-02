@@ -1,5 +1,3 @@
-const { NotImplementedError } = require('../extensions/index.js');
-
 /**
  * Given matrix where you have to find cats by ears "^^"
  *
@@ -13,9 +11,11 @@ const { NotImplementedError } = require('../extensions/index.js');
  *  ['^^', 1, 2]
  * ]) => 3`
  *
- */
+**/
+
 function countCats(matrix) {
   let result = 0;
+
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === '^^') {
@@ -23,6 +23,7 @@ function countCats(matrix) {
       }
     }
   }
+  
   return result;
 }
 

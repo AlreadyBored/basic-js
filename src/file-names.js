@@ -1,5 +1,3 @@
-const { NotImplementedError } = require('../extensions/index.js');
-
 /**
  * There's a list of file, since two files cannot have equal names,
  * the one which comes later will have a suffix (k),
@@ -14,7 +12,8 @@ const { NotImplementedError } = require('../extensions/index.js');
  * For input ["file", "file", "image", "file(1)", "file"],
  * the output should be ["file", "file(1)", "image", "file(1)(1)", "file(2)"]
  *
- */
+**/
+
 function renameFiles(arr) {
   let result = [];
   let obj = {};
