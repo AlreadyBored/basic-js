@@ -1,5 +1,3 @@
-const { NotImplementedError } = require('../extensions/index.js');
-
 /**
  * Calculate turns number and time (in seconds) required
  * to solve puzzle
@@ -13,7 +11,8 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  * calculateHanoi(9, 4308) => { turns: 511, seconds: 427 }
  *
- */
+**/
+
 function calculateHanoi(diskNum, speed) {
   let result = {
     turns: 0,
