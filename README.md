@@ -247,7 +247,7 @@ Write your code in `src/recursive-depth.js`.
 ---
 ### **Extended repeater**
 
-![Extended repater](https://farm5.staticflickr.com/4683/39024400961_732f449b65.jpg)  
+![Extended repater](https://upload.wikimedia.org/wikipedia/commons/4/4b/Macaws_at_Jurong_Bird_Park_-Singapore-8.jpg)  
 Your task is to implement the function `repeater(str, options)`.
 This function returns a repeating `string` based on the given parameters:
 * `str` is a `string` to repeat;
