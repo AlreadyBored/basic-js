@@ -112,3 +112,14 @@ describe('Count cats!', () => {
 });
 
 
+let arr = [[0, 1, '^^']];
+
+function counterCats(backyard) {
+  let counter = 0;
+
+  for (let i = 0; i < backyard.length; i++) {
+    console.log(backyard[i]);
+  }
+}
+
+console.log(countCats(arr));
