@@ -50,59 +50,6 @@ function repeater(str, options) {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function repeater(str, options) {
-//   if (options.addition){
-//     let addToStr = String(options.addition)
-//     if (String(options.additionSeparator) && options.repeatTimes){
-
-//       addToStr+= String(options.additionSeparator)
-//     }
-//     if (options.additionRepeatTimes > 1){
-//       let addReapTimes = options.additionRepeatTimes
-//       addToStr*=addReapTimes
-//       addToStr = String(addToStr).slice(0,addToStr.length - String(String(options.additionSeparator)).length)
-//     }
-
-//     str+= addToStr
-//   }
-
-//   if (options.repeatTimes){
-//     let repTimes = options.repeatTimes
-//     str = Array(repTimes).fill(str)
-//     if (options.separator){
-
-//       let strSep = options.separator
-//       return str.join(`${strSep}`)
-//     }
-//     return str.join('+')
-//   }
-//   if (options.separator && options.repeatTimes){
-
-//     let strSep = options.separator
-//     return str+strSep
-//   }
-//   return str
-// }
-
 module.exports = {
   repeater
 };
