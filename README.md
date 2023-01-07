@@ -375,9 +375,9 @@ Write your code in `src/get-email-domain.js`.
 
 ---
 
-### **(ST) Is MAC-48 Adress?**
+### **(ST) Is MAC-48 Address?**
 The **MAC-48 address** is six groups of two hexadecimal digits (0 to 9 or A to F) separated by hyphens.
-Your task is to implement function that accepts **string** (`inputString`) and returns `true` if **string** is valid **MAC-48 adress**.  
+Your task is to implement function that accepts **string** (`inputString`) and returns `true` if **string** is valid **MAC-48 address**.  
 
 For example:
 
