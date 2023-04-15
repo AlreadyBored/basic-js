@@ -1,4 +1,23 @@
-const { NotImplementedError } = require('../extensions/index.js');
+function getCommonCharacterCount(s1, s2) {
+  const chars1 = countChars(s1);
+  const chars2 = countChars(s2);
+  let count = 0;
+  for (let char in chars1) {
+    if (chars2[char]) {
+      count += Math.min(chars1[char], chars2[char]);
+    }
+  }
+  return count;
+}
+
+function countChars(str) {
+  const chars = {};
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    chars[char] = (chars[char] || 0) + 1;
+  }
+  return chars;
+}
 
 /**
  * Given two strings, find the number of common characters between them.
