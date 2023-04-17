@@ -14,16 +14,23 @@ const { NotImplementedError } = require('../extensions/index.js');
 function sortByHeight(arr) {
 
   let arr1 = [...arr];
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] == -1){
-      arr1
+  for(let i = 0; i < arr1.length; i++){
+    if(arr1[i] == -1){
+      arr1.splice(i, 1)
+      i--;
     }
   }
-
-
-  
+  arr1.sort(((a, b) => a - b));
+  let k = 0;
+  for(let j = 0; j < arr.length; j++){
+    if(arr[j] === -1){
+      continue;
+    }
+    arr[j] = arr1[k];
+    k = k + 1;
+  }
+  return arr;
 }
-
 module.exports = {
   sortByHeight
 };
