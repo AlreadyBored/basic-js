@@ -1,13 +1,16 @@
-const { assert } = require('chai');
-const { testOptional } = require('../extensions/index.js');
-const { minesweeper } = require('../src/mine-sweeper.js');
-
-it.optional = testOptional;
-
-Object.freeze(assert);
+const { describe } = require('node:test');
+const assert = require('node:assert');
+const { test } = require('../lib');
+const { minesweeper } = require('../src/minesweeper.js');
 
 describe('Minesweeper', () => {
-  it.optional('should return minesweeper game setup', () => {
+  // Presence requirement
+  test('function minesweeper exists', () => {
+    assert.strictEqual(typeof minesweeper, 'function');
+  });
+
+  // Functional requirements
+  test('should return minesweeper game setup', () => {
     assert.deepEqual(
       minesweeper([
         [true, false, false],
