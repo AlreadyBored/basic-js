@@ -23,7 +23,7 @@ describe('Make chain!', () => {
           .removeLink(2)
           .reverseChain()
           .finishChain(),
-        '( 3rd )~~( function () { } )',
+        '( 3rd )~~( function () {} )',
       );
     });
 

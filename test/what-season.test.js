@@ -54,7 +54,7 @@ describe('What season', () => {
 
     test('correctly handles argument absence', function () {
       const res = isNotThrowingErrors.call(this, [() => getSeason()]);
-      assert.equal(res, false);
+      assert.equal(res, true);
       assert.equal(getSeason(), 'Unable to determine the time of year!');
     });
 

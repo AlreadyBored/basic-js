@@ -1,4 +1,4 @@
-const { decorateClass } = require('../lib');
+const { decorateObject } = require('../lib');
 
 /**
  * Implement class DepthCalculator with method calculateDepth
@@ -13,9 +13,9 @@ const { decorateClass } = require('../lib');
  *
  */
 class DepthCalculator {
-  calculateDepth(/* arr */) {}
+  calculateDepth = (/* arr */) => {}
 }
 
 module.exports = {
-  DepthCalculator: decorateClass(DepthCalculator),
+  depthCalculator: decorateObject(new DepthCalculator()),
 };

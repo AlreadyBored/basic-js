@@ -1,4 +1,4 @@
-const { decorateClass } = require('../lib');
+const { decorateObject } = require('../lib');
 
 /**
  * Implement class VigenereCipheringMachine that allows us to create
@@ -20,11 +20,13 @@ const { decorateClass } = require('../lib');
  *
  */
 class VigenereCipheringMachine {
-  encrypt() {}
+  encrypt = () => {}
 
-  decrypt() {}
+  decrypt = () => {}
 }
 
 module.exports = {
-  VigenereCipheringMachine: decorateClass(VigenereCipheringMachine),
+  directMachine: decorateObject(new VigenereCipheringMachine()),
+  reverseMachine: decorateObject(new VigenereCipheringMachine(false)),
+  VigenereCipheringMachine,
 };

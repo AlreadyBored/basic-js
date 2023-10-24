@@ -1,10 +1,9 @@
 const { describe } = require('node:test');
 const assert = require('node:assert');
 const { test } = require('../lib');
-const { DepthCalculator } = require('../src/recursive-depth.js');
+const { depthCalculator } = require('../src/recursive-depth.js');
 
-const instance = new DepthCalculator();
-const calculateDepth = instance.calculateDepth.bind(instance);
+const calculateDepth = depthCalculator.calculateDepth.bind(depthCalculator);
 
 const createFlatArr = (length) => Array.from({ length }, () => Math.floor(Math.random() * length));
 
@@ -24,6 +23,7 @@ describe('Recursive depth', () => {
         assert.equal(calculateDepth(flatArr), 1);
       }
     });
+    
     test('returns correct depth of nested arrays', () => {
       assert.equal(
         calculateDepth([
