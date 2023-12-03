@@ -1,13 +1,18 @@
-const { assert } = require('chai');
-const { testOptional } = require('../extensions/index.js');
+const { describe } = require('node:test');
+const assert = require('node:assert');
+const { test } = require('../lib');
 const { getCommonCharacterCount } = require('../src/common-character-count.js');
 
-it.optional = testOptional;
-
-Object.freeze(assert);
-
 describe('Common character count', () => {
-  it.optional('should return the number of common characters between the given strings', () => {
+  // Presence requirement
+  describe('function presence', () => {
+    test('function getCommonCharacterCount exists', () => {
+      assert.strictEqual(typeof getCommonCharacterCount, 'function');
+    });
+  });
+
+  // Functional requirements
+  test('should return the number of common characters between the given strings', () => {
     assert.strictEqual(getCommonCharacterCount('aabcc', 'adcaa'), 3);
     assert.strictEqual(getCommonCharacterCount('zzzz', 'zzzzzzz'), 4);
     assert.strictEqual(getCommonCharacterCount('abca', 'xyzbac'), 3);
