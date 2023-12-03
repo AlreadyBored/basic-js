@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../extensions/index.js');
 
 /**
  * Given a string, return its encoding version.
@@ -10,9 +10,11 @@ const { checkImplementedDecorator } = require('../lib');
  * For aabbbc should return 2a3bc
  *
  */
-
-function encodeLine(/* str */) {}
+function encodeLine(/* str */) {
+  throw new NotImplementedError('Not implemented');
+  // remove line with error and write your code here
+}
 
 module.exports = {
-  encodeLine: checkImplementedDecorator(encodeLine),
+  encodeLine
 };
