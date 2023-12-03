@@ -11,7 +11,7 @@ describe('Minesweeper', () => {
 
   // Functional requirements
   test('should return minesweeper game setup', () => {
-    assert.deepEqual(
+    assert.deepStrictEqual(
       minesweeper([
         [true, false, false],
         [false, true, false],
@@ -24,7 +24,7 @@ describe('Minesweeper', () => {
       ],
     );
 
-    assert.deepEqual(
+    assert.deepStrictEqual(
       minesweeper([
         [false, false, false],
         [false, false, false],

@@ -51,23 +51,23 @@ describe('Vigenere cipher', () => {
     });
 
     test('base encryption', () => {
-      assert.equal(directMachine.encrypt('attack at dawn!', 'alphonse'), 'AEIHQX SX DLLU!');
-      assert.equal(
+      assert.strictEqual(directMachine.encrypt('attack at dawn!', 'alphonse'), 'AEIHQX SX DLLU!');
+      assert.strictEqual(
         directMachine.encrypt('Example of sequence: 1, 2, 3, 4.', 'lilkey'),
         'PFLWTJP WQ CIOFMYMI: 1, 2, 3, 4.',
       );
-      assert.equal(directMachine.encrypt('cryptography', 'verylongkeyword'), 'XVPNECTXKTFU');
-      assert.equal(directMachine.encrypt('Samelengthkey', 'Samelengthkey'), 'KAYIWIAMMOUIW');
-      assert.equal(directMachine.encrypt('Same length key', 'Samelengthkey'), 'KAYI WIAMMO UIW');
+      assert.strictEqual(directMachine.encrypt('cryptography', 'verylongkeyword'), 'XVPNECTXKTFU');
+      assert.strictEqual(directMachine.encrypt('Samelengthkey', 'Samelengthkey'), 'KAYIWIAMMOUIW');
+      assert.strictEqual(directMachine.encrypt('Same length key', 'Samelengthkey'), 'KAYI WIAMMO UIW');
     });
     test('base decryption', () => {
-      assert.equal(directMachine.decrypt('UWJJW XAGWLNFM VNNNDXHVWWL :)', 'js'), 'LEARN FRONTEND DEVELOPMENT :)');
-      assert.equal(
+      assert.strictEqual(directMachine.decrypt('UWJJW XAGWLNFM VNNNDXHVWWL :)', 'js'), 'LEARN FRONTEND DEVELOPMENT :)');
+      assert.strictEqual(
         directMachine.decrypt('ICWWQAM KECEIK JVZZT EADGG!', 'rollingscopes'),
         'ROLLING SCOPES SHOOL RULES!',
       );
-      assert.equal(directMachine.decrypt('TRVVFB VT JSUIFMYL!', 'learning'), 'INVEST IN YOURSELF!');
-      assert.equal(directMachine.decrypt('HSVD AJAL ^^', 'behappy'), 'GOOD LUCK ^^');
+      assert.strictEqual(directMachine.decrypt('TRVVFB VT JSUIFMYL!', 'learning'), 'INVEST IN YOURSELF!');
+      assert.strictEqual(directMachine.decrypt('HSVD AJAL ^^', 'behappy'), 'GOOD LUCK ^^');
     });
   });
 
@@ -77,7 +77,7 @@ describe('Vigenere cipher', () => {
         const testStr = createTestString(i);
         const testKey = createTestKey(i + (i % 2));
         const encrypted = directMachine.encrypt(testStr, testKey);
-        assert.equal(directMachine.decrypt(encrypted, testKey), testStr);
+        assert.strictEqual(directMachine.decrypt(encrypted, testKey), testStr);
       }
     });
 
@@ -88,7 +88,7 @@ describe('Vigenere cipher', () => {
         const testKey = createTestKey(i - (i % 2));
         const encrypted = reverseMachine.encrypt(reversedTestStr, testKey);
         const reversedEncrypted = encrypted.split('').reverse().join('');
-        assert.equal(reverseMachine.decrypt(reversedEncrypted, testKey), testStr);
+        assert.strictEqual(reverseMachine.decrypt(reversedEncrypted, testKey), testStr);
       }
     });
   });
