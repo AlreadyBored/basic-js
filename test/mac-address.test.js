@@ -1,13 +1,16 @@
-const { assert } = require('chai');
-const { testOptional } = require('../extensions/index.js');
+const { describe } = require('node:test');
+const assert = require('node:assert');
+const { test } = require('../lib');
 const { isMAC48Address } = require('../src/mac-address.js');
 
-it.optional = testOptional;
-
-Object.freeze(assert);
-
 describe('MAC address', () => {
-  it.optional('should check if a given string corresponds to MAC-48 address or not', () => {
+  // Presence requirement
+  test('function isMAC48Address exists', () => {
+    assert.strictEqual(typeof isMAC48Address, 'function');
+  });
+
+  // Functional requirements
+  test('should check if a given string corresponds to MAC-48 address or not', () => {
     assert.strictEqual(isMAC48Address('00-1B-63-84-45-E6'), true);
     assert.strictEqual(isMAC48Address('Z1-1B-63-84-45-E6'), false);
     assert.strictEqual(isMAC48Address('not a MAC-48 address'), false);

@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { checkImplementedDecorator } = require('../lib');
 
 /**
  * Given matrix, a rectangular matrix of integers,
@@ -16,11 +16,8 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  * The result should be 9
  */
-function getMatrixElementsSum(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
-}
+function getMatrixElementsSum(/* matrix */) {}
 
 module.exports = {
-  getMatrixElementsSum
+  getMatrixElementsSum: checkImplementedDecorator(getMatrixElementsSum),
 };
