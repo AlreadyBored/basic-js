@@ -41,7 +41,7 @@ Your task is to write several functions that are the solution to the subtasks. S
 
 ### **Count cats!**
 
-![Count cats!](https://vg5b2ejdwb-flywheel.netdna-ssl.com/wp-content/uploads/2019/11/cats-in-boxes-03.jpg)  
+![Count cats!](https://i.imgur.com/fK1LS0B.png)  
 Your task is to count the cats hidden in the backyard (presented by two-dimensional `Array`). Cats hide well, but their **ears** (`"^^"`) are clearly visible. Your task is to implement the `countCats(backyard)` function that will count cats. Good luck!
 
 Number of cats found should be `number`. If no cats found, function should return `0`.
