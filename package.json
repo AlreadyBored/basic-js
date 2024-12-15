@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Tasks for RSS",
   "main": "index.js",
+  "engines": {
+    "node": "16",
+    "npm": "8"
+  },
   "directories": {
     "test": "test"
   },
@@ -24,8 +28,8 @@
   },
   "homepage": "https://github.com/AlreadyBored/basic-js#readme",
   "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^9.1.0",
-    "sinon": "^11.1.2"
+    "chai": "4.3.6",
+    "mocha": "10.0.0",
+    "sinon": "14.0.0"
   }
 }
