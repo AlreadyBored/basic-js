@@ -14,11 +14,10 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 
 function getSumOfDigits(n) {
-    // Попробуем преобразовать в строку, а затем в массив
     let arr = n.toString().split('')
+    
     while (arr.length > 1) {
       arr = arr.reduce((a, b) => {
-        // применяет функцию reducer к каждому элементу массива (слева-направо)
         return a + +b;
       }, 0).toString().split('')
     }

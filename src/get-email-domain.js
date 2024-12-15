@@ -12,6 +12,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function getEmailDomain(email) {
     let deleteBeforeDog = email.split('@');
+
     return deleteBeforeDog[deleteBeforeDog.length -1];
 }
 

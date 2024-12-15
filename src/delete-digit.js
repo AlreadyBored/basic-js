@@ -13,10 +13,12 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
  function deleteDigit(num) {
   let maxValue = 0;
+  
   for (let i = 0; i < num.toString().length; i++) {
-      let currentValue = num.toString().slice(0, i) + num.toString().slice(i + 1);
-      if (currentValue > maxValue) { maxValue = currentValue; }
+    let currentValue = num.toString().slice(0, i) + num.toString().slice(i + 1);
+    if (currentValue > maxValue) { maxValue = currentValue; }
   }
+  
   return parseInt(maxValue);
 }
 

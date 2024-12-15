@@ -11,39 +11,34 @@ const { NotImplementedError } = require('../extensions/index.js');
  * getSeason(new Date(2020, 02, 31)) => 'spring'
  * 
  */
+const monthToSeason = {
+  Jan: 'winter',
+  Feb: 'winter',
+  Mar: 'spring',
+  Apr: 'spring',
+  May: 'spring',
+  Jun: 'summer',
+  Jul: 'summer',
+  Aug: 'summer',
+  Sep: 'autumn',
+  Oct: 'autumn',
+  Nov: 'autumn',
+  Dec: 'winter',
+};
+
 function getSeason( date ) {
-  //1. Если нет даты, то его невозможно определить
   if (date == undefined) return 'Unable to determine the time of year!'
   if (!(date instanceof Date)) { throw Error('Invalid date!') }
   if (date.hasOwnProperty('toString')) throw new Error('Invalid date!')
 
   let season = date.getMonth();
-  if (season === 1) return 'winter';
-  if (season  === 2) return 'spring';
-  if (season  === 3) return 'spring';  
-  if (season  === 4) return 'spring';
-  if (season  === 5) return 'summer';
-  if (season  === 6) return 'summer';
-  if (season  === 7) return 'summer';
-  if (season  === 8) return 'autumn';
-  if (season  === 9) return 'autumn';
-  if (season  === 10) return 'autumn';
-  if (season  === 11) return 'winter';
-  if (season  === 12) return 'winter';
+  if ([11, 0, 1].includes(season)) return 'winter';
+  if ([2, 3, 4].includes(season)) return 'spring';
+  if ([5, 6, 7].includes(season)) return 'summer';
+  if ([8, 9, 10].includes(season)) return 'autumn';
   
-  let month = date.toString().split(' ');
-  if (month[1] === 'Jan') return 'winter';
-  if (month[1] === 'Feb') return 'spring';
-  if (month[1] === 'Mar') return 'spring';
-  if (month[1] === 'Apr') return 'spring';
-  if (month[1] === 'May') return 'summer';
-  if (month[1] === 'Jun') return 'summer';
-  if (month[1] === 'Jul') return 'summer';
-  if (month[1] === 'Aug') return 'autumn';
-  if (month[1] === 'Sep') return 'autumn';
-  if (month[1] === 'Oct') return 'autumn';
-  if (month[1] === 'Nov') return 'winter';
-  if (month[1] === 'Dec') return 'winter';
+  const monthAbbreviation = date.toString().split(' ')[1];
+  return monthToSeason[monthAbbreviation] || 'Unknown season';
 }
 
 module.exports = {

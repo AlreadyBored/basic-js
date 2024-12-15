@@ -13,8 +13,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function sortByHeight( arr) {
   Array.prototype.insert = function ( index, item ) { this.splice( index, 0, item ); };
-  // var arr = [ 'A', 'B', 'D', 'E' ];   arr.insert(2, 'C');   
-  // Answer: [ 'A', 'B', 'C', 'D', 'E' ]
   let searchArr = [...arr]
   let sort_filter = arr.sort((a, b) => a - b).filter(item => item !== -1);
   for (let i = 0; i < searchArr.length; i++) {

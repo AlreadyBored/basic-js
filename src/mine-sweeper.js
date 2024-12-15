@@ -23,8 +23,8 @@ const { NotImplementedError } = require('../extensions/index.js');
   *  [1, 1, 1]
   * ]
   */
-function minesweeper( matrix ) {
-  re
+function minesweeper(/* matrix */) {
+  throw new NotImplementedError('Not implemented');
 }
 
 
