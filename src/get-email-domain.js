@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given an email address, return it's domain.
@@ -10,8 +10,10 @@ const { checkImplementedDecorator } = require('../lib');
  * For the input 'prettyandsimple@example.com', the output should be 'example.com'
  *
  */
-function getEmailDomain(/* email */) {}
+function getEmailDomain(/* email */) {
+  throw new NotImplementedError('Not implemented');
+}
 
 module.exports = {
-  getEmailDomain: checkImplementedDecorator(getEmailDomain),
+  getEmailDomain
 };

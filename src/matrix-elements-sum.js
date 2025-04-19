@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given matrix, a rectangular matrix of integers,
@@ -16,8 +16,11 @@ const { checkImplementedDecorator } = require('../lib');
  *
  * The result should be 9
  */
-function getMatrixElementsSum(/* matrix */) {}
+function getMatrixElementsSum(/* matrix */) {
+  // Remove line below and write your code here
+  throw new NotImplementedError('Not implemented');
+}
 
 module.exports = {
-  getMatrixElementsSum: checkImplementedDecorator(getMatrixElementsSum),
+  getMatrixElementsSum
 };

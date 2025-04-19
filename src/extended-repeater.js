@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Create a repeating string based on the given parameters
@@ -16,8 +16,11 @@ const { checkImplementedDecorator } = require('../lib');
  *
  */
 
-function repeater(/* str, options */) {}
+function repeater(/* str, options */) {
+  // Remove line below and write your code here
+  throw new NotImplementedError('Not implemented');
+}
 
 module.exports = {
-  repeater: checkImplementedDecorator(repeater),
+  repeater
 };

@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given an array of domains, return the object with the appearances of the DNS.
@@ -22,8 +22,11 @@ const { checkImplementedDecorator } = require('../lib');
  * }
  *
  */
-function getDNSStats(/* domains */) {}
+function getDNSStats(/* domains */) {
+  // Remove line below and write your code here
+  throw new NotImplementedError('Not implemented');
+}
 
 module.exports = {
-  getDNSStats: checkImplementedDecorator(getDNSStats),
+  getDNSStats
 };

@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * There's a list of file, since two files cannot have equal names,
@@ -15,8 +15,11 @@ const { checkImplementedDecorator } = require('../lib');
  * the output should be ["file", "file(1)", "image", "file(1)(1)", "file(2)"]
  *
  */
-function renameFiles(/* names */) {}
+function renameFiles(/* names */) {
+  // Remove line below and write your code here
+  throw new NotImplementedError('Not implemented');
+}
 
 module.exports = {
-  renameFiles: checkImplementedDecorator(renameFiles),
+  renameFiles
 };

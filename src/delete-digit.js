@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given some integer, find the maximal number you can obtain
@@ -11,8 +11,11 @@ const { checkImplementedDecorator } = require('../lib');
  * For n = 152, the output should be 52
  *
  */
-function deleteDigit(/* n */) {}
+function deleteDigit(/* n */) {
+  // Remove line below and write your code here
+  throw new NotImplementedError('Not implemented');
+}
 
 module.exports = {
-  deleteDigit: checkImplementedDecorator(deleteDigit),
+  deleteDigit
 };
