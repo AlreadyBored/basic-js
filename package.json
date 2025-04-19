@@ -4,8 +4,8 @@
   "description": "Tasks for mastering basics of JavaScript",
   "main": "index.js",
   "engines": {
-    "node": ">=18",
-    "npm": ">=8"
+    "node": ">=22",
+    "npm": ">=10"
   },
   "directories": {
     "test": "test"
