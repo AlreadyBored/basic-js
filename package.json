@@ -1,24 +1,25 @@
 {
   "name": "basic-js",
   "version": "1.0.0",
-  "description": "Tasks for RSS",
+  "description": "Tasks for mastering basics of JavaScript",
   "main": "index.js",
   "engines": {
-    "node": "16",
-    "npm": "8"
+    "node": ">=22",
+    "npm": ">=10"
   },
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --parallel"
+    "test": "node --test --test-reporter tap"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlreadyBored/basic-js.git"
   },
   "keywords": [
-    "RSS",
+    "node",
+    "RS",
     "tasks"
   ],
   "author": "AlreadyBored",
@@ -26,10 +27,5 @@
   "bugs": {
     "url": "https://github.com/AlreadyBored/basic-js/issues"
   },
-  "homepage": "https://github.com/AlreadyBored/basic-js#readme",
-  "devDependencies": {
-    "chai": "4.3.6",
-    "mocha": "11.0.1",
-    "sinon": "14.0.0"
-  }
+  "homepage": "https://github.com/AlreadyBored/basic-js#readme"
 }
