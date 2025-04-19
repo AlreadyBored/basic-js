@@ -1,4 +1,4 @@
-const { checkImplementedDecorator } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given a string, return its encoding version.
@@ -11,8 +11,11 @@ const { checkImplementedDecorator } = require('../lib');
  *
  */
 
-function encodeLine(/* str */) {}
+function encodeLine(/* str */) {
+  // Remove line below and write your code here
+  throw new NotImplementedError('Not implemented');
+}
 
 module.exports = {
-  encodeLine: checkImplementedDecorator(encodeLine),
+  encodeLine
 };

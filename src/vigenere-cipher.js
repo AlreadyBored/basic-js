@@ -1,4 +1,4 @@
-const { decorateObject } = require('../lib');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Implement class VigenereCipheringMachine that allows us to create
@@ -20,13 +20,19 @@ const { decorateObject } = require('../lib');
  *
  */
 class VigenereCipheringMachine {
-  encrypt = () => {}
+  encrypt() {
+    // Remove line below and write your code here
+    throw new NotImplementedError('Not implemented');
+  }
 
-  decrypt = () => {}
+  decrypt() {
+    // Remove line below and write your code here
+    throw new NotImplementedError('Not implemented');
+  }
 }
 
 module.exports = {
-  directMachine: decorateObject(new VigenereCipheringMachine()),
-  reverseMachine: decorateObject(new VigenereCipheringMachine(false)),
+  directMachine: new VigenereCipheringMachine(),
+  reverseMachine: new VigenereCipheringMachine(false),
   VigenereCipheringMachine,
 };
