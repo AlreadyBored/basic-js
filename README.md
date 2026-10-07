@@ -33,7 +33,7 @@
 
 #### Notes
 
-1. We recommend you to use Node.js of version 16.x.x LTS. If you use any of features, that does not supported by Node.js v16, there may be problems with task submit.
+1. We recommend you to use Node.js of version 22.x.x LTS. If you use any of features, that does not supported by Node.js v22, there may be problems with task submit.
 2. Please, be sure that each of your tests is limited to 30 sec.
 
 ---
