@@ -7,7 +7,7 @@ const { NotImplementedError } = require('../lib');
  * Your task is to check by given string inputString
  * whether it's a MAC-48 address or not.
  *
- * @param {Number} inputString
+ * @param {String} inputString
  * @return {Boolean}
  *
  * @example
